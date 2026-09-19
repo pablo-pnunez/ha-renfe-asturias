@@ -20,6 +20,7 @@ from homeassistant.helpers.selector import (
 
 from .api import RenfeApiError, async_get_departures
 from .const import (
+    CONF_ALERTS_SCAN_INTERVAL,
     CONF_DESTINATION,
     CONF_ENTRY_TYPE,
     CONF_FLEET_SCAN_INTERVAL,
@@ -29,12 +30,14 @@ from .const import (
     CONF_ROUTE_ID,
     CONF_STATION,
     CONF_STOPS_SCAN_INTERVAL,
+    DEFAULT_ALERTS_SCAN_INTERVAL,
     DEFAULT_FLEET_SCAN_INTERVAL,
     DEFAULT_NUM_DEPARTURES,
     DEFAULT_STOPS_SCAN_INTERVAL,
     DOMAIN,
     ENTRY_TYPE_ROUTE,
     ENTRY_TYPE_STOP,
+    MIN_ALERTS_SCAN_INTERVAL,
     MIN_FLEET_SCAN_INTERVAL,
     MIN_STOPS_SCAN_INTERVAL,
 )
@@ -309,6 +312,20 @@ class RenfeCercaniasOptionsFlow(OptionsFlow):
                         min=MIN_FLEET_SCAN_INTERVAL,
                         max=300,
                         step=5,
+                        mode=NumberSelectorMode.BOX,
+                        unit_of_measurement="s",
+                    )
+                ),
+                vol.Optional(
+                    CONF_ALERTS_SCAN_INTERVAL,
+                    default=options.get(
+                        CONF_ALERTS_SCAN_INTERVAL, DEFAULT_ALERTS_SCAN_INTERVAL
+                    ),
+                ): NumberSelector(
+                    NumberSelectorConfig(
+                        min=MIN_ALERTS_SCAN_INTERVAL,
+                        max=1800,
+                        step=30,
                         mode=NumberSelectorMode.BOX,
                         unit_of_measurement="s",
                     )

@@ -1,26 +1,36 @@
-"""Sensores de próximas salidas para paradas y rutas favoritas."""
+"""Sensores de próximas salidas y avisos de servicio para paradas y rutas favoritas."""
 from __future__ import annotations
 
 from datetime import datetime
 
-from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
+from homeassistant.components.sensor import (
+    SensorDeviceClass,
+    SensorEntity,
+    SensorStateClass,
+)
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import RenfeEntryData
-from .api import Departure
+from .api import Departure, ServiceAlert
 from .const import (
+    ATTRIBUTION,
     CONF_DESTINATION,
     CONF_ENTRY_TYPE,
     CONF_NUM_DEPARTURES,
     CONF_ORIGIN,
+    CONF_ROUTE_ID,
     CONF_STATION,
     DEFAULT_NUM_DEPARTURES,
     DOMAIN,
     ENTRY_TYPE_ROUTE,
+    ENTRY_TYPE_STOP,
 )
-from .entity import RenfeStopEntity
+from .coordinator import RenfeAlertsCoordinator
+from .entity import RenfeStopEntity, build_device_info
+from .route_patterns import get_pattern, get_route_ids_for_line
 from .stations import get_station_name
 
 
@@ -51,27 +61,27 @@ async def async_setup_entry(
     entry_data: RenfeEntryData = hass.data[DOMAIN][entry.entry_id]
     num_departures = entry.options.get(CONF_NUM_DEPARTURES, DEFAULT_NUM_DEPARTURES)
 
+    entities: list[SensorEntity] = []
     if entry.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_ROUTE:
-        async_add_entities(
-            [
-                RenfeRouteDepartureSensor(
-                    entry_data.stop_coordinator,
-                    entry,
-                    destination=entry.data[CONF_DESTINATION],
-                    num_departures=num_departures,
-                )
-            ]
+        entities.append(
+            RenfeRouteDepartureSensor(
+                entry_data.stop_coordinator,
+                entry,
+                destination=entry.data[CONF_DESTINATION],
+                num_departures=num_departures,
+            )
         )
     else:
-        async_add_entities(
-            [
-                RenfeStopDepartureSensor(
-                    entry_data.stop_coordinator,
-                    entry,
-                    num_departures=num_departures,
-                )
-            ]
+        entities.append(
+            RenfeStopDepartureSensor(
+                entry_data.stop_coordinator,
+                entry,
+                num_departures=num_departures,
+            )
         )
+
+    entities.append(RenfeAlertsSensor(entry_data.alerts_coordinator, entry))
+    async_add_entities(entities)
 
 
 class RenfeStopDepartureSensor(RenfeStopEntity, SensorEntity):
@@ -150,3 +160,58 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
         if first is not None:
             attrs.update(_departure_attrs(first))
         return attrs
+
+
+class RenfeAlertsSensor(CoordinatorEntity[RenfeAlertsCoordinator], SensorEntity):
+    """Avisos de servicio (GTFS-RT) que afectan a una parada o ruta favorita.
+
+    Para una parada se buscan avisos que mencionen explícitamente su código
+    de estación; para una ruta, avisos de cualquiera de los `route_id`
+    (ambos sentidos) de su misma línea, ya que Renfe suele publicarlos a
+    nivel de línea completa.
+    """
+
+    _attr_attribution = ATTRIBUTION
+    _attr_has_entity_name = True
+    _attr_translation_key = "service_alerts"
+    _attr_icon = "mdi:alert-circle-outline"
+    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_native_unit_of_measurement = "avisos"
+
+    def __init__(
+        self, coordinator: RenfeAlertsCoordinator, entry: ConfigEntry
+    ) -> None:
+        super().__init__(coordinator)
+        self._attr_device_info = build_device_info(entry)
+
+        if entry.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_STOP:
+            station_code = entry.data[CONF_STATION]
+            self._attr_unique_id = f"stop_{station_code}_service_alerts"
+            self._station_code: str | None = station_code
+            self._route_ids: set[str] = set()
+        else:
+            origin = entry.data[CONF_ORIGIN]
+            destination = entry.data[CONF_DESTINATION]
+            self._attr_unique_id = f"route_{origin}_{destination}_service_alerts"
+            self._station_code = None
+            route_id = entry.data.get(CONF_ROUTE_ID, "")
+            pattern = get_pattern(route_id)
+            self._route_ids = (
+                get_route_ids_for_line(pattern["linea"], pattern["nucleo"])
+                if pattern
+                else set()
+            )
+
+    @property
+    def _alerts(self) -> list[ServiceAlert]:
+        if self._station_code is not None:
+            return self.coordinator.get_alerts_for_stop(self._station_code)
+        return self.coordinator.get_alerts_for_routes(self._route_ids)
+
+    @property
+    def native_value(self) -> int:
+        return len(self._alerts)
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"avisos": [alert.texto for alert in self._alerts]}

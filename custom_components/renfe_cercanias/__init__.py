@@ -13,11 +13,14 @@ from homeassistant.helpers.storage import Store
 from homeassistant.helpers.typing import ConfigType
 
 from .const import (
+    ALERTS_COORDINATOR,
+    CONF_ALERTS_SCAN_INTERVAL,
     CONF_ENTRY_TYPE,
     CONF_FLEET_SCAN_INTERVAL,
     CONF_ORIGIN,
     CONF_STATION,
     CONF_STOPS_SCAN_INTERVAL,
+    DEFAULT_ALERTS_SCAN_INTERVAL,
     DEFAULT_FLEET_SCAN_INTERVAL,
     DEFAULT_STOPS_SCAN_INTERVAL,
     DOMAIN,
@@ -25,7 +28,7 @@ from .const import (
     ENTRY_TYPE_STOP,
     FLEET_COORDINATOR,
 )
-from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
+from .coordinator import RenfeAlertsCoordinator, RenfeFleetCoordinator, RenfeStopCoordinator
 from .route_patterns import preload as preload_route_patterns
 from .stations import preload as preload_stations
 
@@ -129,6 +132,7 @@ class RenfeEntryData:
 
     stop_coordinator: RenfeStopCoordinator
     fleet_coordinator: RenfeFleetCoordinator | None
+    alerts_coordinator: RenfeAlertsCoordinator
 
 
 def _platforms_for_entry(entry: ConfigEntry) -> list[Platform]:
@@ -156,6 +160,23 @@ async def _async_get_fleet_coordinator(
     return coordinator
 
 
+async def _async_get_alerts_coordinator(
+    hass: HomeAssistant, scan_interval: int
+) -> RenfeAlertsCoordinator:
+    """Devuelve el coordinador de avisos de servicio compartido.
+
+    Igual que el de flota, se comparte entre todas las entradas (paradas y
+    rutas) y solo se refresca por primera vez al crearlo.
+    """
+    domain_data = hass.data.setdefault(DOMAIN, {})
+    coordinator: RenfeAlertsCoordinator | None = domain_data.get(ALERTS_COORDINATOR)
+    if coordinator is None:
+        coordinator = RenfeAlertsCoordinator(hass, scan_interval)
+        await coordinator.async_config_entry_first_refresh()
+        domain_data[ALERTS_COORDINATOR] = coordinator
+    return coordinator
+
+
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Configura una entrada (parada o ruta favorita) a partir del config flow."""
     await _async_warm_caches(hass)
@@ -168,6 +189,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     )
     fleet_interval = entry.options.get(
         CONF_FLEET_SCAN_INTERVAL, DEFAULT_FLEET_SCAN_INTERVAL
+    )
+    alerts_interval = entry.options.get(
+        CONF_ALERTS_SCAN_INTERVAL, DEFAULT_ALERTS_SCAN_INTERVAL
     )
 
     station_code = (
@@ -183,9 +207,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if entry_type == ENTRY_TYPE_ROUTE:
         fleet_coordinator = await _async_get_fleet_coordinator(hass, fleet_interval)
 
+    alerts_coordinator = await _async_get_alerts_coordinator(hass, alerts_interval)
+
     hass.data.setdefault(DOMAIN, {})[entry.entry_id] = RenfeEntryData(
         stop_coordinator=stop_coordinator,
         fleet_coordinator=fleet_coordinator,
+        alerts_coordinator=alerts_coordinator,
     )
 
     await hass.config_entries.async_forward_entry_setups(
@@ -208,13 +235,16 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if unloaded:
         hass.data[DOMAIN].pop(entry.entry_id, None)
 
-        remaining_routes = [
+        remaining_entries = [
             other
             for other in hass.config_entries.async_entries(DOMAIN)
             if other.entry_id != entry.entry_id
-            and other.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_ROUTE
         ]
-        if not remaining_routes:
+        if not any(
+            other.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_ROUTE for other in remaining_entries
+        ):
             hass.data[DOMAIN].pop(FLEET_COORDINATOR, None)
+        if not remaining_entries:
+            hass.data[DOMAIN].pop(ALERTS_COORDINATOR, None)
 
     return unloaded

@@ -76,6 +76,22 @@ def get_route_color(route_id: str) -> str | None:
     return pattern["color"] if pattern else None
 
 
+def get_route_ids_for_line(linea: str, nucleo: str) -> set[str]:
+    """Devuelve todos los `route_id` (ambos sentidos) de una línea+núcleo.
+
+    Los avisos de servicio de Renfe se publican por `routeId`, pero pueden
+    referirse a cualquiera de los sentidos de una línea; para no perder
+    avisos relevantes de una ruta favorita hay que comprobar todos los
+    `route_id` conocidos de su misma línea, no solo el de la salida
+    concreta que se usó para configurarla.
+    """
+    return {
+        route_id
+        for route_id, pattern in _all_patterns().items()
+        if pattern["linea"] == linea and pattern["nucleo"] == nucleo
+    }
+
+
 def preload() -> None:
     """Fuerza la carga (y cacheado) del fichero de patrones.
 

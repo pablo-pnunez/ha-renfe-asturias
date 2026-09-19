@@ -1,6 +1,8 @@
 """Ubicación en tiempo real del tren de una ruta favorita."""
 from __future__ import annotations
 
+import math
+
 from homeassistant.components.device_tracker import SourceType, TrackerEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
@@ -8,14 +10,51 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import RenfeEntryData
-from .api import TrainPosition
-from .const import ATTRIBUTION, CONF_DESTINATION, CONF_ORIGIN, CONF_ROUTE_ID, DOMAIN
+from .api import TrainPosition, VehicleStatus
+from .const import (
+    ATTRIBUTION,
+    CONF_DESTINATION,
+    CONF_ORIGIN,
+    CONF_ROUTE_ID,
+    DOMAIN,
+    VEHICLE_STATUS_IN_TRANSIT,
+    VEHICLE_STATUS_INCOMING,
+    VEHICLE_STATUS_STOPPED,
+)
 from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
 from .entity import build_device_info
 from .route_patterns import PatternStop, get_pattern, get_route_segment
-from .stations import get_station_name
+from .stations import get_station_name, get_stations_by_code
 
 NOT_RUNNING = "sin_circular"
+
+# % de avance asumido cuando el GTFS-RT indica que el tren está llegando a
+# la parada (no da un porcentaje exacto, pero "llegando" implica ya casi al
+# final del tramo).
+INCOMING_PROGRESS_PCT = 90.0
+
+
+def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Distancia en línea recta (km) entre dos coordenadas."""
+    earth_radius_km = 6371.0088
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = (
+        math.sin(dphi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    )
+    return 2 * earth_radius_km * math.asin(math.sqrt(a))
+
+
+def _parse_legacy_progress(value: str | None) -> float | None:
+    """Intenta interpretar el campo `porAvanc` (sin documentar) del visor clásico."""
+    if not value:
+        return None
+    try:
+        return max(0.0, min(100.0, float(value)))
+    except ValueError:
+        return None
 
 
 async def async_setup_entry(
@@ -118,6 +157,53 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
                 return index
         return None
 
+    def _compute_progress_pct(self, train: TrainPosition) -> float | None:
+        """Calcula el % de avance (0-100) entre la estación actual y la siguiente.
+
+        Usa el `currentStatus` GTFS-RT (`vehicle_positions.json`), un dato
+        estandarizado y mucho más fiable que el campo `porAvanc` (sin
+        documentar) del visor clásico de Renfe: si el tren está parado, el
+        avance es 0%; si está en tránsito, se calcula geométricamente la
+        proporción recorrida entre ambas paradas a partir de sus
+        coordenadas. Si no hay estado GTFS-RT disponible para este viaje, se
+        recurre al campo clásico como último recurso.
+        """
+        status: VehicleStatus | None = self.coordinator.get_status_by_trip_id(
+            train.trip_id
+        )
+        if status is not None:
+            if status.current_status == VEHICLE_STATUS_STOPPED:
+                return 0.0
+            if status.current_status == VEHICLE_STATUS_INCOMING:
+                return INCOMING_PROGRESS_PCT
+            if status.current_status == VEHICLE_STATUS_IN_TRANSIT:
+                geo_pct = self._geometric_progress_pct(train)
+                if geo_pct is not None:
+                    return geo_pct
+
+        return _parse_legacy_progress(train.porcentaje_avance)
+
+    def _geometric_progress_pct(self, train: TrainPosition) -> float | None:
+        idx_actual = self._segment_index(train.estacion_actual_codigo)
+        idx_siguiente = self._segment_index(train.estacion_siguiente_codigo)
+        if idx_actual is None or idx_siguiente is None:
+            return None
+
+        stations = get_stations_by_code()
+        actual = stations.get(self._paradas[idx_actual]["codigo"])
+        siguiente = stations.get(self._paradas[idx_siguiente]["codigo"])
+        if not actual or not siguiente:
+            return None
+
+        total_km = _haversine_km(actual["lat"], actual["lon"], siguiente["lat"], siguiente["lon"])
+        if total_km <= 0:
+            return None
+
+        recorrido_km = _haversine_km(
+            actual["lat"], actual["lon"], train.latitud, train.longitud
+        )
+        return max(0.0, min(100.0, recorrido_km / total_km * 100))
+
     @property
     def source_type(self) -> SourceType:
         return SourceType.GPS
@@ -149,6 +235,7 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
             attrs["indice_estacion_siguiente"] = None
             return attrs
 
+        status = self.coordinator.get_status_by_trip_id(train.trip_id)
         attrs.update(
             {
                 "en_circulacion": True,
@@ -167,7 +254,8 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
                 if train.hora_llegada_siguiente
                 else None,
                 "retraso_min": train.retraso_min,
-                "porcentaje_avance": train.porcentaje_avance,
+                "porcentaje_avance": self._compute_progress_pct(train),
+                "estado_gtfs_rt": status.current_status if status else None,
                 "via": train.via,
                 "accesible": train.accesible,
             }

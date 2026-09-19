@@ -18,15 +18,20 @@ Cantabria y Zaragoza.
 - **Rutas favoritas** (origen → destino): además del sensor de próxima salida para ese
   trayecto concreto, se crea una entidad `device_tracker` que sitúa el tren en el mapa de
   Home Assistant mientras está circulando, con línea, retraso, próxima parada y % de
-  avance como atributos. También expone el itinerario completo de paradas de la ruta
-  (orden real, extraído del GTFS oficial) y el índice de la parada actual/siguiente
-  dentro de ese itinerario, pensado para dashboards.
+  avance como atributos. El % de avance se calcula con el `currentStatus` GTFS-RT oficial
+  (parado / llegando / en tránsito) y, cuando el tren está en tránsito, con la posición
+  geométrica real entre ambas paradas. También expone el itinerario completo de paradas
+  de la ruta (orden real, extraído del GTFS oficial) y el índice de la parada
+  actual/siguiente dentro de ese itinerario, pensado para dashboards.
+- **Avisos de servicio**: cada parada y ruta favorita tiene un sensor con el número de
+  incidencias activas de Renfe que le afectan (obras, cambios de recorrido, ascensores
+  averiados...) y su texto completo como atributo.
 - **Tarjeta Lovelace incluida** (`renfe-route-card`): visualización lineal de una ruta
   favorita con todas sus paradas y un indicador que se mueve en directo según la posición
   del tren. Se registra automáticamente como recurso del frontend al instalar.
 - Todo se configura desde la interfaz (config flow), sin tocar YAML.
 - Opciones configurables: número de próximas salidas a mostrar e intervalos de
-  actualización de horarios y de posición GPS.
+  actualización de horarios, posición GPS y avisos de servicio.
 
 ## Instalación
 
@@ -85,6 +90,9 @@ Todos los datos provienen de fuentes públicas de Renfe:
 - Itinerario completo de cada línea (orden de paradas y color oficial): feed
   [GTFS estático de Cercanías](http://data.renfe.com) (`fomento_transit.zip`), usado para
   generar el catálogo embebido `route_patterns.json`.
+- Estado GTFS-Realtime oficial (`https://gtfsrt.renfe.com`): `vehicle_positions.json`
+  aporta el `currentStatus` de cada tren (parado / llegando / en tránsito), usado para
+  calcular con precisión el % de avance; `alerts.json` aporta los avisos de servicio.
 
 ## Limitaciones conocidas
 

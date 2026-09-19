@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 
 import aiohttp
 
-from .const import HTTP_HEADERS, URL_FLOTA, URL_SALIDAS
+from .const import HTTP_HEADERS, URL_ALERTS, URL_FLOTA, URL_SALIDAS, URL_VEHICLE_POSITIONS
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -89,6 +89,32 @@ class TrainPosition:
     longitud: float
     accesible: bool
     via: str | None
+
+
+@dataclass(slots=True)
+class VehicleStatus:
+    """Estado GTFS-RT (estandarizado) de un tren en circulación.
+
+    `stop_id` es la parada asociada a `current_status`: la estación donde
+    está parado (`STOPPED_AT`) o hacia la que se dirige
+    (`INCOMING_AT`/`IN_TRANSIT_TO`).
+    """
+
+    trip_id: str
+    latitud: float
+    longitud: float
+    current_status: str
+    stop_id: str
+
+
+@dataclass(slots=True)
+class ServiceAlert:
+    """Un aviso de servicio de Renfe (incidencias, obras, avisos puntuales)."""
+
+    alert_id: str
+    texto: str
+    route_ids: list[str]
+    stop_ids: list[str]
 
 
 async def _fetch_json(session: aiohttp.ClientSession, url: str) -> dict | list:
@@ -189,3 +215,70 @@ async def async_get_fleet(
             )
         )
     return positions
+
+
+async def async_get_vehicle_statuses(
+    session: aiohttp.ClientSession,
+) -> list[VehicleStatus]:
+    """Obtiene el estado GTFS-RT (`vehicle_positions`) de todos los trenes.
+
+    Complementa a `async_get_fleet`: aporta un `currentStatus` estandarizado
+    (`STOPPED_AT` / `INCOMING_AT` / `IN_TRANSIT_TO`) mucho más fiable que el
+    campo `porAvanc` (sin documentar) del visor clásico de Renfe, útil para
+    calcular con precisión en qué punto del trayecto está un tren.
+    """
+    raw = await _fetch_json(session, URL_VEHICLE_POSITIONS)
+    entities = raw.get("entity", []) if isinstance(raw, dict) else []
+
+    statuses: list[VehicleStatus] = []
+    for item in entities:
+        vehicle = item.get("vehicle") or {}
+        trip = vehicle.get("trip") or {}
+        position = vehicle.get("position") or {}
+        lat = _parse_float(position.get("latitude"))
+        lon = _parse_float(position.get("longitude"))
+        trip_id = str(trip.get("tripId", ""))
+        if not trip_id or lat is None or lon is None:
+            continue
+
+        statuses.append(
+            VehicleStatus(
+                trip_id=trip_id,
+                latitud=lat,
+                longitud=lon,
+                current_status=str(vehicle.get("currentStatus", "")),
+                stop_id=str(vehicle.get("stopId", "")),
+            )
+        )
+    return statuses
+
+
+async def async_get_alerts(session: aiohttp.ClientSession) -> list[ServiceAlert]:
+    """Obtiene los avisos de servicio (GTFS-RT `alerts`) activos."""
+    raw = await _fetch_json(session, URL_ALERTS)
+    entities = raw.get("entity", []) if isinstance(raw, dict) else []
+
+    alerts: list[ServiceAlert] = []
+    for item in entities:
+        alert = item.get("alert") or {}
+        informed = alert.get("informedEntity") or []
+        route_ids = [str(e["routeId"]) for e in informed if e.get("routeId")]
+        stop_ids = [str(e["stopId"]) for e in informed if e.get("stopId")]
+
+        translations = (alert.get("descriptionText") or {}).get("translation") or []
+        texto = next(
+            (t.get("text", "") for t in translations if t.get("language") == "es"),
+            translations[0].get("text", "") if translations else "",
+        )
+        if not texto:
+            continue
+
+        alerts.append(
+            ServiceAlert(
+                alert_id=str(item.get("id", "")),
+                texto=texto,
+                route_ids=route_ids,
+                stop_ids=stop_ids,
+            )
+        )
+    return alerts

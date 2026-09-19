@@ -58,7 +58,8 @@
         "data": {
           "num_departures": "Número de próximas salidas a mostrar",
           "stops_scan_interval": "Intervalo de actualización de horarios (segundos)",
-          "fleet_scan_interval": "Intervalo de actualización de la posición del tren (segundos)"
+          "fleet_scan_interval": "Intervalo de actualización de la posición del tren (segundos)",
+          "alerts_scan_interval": "Intervalo de actualización de avisos de servicio (segundos)"
         }
       }
     }
@@ -67,6 +68,9 @@
     "sensor": {
       "next_departure": {
         "name": "Próxima salida"
+      },
+      "service_alerts": {
+        "name": "Avisos de servicio"
       }
     },
     "device_tracker": {
