@@ -1,0 +1,113 @@
+"""Integración Renfe Cercanías Asturias: paradas y rutas favoritas."""
+from __future__ import annotations
+
+import logging
+from dataclasses import dataclass
+
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import HomeAssistant
+from homeassistant.const import Platform
+
+from .const import (
+    CONF_ENTRY_TYPE,
+    CONF_FLEET_SCAN_INTERVAL,
+    CONF_ORIGIN,
+    CONF_STATION,
+    CONF_STOPS_SCAN_INTERVAL,
+    DEFAULT_FLEET_SCAN_INTERVAL,
+    DEFAULT_STOPS_SCAN_INTERVAL,
+    DOMAIN,
+    ENTRY_TYPE_ROUTE,
+    ENTRY_TYPE_STOP,
+    FLEET_COORDINATOR,
+)
+from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
+
+_LOGGER = logging.getLogger(__name__)
+
+
+@dataclass
+class RenfeEntryData:
+    """Datos en tiempo de ejecución asociados a una config entry."""
+
+    stop_coordinator: RenfeStopCoordinator
+    fleet_coordinator: RenfeFleetCoordinator | None
+
+
+def _platforms_for_entry(entry: ConfigEntry) -> list[Platform]:
+    if entry.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_ROUTE:
+        return [Platform.SENSOR, Platform.DEVICE_TRACKER]
+    return [Platform.SENSOR]
+
+
+async def _async_get_fleet_coordinator(
+    hass: HomeAssistant, scan_interval: int
+) -> RenfeFleetCoordinator:
+    domain_data = hass.data.setdefault(DOMAIN, {})
+    coordinator: RenfeFleetCoordinator | None = domain_data.get(FLEET_COORDINATOR)
+    if coordinator is None:
+        coordinator = RenfeFleetCoordinator(hass, scan_interval)
+        domain_data[FLEET_COORDINATOR] = coordinator
+    return coordinator
+
+
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Configura una entrada (parada o ruta favorita) a partir del config flow."""
+    entry_type = entry.data[CONF_ENTRY_TYPE]
+
+    stops_interval = entry.options.get(
+        CONF_STOPS_SCAN_INTERVAL, DEFAULT_STOPS_SCAN_INTERVAL
+    )
+    fleet_interval = entry.options.get(
+        CONF_FLEET_SCAN_INTERVAL, DEFAULT_FLEET_SCAN_INTERVAL
+    )
+
+    station_code = (
+        entry.data[CONF_STATION]
+        if entry_type == ENTRY_TYPE_STOP
+        else entry.data[CONF_ORIGIN]
+    )
+
+    stop_coordinator = RenfeStopCoordinator(hass, station_code, stops_interval)
+    await stop_coordinator.async_config_entry_first_refresh()
+
+    fleet_coordinator: RenfeFleetCoordinator | None = None
+    if entry_type == ENTRY_TYPE_ROUTE:
+        fleet_coordinator = await _async_get_fleet_coordinator(hass, fleet_interval)
+        await fleet_coordinator.async_config_entry_first_refresh()
+
+    hass.data.setdefault(DOMAIN, {})[entry.entry_id] = RenfeEntryData(
+        stop_coordinator=stop_coordinator,
+        fleet_coordinator=fleet_coordinator,
+    )
+
+    await hass.config_entries.async_forward_entry_setups(
+        entry, _platforms_for_entry(entry)
+    )
+    entry.async_on_unload(entry.add_update_listener(_async_update_listener))
+    return True
+
+
+async def _async_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
+    """Recarga la entrada cuando cambian las opciones."""
+    await hass.config_entries.async_reload(entry.entry_id)
+
+
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Descarga una entrada de configuración."""
+    unloaded = await hass.config_entries.async_unload_platforms(
+        entry, _platforms_for_entry(entry)
+    )
+    if unloaded:
+        hass.data[DOMAIN].pop(entry.entry_id, None)
+
+        remaining_routes = [
+            other
+            for other in hass.config_entries.async_entries(DOMAIN)
+            if other.entry_id != entry.entry_id
+            and other.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_ROUTE
+        ]
+        if not remaining_routes:
+            hass.data[DOMAIN].pop(FLEET_COORDINATOR, None)
+
+    return unloaded

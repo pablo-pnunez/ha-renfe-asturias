@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "menu_options": {
+          "stop": "Parada favorita",
+          "route": "Ruta favorita"
+        }
+      },
+      "stop": {
+        "title": "Añadir parada favorita",
+        "description": "Elige la estación de Cercanías Asturias de la que quieres ver los próximos trenes.",
+        "data": {
+          "station": "Estación"
+        }
+      },
+      "route": {
+        "title": "Añadir ruta favorita",
+        "description": "Elige la estación de origen.",
+        "data": {
+          "origin": "Origen"
+        }
+      },
+      "route_destination": {
+        "title": "Añadir ruta favorita",
+        "description": "Elige el destino entre los trenes que salen de {origin}. Se creará un sensor con la próxima salida y, mientras haya un tren circulando en ese trayecto, se mostrará su ubicación en el mapa.",
+        "data": {
+          "destination": "Destino"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se ha podido consultar los horarios en tiempo real de Renfe. Inténtalo de nuevo.",
+      "no_destinations": "No se han encontrado trenes saliendo de esta estación ahora mismo. Inténtalo de nuevo más tarde."
+    },
+    "abort": {
+      "already_configured": "Esta parada o ruta ya está configurada"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones de Renfe Cercanías Asturias",
+        "data": {
+          "num_departures": "Número de próximas salidas a mostrar",
+          "stops_scan_interval": "Intervalo de actualización de horarios (segundos)",
+          "fleet_scan_interval": "Intervalo de actualización de la posición del tren (segundos)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_departure": {
+        "name": "Próxima salida"
+      }
+    },
+    "device_tracker": {
+      "train_position": {
+        "name": "Tren"
+      }
+    }
+  }
+}

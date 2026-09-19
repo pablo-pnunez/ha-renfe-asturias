@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "menu_options": {
+          "stop": "Favorite stop",
+          "route": "Favorite route"
+        }
+      },
+      "stop": {
+        "title": "Add favorite stop",
+        "description": "Choose the Cercanías Asturias station you want to see upcoming trains for.",
+        "data": {
+          "station": "Station"
+        }
+      },
+      "route": {
+        "title": "Add favorite route",
+        "description": "Choose the origin station.",
+        "data": {
+          "origin": "Origin"
+        }
+      },
+      "route_destination": {
+        "title": "Add favorite route",
+        "description": "Choose the destination among the trains departing from {origin}. A sensor with the next departure will be created and, while a train is running on this route, its live location will be shown on the map.",
+        "data": {
+          "destination": "Destination"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not fetch Renfe's live timetable. Please try again.",
+      "no_destinations": "No trains found departing from this station right now. Please try again later."
+    },
+    "abort": {
+      "already_configured": "This stop or route is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Renfe Cercanías Asturias options",
+        "data": {
+          "num_departures": "Number of upcoming departures to show",
+          "stops_scan_interval": "Timetable update interval (seconds)",
+          "fleet_scan_interval": "Train position update interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_departure": {
+        "name": "Next departure"
+      }
+    },
+    "device_tracker": {
+      "train_position": {
+        "name": "Train"
+      }
+    }
+  }
+}
