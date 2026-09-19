@@ -129,6 +129,19 @@ class RenfeRouteCard extends HTMLElement {
           color: var(--error-color, #db4437);
           font-weight: 500;
         }
+        .renfe-times {
+          padding: 4px 16px 0 16px;
+          font-size: 0.8rem;
+          color: var(--secondary-text-color);
+        }
+        .renfe-times b {
+          color: var(--primary-text-color);
+          font-weight: 500;
+        }
+        .renfe-times .sep {
+          margin: 0 6px;
+          opacity: 0.6;
+        }
         .renfe-track-wrap {
           width: 100%;
           padding: 28px ${TRACK_RIGHT_PADDING_PX}px ${TRACK_BOTTOM_PADDING_PX}px ${TRACK_LEFT_PADDING_PX}px;
@@ -218,6 +231,7 @@ class RenfeRouteCard extends HTMLElement {
         <span class="renfe-title"></span>
         <span class="renfe-status"></span>
       </div>
+      <div class="renfe-times"></div>
       <div class="renfe-body"></div>
     `;
     this.innerHTML = "";
@@ -226,6 +240,7 @@ class RenfeRouteCard extends HTMLElement {
     this._dotEl = card.querySelector(".renfe-dot");
     this._titleEl = card.querySelector(".renfe-title");
     this._statusEl = card.querySelector(".renfe-status");
+    this._timesEl = card.querySelector(".renfe-times");
     this._bodyEl = card.querySelector(".renfe-body");
 
     if (!this._resizeObserver && this.isConnected) {
@@ -238,7 +253,15 @@ class RenfeRouteCard extends HTMLElement {
     this._dotEl.style.background = "var(--disabled-text-color)";
     this._titleEl.textContent = this._config.entity;
     this._statusEl.textContent = "Entidad no encontrada";
+    this._timesEl.innerHTML = "";
     this._bodyEl.innerHTML = "";
+  }
+
+  _formatTime(iso) {
+    if (!iso) return null;
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return null;
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   }
 
   _render(stateObj) {
@@ -271,6 +294,16 @@ class RenfeRouteCard extends HTMLElement {
       }
     }
 
+    const horaSalida = this._formatTime(attrs.hora_salida_origen);
+    const horaLlegada = this._formatTime(attrs.hora_llegada_destino);
+    if (horaSalida && horaLlegada) {
+      this._timesEl.innerHTML = `Sale <b>${horaSalida}</b><span class="sep">→</span>Llega <b>${horaLlegada}</b>`;
+    } else if (horaSalida) {
+      this._timesEl.innerHTML = `Sale <b>${horaSalida}</b>`;
+    } else {
+      this._timesEl.innerHTML = "";
+    }
+
     if (!paradas.length) {
       this._bodyEl.innerHTML =
         '<div class="renfe-empty">No se conoce el itinerario de esta línea todavía.</div>';
@@ -300,8 +333,12 @@ class RenfeRouteCard extends HTMLElement {
       const leftPct = n > 1 ? (i / (n - 1)) * 100 : 0;
       const labeled = labeledIndices.has(i);
       const reached = ratio !== null && leftPct / 100 <= ratio + 1e-6;
+      const stopTime = this._formatTime(paradas[i].hora_estimada);
+      const tooltip = stopTime
+        ? `${paradas[i].nombre} — ${stopTime}`
+        : paradas[i].nombre;
       const label = labeled
-        ? `<div class="renfe-stop-label" title="${this._escape(paradas[i].nombre)}">${this._escape(
+        ? `<div class="renfe-stop-label" title="${this._escape(tooltip)}">${this._escape(
             paradas[i].nombre
           )}</div>`
         : "";

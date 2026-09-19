@@ -21,6 +21,11 @@ class PatternStop(TypedDict):
 
     codigo: str
     nombre: str
+    offset_min: int
+    """Minutos programados (GTFS) desde la salida de la primera parada del
+    patrón hasta esta; permite calcular la hora estimada de paso por
+    cualquier parada a partir de la hora de salida real de una ruta
+    favorita concreta."""
 
 
 class RoutePattern(TypedDict):
@@ -68,6 +73,26 @@ def get_route_segment(
         return None
 
     return paradas[origin_idx : destination_idx + 1]
+
+
+def get_travel_time_min(
+    route_id: str, origin_code: str, destination_code: str
+) -> int | None:
+    """Minutos de viaje programados (GTFS) entre dos paradas del mismo patrón.
+
+    Se calcula como la diferencia de `offset_min`, así que funciona para
+    cualquier par de paradas del itinerario (no solo los extremos de la
+    ruta favorita), incluidas las intermedias.
+    """
+    pattern = get_pattern(route_id)
+    if pattern is None:
+        return None
+
+    offsets = {parada["codigo"]: parada["offset_min"] for parada in pattern["paradas"]}
+    if origin_code not in offsets or destination_code not in offsets:
+        return None
+
+    return offsets[destination_code] - offsets[origin_code]
 
 
 def get_route_color(route_id: str) -> str | None:

@@ -1,7 +1,7 @@
 """Sensores de próximas salidas y avisos de servicio para paradas y rutas favoritas."""
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -30,11 +30,21 @@ from .const import (
 )
 from .coordinator import RenfeAlertsCoordinator
 from .entity import RenfeStopEntity, build_device_info
-from .route_patterns import get_pattern, get_route_ids_for_line
+from .route_patterns import get_pattern, get_route_ids_for_line, get_travel_time_min
 from .stations import get_station_name
 
 
-def _departure_attrs(departure: Departure) -> dict:
+def _departure_attrs(departure: Departure, origin_code: str) -> dict:
+    hora_llegada_estimada = None
+    if departure.hora_salida is not None:
+        travel_min = get_travel_time_min(
+            departure.route_id, origin_code, departure.destino_codigo
+        )
+        if travel_min is not None:
+            hora_llegada_estimada = (
+                departure.hora_salida + timedelta(minutes=travel_min)
+            ).isoformat()
+
     return {
         "linea": departure.linea,
         "destino": departure.destino_nombre,
@@ -45,6 +55,7 @@ def _departure_attrs(departure: Departure) -> dict:
         "hora_salida_planificada": departure.hora_salida_planificada.isoformat()
         if departure.hora_salida_planificada
         else None,
+        "hora_llegada_estimada": hora_llegada_estimada,
         "retraso_min": departure.retraso_min,
         "via": departure.via,
         "accesible": departure.accesible,
@@ -94,8 +105,8 @@ class RenfeStopDepartureSensor(RenfeStopEntity, SensorEntity):
     def __init__(self, coordinator, entry: ConfigEntry, num_departures: int) -> None:
         super().__init__(coordinator, entry)
         self._num_departures = num_departures
-        station_code = entry.data[CONF_STATION]
-        self._attr_unique_id = f"stop_{station_code}_next_departure"
+        self._station_code = entry.data[CONF_STATION]
+        self._attr_unique_id = f"stop_{self._station_code}_next_departure"
 
     @property
     def _departures(self) -> list[Departure]:
@@ -110,9 +121,13 @@ class RenfeStopDepartureSensor(RenfeStopEntity, SensorEntity):
     def extra_state_attributes(self) -> dict:
         departures = self._departures[: self._num_departures]
         first = departures[0] if departures else None
-        attrs: dict = {"salidas": [_departure_attrs(dep) for dep in departures]}
+        attrs: dict = {
+            "salidas": [
+                _departure_attrs(dep, self._station_code) for dep in departures
+            ]
+        }
         if first is not None:
-            attrs.update(_departure_attrs(first))
+            attrs.update(_departure_attrs(first, self._station_code))
         return attrs
 
 
@@ -133,8 +148,8 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
         super().__init__(coordinator, entry)
         self._destination = destination
         self._num_departures = num_departures
-        origin = entry.data.get(CONF_ORIGIN)
-        self._attr_unique_id = f"route_{origin}_{destination}_next_departure"
+        self._origin = entry.data.get(CONF_ORIGIN)
+        self._attr_unique_id = f"route_{self._origin}_{destination}_next_departure"
 
     @property
     def _departures(self) -> list[Departure]:
@@ -155,10 +170,10 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
         first = departures[0] if departures else None
         attrs: dict = {
             "destino": get_station_name(self._destination),
-            "salidas": [_departure_attrs(dep) for dep in departures],
+            "salidas": [_departure_attrs(dep, self._origin) for dep in departures],
         }
         if first is not None:
-            attrs.update(_departure_attrs(first))
+            attrs.update(_departure_attrs(first, self._origin))
         return attrs
 
 

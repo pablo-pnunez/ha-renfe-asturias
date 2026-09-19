@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import math
+from datetime import datetime, timedelta
 
 from homeassistant.components.device_tracker import SourceType, TrackerEntity
 from homeassistant.config_entries import ConfigEntry
@@ -10,7 +11,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import RenfeEntryData
-from .api import TrainPosition, VehicleStatus
+from .api import Departure, TrainPosition, VehicleStatus
 from .const import (
     ATTRIBUTION,
     CONF_DESTINATION,
@@ -23,7 +24,12 @@ from .const import (
 )
 from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
 from .entity import build_device_info
-from .route_patterns import PatternStop, get_pattern, get_route_segment
+from .route_patterns import (
+    PatternStop,
+    get_pattern,
+    get_route_segment,
+    get_travel_time_min,
+)
 from .stations import get_station_name, get_stations_by_code
 
 NOT_RUNNING = "sin_circular"
@@ -140,7 +146,7 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
         return super().state
 
     @property
-    def _current_trip_id(self) -> str | None:
+    def _current_departure(self) -> Departure | None:
         # Dos líneas distintas pueden compartir destino final (p.ej. varias
         # rutas que terminan en la misma estación cabecera); si se vinculara
         # el tren solo por destino, podría acabar siendo uno de otra línea,
@@ -151,13 +157,63 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
                 departure.destino_codigo == self._destination
                 and departure.linea == self._linea
             ):
-                return departure.trip_id
+                return departure
         return None
 
     @property
     def _train(self) -> TrainPosition | None:
-        trip_id = self._current_trip_id
-        return self.coordinator.get_train_by_trip_id(trip_id) if trip_id else None
+        departure = self._current_departure
+        return (
+            self.coordinator.get_train_by_trip_id(departure.trip_id)
+            if departure
+            else None
+        )
+
+    @property
+    def _hora_salida_origen(self) -> datetime | None:
+        departure = self._current_departure
+        return departure.hora_salida if departure else None
+
+    @property
+    def _hora_llegada_destino(self) -> datetime | None:
+        hora_salida = self._hora_salida_origen
+        if hora_salida is None:
+            return None
+        travel_min = get_travel_time_min(
+            self._route_id, self._origin, self._destination
+        )
+        if travel_min is None:
+            return None
+        return hora_salida + timedelta(minutes=travel_min)
+
+    def _paradas_con_hora(self) -> list[dict]:
+        """Itinerario del tramo con la hora estimada de paso por cada parada.
+
+        La hora se calcula a partir de la hora de salida real/estimada del
+        origen más los minutos programados (GTFS) entre paradas; es una
+        estimación (asume que el recorrido sigue el horario programado desde
+        ese punto), no una predicción en tiempo real por parada.
+        """
+        if not self._paradas:
+            return []
+
+        hora_salida = self._hora_salida_origen
+        offset_origen = self._paradas[0]["offset_min"]
+
+        paradas_con_hora = []
+        for parada in self._paradas:
+            hora_estimada = None
+            if hora_salida is not None:
+                delta = parada["offset_min"] - offset_origen
+                hora_estimada = (hora_salida + timedelta(minutes=delta)).isoformat()
+            paradas_con_hora.append(
+                {
+                    "codigo": parada["codigo"],
+                    "nombre": parada["nombre"],
+                    "hora_estimada": hora_estimada,
+                }
+            )
+        return paradas_con_hora
 
     def _segment_index(self, station_code: str) -> int | None:
         for index, parada in enumerate(self._paradas):
@@ -228,12 +284,20 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
 
     @property
     def extra_state_attributes(self) -> dict:
+        hora_salida_origen = self._hora_salida_origen
+        hora_llegada_destino = self._hora_llegada_destino
         attrs: dict = {
-            "paradas": self._paradas,
+            "paradas": self._paradas_con_hora(),
             "color": self._color,
             "linea": self._linea,
             "origen": get_station_name(self._origin),
             "destino": get_station_name(self._destination),
+            "hora_salida_origen": hora_salida_origen.isoformat()
+            if hora_salida_origen
+            else None,
+            "hora_llegada_destino": hora_llegada_destino.isoformat()
+            if hora_llegada_destino
+            else None,
         }
 
         train = self._train

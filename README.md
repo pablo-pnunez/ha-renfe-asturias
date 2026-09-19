@@ -22,7 +22,10 @@ Cantabria y Zaragoza.
   (parado / llegando / en tránsito) y, cuando el tren está en tránsito, con la posición
   geométrica real entre ambas paradas. También expone el itinerario completo de paradas
   de la ruta (orden real, extraído del GTFS oficial) y el índice de la parada
-  actual/siguiente dentro de ese itinerario, pensado para dashboards.
+  actual/siguiente dentro de ese itinerario, pensado para dashboards. También expone la
+  hora de salida real del origen, la hora estimada de llegada al destino y la hora
+  estimada de paso por cada parada intermedia (calculadas a partir de los tiempos de
+  recorrido programados del GTFS, sumados a la hora de salida real).
 - **Avisos de servicio**: cada parada y ruta favorita tiene un sensor con el número de
   incidencias activas de Renfe que le afectan (obras, cambios de recorrido, ascensores
   averiados...) y su texto completo como atributo.
