@@ -184,6 +184,21 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
 
     @property
     def _train(self) -> TrainPosition | None:
+        # La lista de "próximas salidas" de la estación deja de incluir un
+        # tren en cuanto sale de origen, así que un tren que ya lleva un
+        # buen tramo recorrido no se encuentra por ahí. Se busca primero
+        # directamente en la flota completa: cualquier tren de nuestra
+        # línea cuya posición actual (estación actual o siguiente) esté
+        # dentro de nuestro tramo y avance en la dirección correcta. Esto
+        # cubre tanto un tren recién salido como uno ya en tránsito
+        # avanzado.
+        for train in (self.coordinator.data.trains if self.coordinator.data else []):
+            if train.linea == self._linea and self._matches_direction(train):
+                return train
+
+        # Si ningún tren de la flota está todavía en nuestro tramo, se cae
+        # al tripId de la próxima salida prevista (por si ya circula pero
+        # con datos de posición aún no actualizados).
         departure = self._current_departure
         return (
             self.coordinator.get_train_by_trip_id(departure.trip_id)
@@ -191,10 +206,31 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
             else None
         )
 
+    def _matches_direction(self, train: TrainPosition) -> bool:
+        idx_actual = self._segment_index(train.estacion_actual_codigo)
+        idx_siguiente = self._segment_index(train.estacion_siguiente_codigo)
+        if idx_actual is not None and idx_siguiente is not None:
+            return idx_siguiente >= idx_actual
+        return idx_actual is not None or idx_siguiente is not None
+
     @property
     def _hora_salida_origen(self) -> datetime | None:
         departure = self._current_departure
-        return departure.hora_salida if departure else None
+        if departure is not None:
+            return departure.hora_salida
+
+        # El tren ya circula pero ya no aparece en "próximas salidas": se
+        # estima la hora de salida del origen a partir de la ETA a la
+        # siguiente parada, retrocediendo los minutos programados (GTFS)
+        # entre el origen y esa parada.
+        train = self._train
+        if train is None or train.hora_llegada_siguiente is None:
+            return None
+        idx_siguiente = self._segment_index(train.estacion_siguiente_codigo)
+        if idx_siguiente is None or not self._paradas:
+            return None
+        delta_min = self._paradas[idx_siguiente]["offset_min"] - self._paradas[0]["offset_min"]
+        return train.hora_llegada_siguiente - timedelta(minutes=delta_min)
 
     @property
     def _hora_llegada_destino(self) -> datetime | None:
