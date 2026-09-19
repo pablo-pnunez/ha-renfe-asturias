@@ -163,6 +163,14 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
         # comprueba la línea y que el tren vaya en la dirección correcta:
         # su destino final debe llegar, como mínimo, hasta la parada que
         # elegimos como destino (offset GTFS mayor o igual al nuestro).
+        #
+        # El GTFS oficial de Renfe no siempre modela el trayecto completo de
+        # una línea como una sola ruta (esa misma C2, en el GTFS estático,
+        # no llega más allá de Oviedo aunque el servicio real continúe hasta
+        # San Juan de Nieva); si el destino real del tren ni siquiera
+        # aparece en nuestro patrón, se asume que el trayecto se extiende
+        # más allá de lo que el GTFS cubre y que igualmente pasa por nuestro
+        # destino, en vez de descartarlo.
         if self._destination_offset is None:
             return None
 
@@ -170,7 +178,7 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
             if departure.linea != self._linea:
                 continue
             dest_offset = self._offsets.get(departure.destino_codigo)
-            if dest_offset is not None and dest_offset >= self._destination_offset:
+            if dest_offset is None or dest_offset >= self._destination_offset:
                 return departure
         return None
 

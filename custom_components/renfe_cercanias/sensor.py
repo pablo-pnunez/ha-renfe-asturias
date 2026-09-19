@@ -187,7 +187,12 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
         # nota en device_tracker.RenfeRouteTrainTracker._current_departure).
         # Basta con que la línea coincida y el tren llegue, como mínimo,
         # hasta nuestra parada de destino (offset GTFS mayor o igual, dentro
-        # de nuestro propio patrón de referencia).
+        # de nuestro propio patrón de referencia). Si el destino real del
+        # tren ni siquiera aparece en el patrón, el GTFS no cubre ese tramo
+        # (p.ej. la C2 de Asturias no llega, sobre el papel, más allá de
+        # Oviedo aunque el servicio real continúe hasta San Juan de Nieva):
+        # se asume que igualmente pasa por nuestro destino en vez de
+        # descartarlo.
         if self._destination_offset is None:
             return []
         result = []
@@ -195,7 +200,7 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
             if dep.linea != self._linea:
                 continue
             dest_offset = self._offsets.get(dep.destino_codigo)
-            if dest_offset is not None and dest_offset >= self._destination_offset:
+            if dest_offset is None or dest_offset >= self._destination_offset:
                 result.append(dep)
         return result
 
