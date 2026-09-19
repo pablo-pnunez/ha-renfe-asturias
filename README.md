@@ -77,6 +77,14 @@ Si tu Lovelace está en modo YAML puro, o el registro automático no funcionase 
 versión de Home Assistant, añade el recurso a mano en Ajustes → Panel de control →
 Recursos: `/renfe_cercanias/renfe-route-card.js` (tipo módulo JavaScript).
 
+## Icono de la integración
+
+El icono y logo se sirven directamente desde `custom_components/renfe_cercanias/brand/`
+gracias a la [Brands Proxy API](https://developers.home-assistant.io/blog/2026/02/24/brands-proxy-api)
+introducida en Home Assistant 2026.3: no requiere ningún PR externo ni configuración
+adicional. En versiones de Home Assistant anteriores a la 2026.3 no se mostrará (se verá
+el icono genérico de integración personalizada).
+
 ## Fuentes de datos
 
 Todos los datos provienen de fuentes públicas de Renfe:
