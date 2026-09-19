@@ -5,9 +5,14 @@
  * Configuración YAML mínima:
  *   type: custom:renfe-route-card
  *   entity: device_tracker.cercanias_oviedo_aviles_tren
+ *
+ * La tarjeta siempre ocupa el ancho disponible (nunca requiere scroll
+ * horizontal): mide su propio ancho con ResizeObserver y decide cuántas
+ * etiquetas de parada caben sin solaparse, mostrando siempre origen,
+ * destino y la parada actual/siguiente del tren cuando está circulando.
  */
 
-const STOP_WIDTH = 64; // px reservados por parada en la pista
+const MIN_LABEL_SPACING_PX = 46; // ancho mínimo por etiqueta para no solaparse
 
 class RenfeRouteCard extends HTMLElement {
   setConfig(config) {
@@ -16,6 +21,7 @@ class RenfeRouteCard extends HTMLElement {
     }
     this._config = config;
     this._built = false;
+    this._lastStateObj = null;
   }
 
   set hass(hass) {
@@ -32,7 +38,28 @@ class RenfeRouteCard extends HTMLElement {
       return;
     }
 
+    this._lastStateObj = stateObj;
     this._render(stateObj);
+  }
+
+  connectedCallback() {
+    if (this._resizeObserver || !this._built) return;
+    this._resizeObserver = new ResizeObserver(() => this._onResize());
+    this._resizeObserver.observe(this);
+  }
+
+  disconnectedCallback() {
+    if (this._resizeObserver) {
+      this._resizeObserver.disconnect();
+      this._resizeObserver = null;
+    }
+  }
+
+  _onResize() {
+    if (this._resizeFrame) cancelAnimationFrame(this._resizeFrame);
+    this._resizeFrame = requestAnimationFrame(() => {
+      if (this._lastStateObj) this._render(this._lastStateObj);
+    });
   }
 
   getCardSize() {
@@ -47,6 +74,10 @@ class RenfeRouteCard extends HTMLElement {
     const card = document.createElement("ha-card");
     card.innerHTML = `
       <style>
+        :host, ha-card {
+          display: block;
+          overflow: hidden;
+        }
         .renfe-header {
           display: flex;
           align-items: center;
@@ -66,23 +97,27 @@ class RenfeRouteCard extends HTMLElement {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          min-width: 0;
         }
         .renfe-status {
           margin-left: auto;
           font-size: 0.85rem;
           color: var(--secondary-text-color);
           white-space: nowrap;
+          flex-shrink: 0;
         }
         .renfe-status.delay {
           color: var(--error-color, #db4437);
           font-weight: 500;
         }
         .renfe-track-wrap {
-          overflow-x: auto;
-          padding: 28px 16px 40px 16px;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 28px 18px 40px 18px;
         }
         .renfe-track {
           position: relative;
+          width: 100%;
           height: 4px;
         }
         .renfe-line {
@@ -96,21 +131,32 @@ class RenfeRouteCard extends HTMLElement {
         }
         .renfe-stop {
           position: absolute;
-          top: -5px;
+          top: -4px;
           transform: translateX(-50%);
         }
         .renfe-stop-dot {
-          width: 14px;
-          height: 14px;
+          width: 12px;
+          height: 12px;
           border-radius: 50%;
           background: var(--card-background-color, white);
           border: 3px solid var(--divider-color, #9e9e9e);
           box-sizing: border-box;
         }
+        .renfe-stop.minor {
+          top: -2px;
+        }
+        .renfe-stop.minor .renfe-stop-dot {
+          width: 6px;
+          height: 6px;
+          border-width: 2px;
+        }
         .renfe-stop-label {
           position: absolute;
-          top: 20px;
-          left: 7px;
+          top: 18px;
+          left: 6px;
+          max-width: 90px;
+          overflow: hidden;
+          text-overflow: ellipsis;
           font-size: 0.72rem;
           color: var(--secondary-text-color);
           white-space: nowrap;
@@ -119,10 +165,10 @@ class RenfeRouteCard extends HTMLElement {
         }
         .renfe-indicator {
           position: absolute;
-          top: -9px;
+          top: -8px;
           transform: translateX(-50%);
-          width: 22px;
-          height: 22px;
+          width: 20px;
+          height: 20px;
           border-radius: 50%;
           background: var(--card-background-color, white);
           border: 4px solid var(--primary-color);
@@ -151,6 +197,11 @@ class RenfeRouteCard extends HTMLElement {
     this._titleEl = card.querySelector(".renfe-title");
     this._statusEl = card.querySelector(".renfe-status");
     this._bodyEl = card.querySelector(".renfe-body");
+
+    if (!this._resizeObserver && this.isConnected) {
+      this._resizeObserver = new ResizeObserver(() => this._onResize());
+      this._resizeObserver.observe(this);
+    }
   }
 
   _renderMissing() {
@@ -173,6 +224,7 @@ class RenfeRouteCard extends HTMLElement {
     this._titleEl.textContent =
       this._config.title ||
       (linea ? `${linea} · ${origen} → ${destino}` : `${origen} → ${destino}`);
+    this._titleEl.title = this._titleEl.textContent;
 
     if (!enCirculacion) {
       this._statusEl.textContent = "Sin tren en circulación";
@@ -195,19 +247,35 @@ class RenfeRouteCard extends HTMLElement {
     }
 
     const n = paradas.length;
-    const trackWidth = Math.max(100, (n - 1) * STOP_WIDTH);
+    const idxActual = enCirculacion ? attrs.indice_estacion_actual : null;
+    const idxSiguiente = enCirculacion ? attrs.indice_estacion_siguiente : null;
+
+    const availableWidth = this.clientWidth || this._card.clientWidth || 300;
+    const trackWidth = Math.max(0, availableWidth - 36); // menos el padding horizontal
+    const labeledIndices = this._pickLabeledIndices(
+      n,
+      trackWidth,
+      idxActual,
+      idxSiguiente
+    );
 
     let stopsHtml = "";
     for (let i = 0; i < n; i++) {
       const leftPct = n > 1 ? (i / (n - 1)) * 100 : 0;
+      const labeled = labeledIndices.has(i);
+      const label = labeled
+        ? `<div class="renfe-stop-label" title="${this._escape(paradas[i].nombre)}">${this._escape(
+            paradas[i].nombre
+          )}</div>`
+        : "";
       stopsHtml += `
-        <div class="renfe-stop" style="left:${leftPct}%">
+        <div class="renfe-stop${labeled ? "" : " minor"}" style="left:${leftPct}%">
           <div class="renfe-stop-dot" style="border-color:${color}"></div>
-          <div class="renfe-stop-label">${this._escape(paradas[i].nombre)}</div>
+          ${label}
         </div>`;
     }
 
-    const ratio = this._computePositionRatio(attrs);
+    const ratio = this._computePositionRatio(n, idxActual, idxSiguiente, attrs.porcentaje_avance);
     let indicatorHtml = "";
     if (ratio !== null) {
       indicatorHtml = `<div class="renfe-indicator" style="left:${
@@ -217,7 +285,7 @@ class RenfeRouteCard extends HTMLElement {
 
     this._bodyEl.innerHTML = `
       <div class="renfe-track-wrap">
-        <div class="renfe-track" style="min-width:${trackWidth}px">
+        <div class="renfe-track">
           <div class="renfe-line" style="background:${color}55"></div>
           ${stopsHtml}
           ${indicatorHtml}
@@ -226,14 +294,45 @@ class RenfeRouteCard extends HTMLElement {
     `;
   }
 
-  _computePositionRatio(attrs) {
-    const idxActual = attrs.indice_estacion_actual;
-    const idxSiguiente = attrs.indice_estacion_siguiente;
-    const n = (attrs.paradas || []).length;
+  /**
+   * Decide qué índices de parada llevan etiqueta de texto, para que quepan
+   * sin solaparse en el ancho real disponible. Siempre se etiquetan el
+   * origen, el destino y (si hay tren circulando) la parada actual y la
+   * siguiente; el resto se reparte de forma uniforme hasta llenar el hueco.
+   */
+  _pickLabeledIndices(n, trackWidthPx, idxActual, idxSiguiente) {
+    const mustHave = new Set([0, n - 1]);
+    if (idxActual !== null && idxActual !== undefined) mustHave.add(idxActual);
+    if (idxSiguiente !== null && idxSiguiente !== undefined) mustHave.add(idxSiguiente);
 
-    if (!attrs.en_circulacion || idxActual === null || idxActual === undefined) {
-      return null;
+    const maxLabels = Math.max(
+      mustHave.size,
+      Math.min(n, Math.floor(trackWidthPx / MIN_LABEL_SPACING_PX) + 1)
+    );
+
+    const indices = new Set(mustHave);
+    if (maxLabels > indices.size && n > 2) {
+      const remainingSlots = maxLabels - indices.size;
+      const step = (n - 1) / (remainingSlots + 1);
+      for (let k = 1; k <= remainingSlots; k++) {
+        const idx = Math.round(step * k);
+        if (idx > 0 && idx < n - 1) indices.add(idx);
+      }
     }
+
+    // Si ni siquiera caben todas las "obligatorias" (origen, destino, tren
+    // actual/siguiente) con un mínimo de holgura -en una tarjeta muy
+    // estrecha-, nos quedamos solo con origen y destino para evitar
+    // amontonar el texto.
+    const avgSpacingPx = trackWidthPx / Math.max(1, indices.size - 1 || 1);
+    if (indices.size > 2 && avgSpacingPx < MIN_LABEL_SPACING_PX * 0.6) {
+      return new Set([0, n - 1]);
+    }
+    return indices;
+  }
+
+  _computePositionRatio(n, idxActual, idxSiguiente, porcentajeAvance) {
+    if (idxActual === null || idxActual === undefined) return null;
     if (n <= 1) return 0;
 
     let target = idxActual;
@@ -242,7 +341,7 @@ class RenfeRouteCard extends HTMLElement {
       idxSiguiente !== undefined &&
       idxSiguiente !== idxActual
     ) {
-      const raw = parseFloat(attrs.porcentaje_avance);
+      const raw = parseFloat(porcentajeAvance);
       const pct = Number.isFinite(raw) ? Math.min(Math.max(raw, 0), 100) / 100 : 0;
       target = idxActual + (idxSiguiente - idxActual) * pct;
     }
