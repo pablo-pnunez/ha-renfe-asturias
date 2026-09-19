@@ -215,16 +215,25 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
 
     @property
     def _hora_salida_origen(self) -> datetime | None:
-        departure = self._current_departure
-        if departure is not None:
-            return departure.hora_salida
+        # Debe corresponder al MISMO tren que `_train` (por tripId): si se
+        # buscara la hora de salida por separado en la lista de "próximas
+        # salidas", podría encontrarse la de un tren FUTURO distinto del
+        # que realmente se está siguiendo (p.ej. si el tren en curso ya no
+        # aparece ahí, `_current_departure` devolvería la siguiente salida
+        # programada, de otro tren).
+        train = self._train
+        if train is None:
+            return None
+
+        for departure in self._stop_coordinator.data or []:
+            if departure.trip_id == train.trip_id:
+                return departure.hora_salida
 
         # El tren ya circula pero ya no aparece en "próximas salidas": se
         # estima la hora de salida del origen a partir de la ETA a la
         # siguiente parada, retrocediendo los minutos programados (GTFS)
         # entre el origen y esa parada.
-        train = self._train
-        if train is None or train.hora_llegada_siguiente is None:
+        if train.hora_llegada_siguiente is None:
             return None
         idx_siguiente = self._segment_index(train.estacion_siguiente_codigo)
         if idx_siguiente is None or not self._paradas:
