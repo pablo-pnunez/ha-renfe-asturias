@@ -44,6 +44,7 @@ CONF_NUM_DEPARTURES: Final = "num_departures"
 CONF_STOPS_SCAN_INTERVAL: Final = "stops_scan_interval"
 CONF_FLEET_SCAN_INTERVAL: Final = "fleet_scan_interval"
 CONF_ALERTS_SCAN_INTERVAL: Final = "alerts_scan_interval"
+CONF_NOTIFY_SERVICE: Final = "notify_service"
 
 DEFAULT_NUM_DEPARTURES: Final = 5
 DEFAULT_STOPS_SCAN_INTERVAL: Final = 60

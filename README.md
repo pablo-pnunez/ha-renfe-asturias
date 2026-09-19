@@ -29,12 +29,20 @@ Cantabria y Zaragoza.
 - **Avisos de servicio**: cada parada y ruta favorita tiene un sensor con el número de
   incidencias activas de Renfe que le afectan (obras, cambios de recorrido, ascensores
   averiados...) y su texto completo como atributo.
+- **Notificaciones automáticas de avisos**: en cuanto aparece un aviso nuevo para una
+  parada o ruta favorita, la propia integración lo notifica, sin necesidad de crear
+  ninguna automatización. Siempre se crea una notificación persistente en Home Assistant;
+  además, si en las opciones de esa parada/ruta se indica un servicio de notificación
+  (p.ej. la app móvil), se envía también como notificación push a ese destino. También se
+  emite un evento `renfe_cercanias_service_alert` para quien quiera construir sus propias
+  automaciones a partir de él.
 - **Tarjeta Lovelace incluida** (`renfe-route-card`): visualización lineal de una ruta
   favorita con todas sus paradas y un indicador que se mueve en directo según la posición
   del tren. Se registra automáticamente como recurso del frontend al instalar.
 - Todo se configura desde la interfaz (config flow), sin tocar YAML.
-- Opciones configurables: número de próximas salidas a mostrar e intervalos de
-  actualización de horarios, posición GPS y avisos de servicio.
+- Opciones configurables: número de próximas salidas a mostrar, intervalos de
+  actualización de horarios, posición GPS y avisos de servicio, y un servicio de
+  notificación opcional al que enviar también los avisos nuevos.
 
 ## Instalación
 

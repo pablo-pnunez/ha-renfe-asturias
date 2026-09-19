@@ -9,6 +9,8 @@ from homeassistant.config_entries import ConfigEntry, ConfigFlow, OptionsFlow
 from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.selector import (
+    EntitySelector,
+    EntitySelectorConfig,
     NumberSelector,
     NumberSelectorConfig,
     NumberSelectorMode,
@@ -24,6 +26,7 @@ from .const import (
     CONF_DESTINATION,
     CONF_ENTRY_TYPE,
     CONF_FLEET_SCAN_INTERVAL,
+    CONF_NOTIFY_SERVICE,
     CONF_NUCLEO,
     CONF_NUM_DEPARTURES,
     CONF_ORIGIN,
@@ -351,6 +354,12 @@ class RenfeCercaniasOptionsFlow(OptionsFlow):
                         unit_of_measurement="s",
                     )
                 ),
+                vol.Optional(
+                    CONF_NOTIFY_SERVICE,
+                    description={
+                        "suggested_value": options.get(CONF_NOTIFY_SERVICE)
+                    },
+                ): EntitySelector(EntitySelectorConfig(domain="notify")),
             }
         )
         return self.async_show_form(step_id="init", data_schema=schema)

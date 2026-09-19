@@ -59,7 +59,8 @@
           "num_departures": "Number of upcoming departures to show",
           "stops_scan_interval": "Timetable update interval (seconds)",
           "fleet_scan_interval": "Train position update interval (seconds)",
-          "alerts_scan_interval": "Service alerts update interval (seconds)"
+          "alerts_scan_interval": "Service alerts update interval (seconds)",
+          "notify_service": "Also send new service alerts to (optional)"
         }
       }
     }

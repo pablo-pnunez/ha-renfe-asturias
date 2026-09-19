@@ -1,6 +1,7 @@
 """Sensores de próximas salidas y avisos de servicio para paradas y rutas favoritas."""
 from __future__ import annotations
 
+import logging
 from datetime import datetime, timedelta
 
 from homeassistant.components.sensor import (
@@ -9,7 +10,7 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
@@ -19,6 +20,7 @@ from .const import (
     ATTRIBUTION,
     CONF_DESTINATION,
     CONF_ENTRY_TYPE,
+    CONF_NOTIFY_SERVICE,
     CONF_NUM_DEPARTURES,
     CONF_ORIGIN,
     CONF_ROUTE_ID,
@@ -29,9 +31,11 @@ from .const import (
     ENTRY_TYPE_STOP,
 )
 from .coordinator import RenfeAlertsCoordinator
-from .entity import RenfeStopEntity, build_device_info
+from .entity import RenfeStopEntity, build_device_info, build_label
 from .route_patterns import get_pattern, get_route_ids_for_line, get_travel_time_min
 from .stations import get_station_name
+
+_LOGGER = logging.getLogger(__name__)
 
 
 def _departure_attrs(
@@ -237,6 +241,11 @@ class RenfeAlertsSensor(CoordinatorEntity[RenfeAlertsCoordinator], SensorEntity)
     de estación; para una ruta, avisos de cualquiera de los `route_id`
     (ambos sentidos) de su misma línea, ya que Renfe suele publicarlos a
     nivel de línea completa.
+
+    En cuanto aparece un aviso nuevo, la propia integración lo notifica: una
+    notificación persistente de Home Assistant siempre (no requiere ninguna
+    automatización), y además, si se ha indicado un servicio de notificación
+    en las opciones de esta entrada, un aviso push a ese destino.
     """
 
     _attr_attribution = ATTRIBUTION
@@ -251,6 +260,9 @@ class RenfeAlertsSensor(CoordinatorEntity[RenfeAlertsCoordinator], SensorEntity)
     ) -> None:
         super().__init__(coordinator)
         self._attr_device_info = build_device_info(entry)
+        self._label = build_label(entry)
+        self._notify_target: str | None = entry.options.get(CONF_NOTIFY_SERVICE)
+        self._seen_alert_ids: set[str] = set()
 
         if entry.data[CONF_ENTRY_TYPE] == ENTRY_TYPE_STOP:
             station_code = entry.data[CONF_STATION]
@@ -268,6 +280,74 @@ class RenfeAlertsSensor(CoordinatorEntity[RenfeAlertsCoordinator], SensorEntity)
                 get_route_ids_for_line(pattern["linea"], pattern["nucleo"])
                 if pattern
                 else set()
+            )
+
+    async def async_added_to_hass(self) -> None:
+        await super().async_added_to_hass()
+        # Los avisos que ya estaban activos antes de que la entidad se
+        # cargara no se notifican (evita un aluvión de notificaciones de
+        # avisos "viejos" en cada reinicio de Home Assistant); solo se
+        # avisa de los que aparecen de nuevas a partir de ahora.
+        self._seen_alert_ids = {alert.alert_id for alert in self._alerts}
+
+    @callback
+    def _handle_coordinator_update(self) -> None:
+        current_alerts = self._alerts
+        new_alerts = [
+            alert for alert in current_alerts if alert.alert_id not in self._seen_alert_ids
+        ]
+        self._seen_alert_ids = {alert.alert_id for alert in current_alerts}
+        if new_alerts:
+            self.hass.async_create_task(self._async_notify_new_alerts(new_alerts))
+        super()._handle_coordinator_update()
+
+    async def _async_notify_new_alerts(self, alerts: list[ServiceAlert]) -> None:
+        for alert in alerts:
+            title = f"⚠️ Renfe Cercanías: {self._label}"
+            message = alert.texto
+
+            try:
+                await self.hass.services.async_call(
+                    "persistent_notification",
+                    "create",
+                    {
+                        "title": title,
+                        "message": message,
+                        "notification_id": f"{DOMAIN}_alert_{alert.alert_id}",
+                    },
+                )
+            except Exception:  # noqa: BLE001 - un fallo aquí no debe romper la entidad
+                _LOGGER.debug(
+                    "No se pudo crear la notificación persistente del aviso %s",
+                    alert.alert_id,
+                    exc_info=True,
+                )
+
+            if self._notify_target:
+                try:
+                    await self.hass.services.async_call(
+                        "notify",
+                        "send_message",
+                        {"title": title, "message": message},
+                        target={"entity_id": self._notify_target},
+                    )
+                except Exception:  # noqa: BLE001 - registro best-effort
+                    _LOGGER.warning(
+                        "No se pudo enviar la notificación push a %s para el aviso %s",
+                        self._notify_target,
+                        alert.alert_id,
+                        exc_info=True,
+                    )
+
+            self.hass.bus.async_fire(
+                f"{DOMAIN}_service_alert",
+                {
+                    "entity_id": self.entity_id,
+                    "alert_id": alert.alert_id,
+                    "message": message,
+                    "route_ids": alert.route_ids,
+                    "stop_ids": alert.stop_ids,
+                },
             )
 
     @property

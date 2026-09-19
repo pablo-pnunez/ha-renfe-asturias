@@ -59,7 +59,8 @@
           "num_departures": "Número de próximas salidas a mostrar",
           "stops_scan_interval": "Intervalo de actualización de horarios (segundos)",
           "fleet_scan_interval": "Intervalo de actualización de la posición del tren (segundos)",
-          "alerts_scan_interval": "Intervalo de actualización de avisos de servicio (segundos)"
+          "alerts_scan_interval": "Intervalo de actualización de avisos de servicio (segundos)",
+          "notify_service": "Enviar avisos de servicio nuevos también a (opcional)"
         }
       }
     }
