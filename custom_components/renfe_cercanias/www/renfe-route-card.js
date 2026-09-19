@@ -10,9 +10,15 @@
  * horizontal): mide su propio ancho con ResizeObserver y decide cuántas
  * etiquetas de parada caben sin solaparse, mostrando siempre origen,
  * destino y la parada actual/siguiente del tren cuando está circulando.
+ * El tramo ya recorrido de la línea se pinta con el color de la línea; el
+ * resto, en gris neutro.
  */
 
-const MIN_LABEL_SPACING_PX = 46; // ancho mínimo por etiqueta para no solaparse
+const MAX_LABEL_WIDTH_PX = 72; // debe coincidir con --renfe-label-max-width
+const MIN_LABEL_SPACING_PX = 54; // >= huella horizontal de una etiqueta rotada 45º
+const TRACK_RIGHT_PADDING_PX = 56; // hueco para que la última etiqueta no se corte
+const TRACK_LEFT_PADDING_PX = 18;
+const TRACK_BOTTOM_PADDING_PX = 80; // hueco vertical para la etiqueta rotada más larga
 
 class RenfeRouteCard extends HTMLElement {
   setConfig(config) {
@@ -63,7 +69,7 @@ class RenfeRouteCard extends HTMLElement {
   }
 
   getCardSize() {
-    return 3;
+    return 4;
   }
 
   static getStubConfig() {
@@ -76,8 +82,9 @@ class RenfeRouteCard extends HTMLElement {
       <style>
         :host, ha-card {
           display: block;
-          overflow: hidden;
+          box-sizing: border-box;
         }
+        * { box-sizing: border-box; }
         .renfe-header {
           display: flex;
           align-items: center;
@@ -111,9 +118,8 @@ class RenfeRouteCard extends HTMLElement {
           font-weight: 500;
         }
         .renfe-track-wrap {
-          box-sizing: border-box;
           width: 100%;
-          padding: 28px 18px 40px 18px;
+          padding: 28px ${TRACK_RIGHT_PADDING_PX}px ${TRACK_BOTTOM_PADDING_PX}px ${TRACK_LEFT_PADDING_PX}px;
         }
         .renfe-track {
           position: relative;
@@ -127,34 +133,45 @@ class RenfeRouteCard extends HTMLElement {
           right: 0;
           height: 4px;
           border-radius: 2px;
-          background: var(--divider-color, #e0e0e0);
+          background: var(--divider-color, #9e9e9e);
+          opacity: 0.5;
+        }
+        .renfe-line-progress {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 4px;
+          border-radius: 2px;
         }
         .renfe-stop {
           position: absolute;
           top: -4px;
-          transform: translateX(-50%);
         }
         .renfe-stop-dot {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateX(-50%);
           width: 12px;
           height: 12px;
           border-radius: 50%;
           background: var(--card-background-color, white);
           border: 3px solid var(--divider-color, #9e9e9e);
-          box-sizing: border-box;
         }
-        .renfe-stop.minor {
-          top: -2px;
+        .renfe-stop.reached .renfe-stop-dot {
+          border-color: var(--renfe-line-color, var(--primary-color));
         }
         .renfe-stop.minor .renfe-stop-dot {
           width: 6px;
           height: 6px;
           border-width: 2px;
+          top: 3px;
         }
         .renfe-stop-label {
           position: absolute;
-          top: 18px;
+          top: 14px;
           left: 6px;
-          max-width: 90px;
+          max-width: ${MAX_LABEL_WIDTH_PX}px;
           overflow: hidden;
           text-overflow: ellipsis;
           font-size: 0.72rem;
@@ -165,13 +182,14 @@ class RenfeRouteCard extends HTMLElement {
         }
         .renfe-indicator {
           position: absolute;
-          top: -8px;
-          transform: translateX(-50%);
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
           width: 20px;
           height: 20px;
           border-radius: 50%;
           background: var(--card-background-color, white);
-          border: 4px solid var(--primary-color);
+          border: 4px solid var(--renfe-line-color, var(--primary-color));
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
           transition: left 2s linear;
           z-index: 3;
@@ -220,6 +238,7 @@ class RenfeRouteCard extends HTMLElement {
     const destino = attrs.destino || "";
     const enCirculacion = !!attrs.en_circulacion;
 
+    this._card.style.setProperty("--renfe-line-color", color);
     this._dotEl.style.background = color;
     this._titleEl.textContent =
       this._config.title ||
@@ -251,7 +270,10 @@ class RenfeRouteCard extends HTMLElement {
     const idxSiguiente = enCirculacion ? attrs.indice_estacion_siguiente : null;
 
     const availableWidth = this.clientWidth || this._card.clientWidth || 300;
-    const trackWidth = Math.max(0, availableWidth - 36); // menos el padding horizontal
+    const trackWidth = Math.max(
+      0,
+      availableWidth - TRACK_LEFT_PADDING_PX - TRACK_RIGHT_PADDING_PX
+    );
     const labeledIndices = this._pickLabeledIndices(
       n,
       trackWidth,
@@ -259,34 +281,46 @@ class RenfeRouteCard extends HTMLElement {
       idxSiguiente
     );
 
+    const ratio = this._computePositionRatio(n, idxActual, idxSiguiente, attrs.porcentaje_avance);
+
     let stopsHtml = "";
     for (let i = 0; i < n; i++) {
       const leftPct = n > 1 ? (i / (n - 1)) * 100 : 0;
       const labeled = labeledIndices.has(i);
+      const reached = ratio !== null && leftPct / 100 <= ratio + 1e-6;
       const label = labeled
         ? `<div class="renfe-stop-label" title="${this._escape(paradas[i].nombre)}">${this._escape(
             paradas[i].nombre
           )}</div>`
         : "";
+      const classes = [
+        "renfe-stop",
+        labeled ? "" : "minor",
+        reached ? "reached" : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
       stopsHtml += `
-        <div class="renfe-stop${labeled ? "" : " minor"}" style="left:${leftPct}%">
-          <div class="renfe-stop-dot" style="border-color:${color}"></div>
+        <div class="${classes}" style="left:${leftPct}%">
+          <div class="renfe-stop-dot"></div>
           ${label}
         </div>`;
     }
 
-    const ratio = this._computePositionRatio(n, idxActual, idxSiguiente, attrs.porcentaje_avance);
     let indicatorHtml = "";
+    let progressHtml = "";
     if (ratio !== null) {
-      indicatorHtml = `<div class="renfe-indicator" style="left:${
+      indicatorHtml = `<div class="renfe-indicator" style="left:${ratio * 100}%"></div>`;
+      progressHtml = `<div class="renfe-line-progress" style="width:${
         ratio * 100
-      }%;border-color:${color}"></div>`;
+      }%;background:var(--renfe-line-color)"></div>`;
     }
 
     this._bodyEl.innerHTML = `
       <div class="renfe-track-wrap">
         <div class="renfe-track">
-          <div class="renfe-line" style="background:${color}55"></div>
+          <div class="renfe-line"></div>
+          ${progressHtml}
           ${stopsHtml}
           ${indicatorHtml}
         </div>

@@ -80,8 +80,11 @@ async def _async_register_frontend(hass: HomeAssistant) -> None:
     domain_data[FRONTEND_REGISTERED_FLAG] = True
 
     try:
+        # cache_headers=False: la URL no lleva versión/hash, así que con
+        # cabeceras de caché de larga duración el navegador seguiría
+        # sirviendo una copia antigua del archivo tras cada actualización.
         await hass.http.async_register_static_paths(
-            [StaticPathConfig(FRONTEND_SCRIPT_URL, str(FRONTEND_SCRIPT_PATH), True)]
+            [StaticPathConfig(FRONTEND_SCRIPT_URL, str(FRONTEND_SCRIPT_PATH), False)]
         )
     except Exception:  # noqa: BLE001 - registro best-effort, no debe romper el setup
         _LOGGER.debug(
