@@ -141,8 +141,16 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
 
     @property
     def _current_trip_id(self) -> str | None:
+        # Dos líneas distintas pueden compartir destino final (p.ej. varias
+        # rutas que terminan en la misma estación cabecera); si se vinculara
+        # el tren solo por destino, podría acabar siendo uno de otra línea,
+        # cuya estación actual/siguiente no aparecería en `self._paradas`
+        # (el tramo se calculó a partir del `route_id` de la línea elegida).
         for departure in self._stop_coordinator.data or []:
-            if departure.destino_codigo == self._destination:
+            if (
+                departure.destino_codigo == self._destination
+                and departure.linea == self._linea
+            ):
                 return departure.trip_id
         return None
 
