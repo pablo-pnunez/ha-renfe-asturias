@@ -72,6 +72,18 @@ class RenfeRouteCard extends HTMLElement {
     return 4;
   }
 
+  getGridOptions() {
+    // Usado por las vistas de "Secciones" (p.ej. "Casa nueva"); sin esto
+    // reciben un hueco por defecto demasiado pequeño y la tarjeta aparece
+    // con scroll. Se pide ancho completo (imprescindible para que quepan
+    // las paradas) y una altura fija que no se pueda reducir.
+    return {
+      columns: "full",
+      rows: 4,
+      min_rows: 4,
+    };
+  }
+
   static getStubConfig() {
     return { entity: "" };
   }
