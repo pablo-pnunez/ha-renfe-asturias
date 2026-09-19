@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from homeassistant.components.device_tracker import SourceType, TrackerEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant, callback
+from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
@@ -79,27 +79,26 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
         )
         self._color: str | None = pattern["color"] if pattern else None
         self._linea: str = pattern["linea"] if pattern else ""
-        self._attr_location_name: str | None = NOT_RUNNING
 
     async def async_added_to_hass(self) -> None:
         """Refresca también cuando cambian las salidas (próximo tripId)."""
         await super().async_added_to_hass()
-        self._update_location_name()
         self.async_on_remove(
             self._stop_coordinator.async_add_listener(
                 self._handle_coordinator_update
             )
         )
 
-    @callback
-    def _handle_coordinator_update(self) -> None:
-        self._update_location_name()
-        super()._handle_coordinator_update()
-
-    def _update_location_name(self) -> None:
-        # Si no hay ningún tren activo en esta ruta ahora mismo, fijamos un
-        # estado explícito en vez de dejar la posición en blanco.
-        self._attr_location_name = None if self._train else NOT_RUNNING
+    @property
+    def state(self) -> str | None:
+        # Tanto la propiedad location_name como el atributo
+        # _attr_location_name están deprecados en TrackerEntity; para fijar
+        # un estado explícito cuando no hay tren activo se sobrescribe el
+        # estado final directamente, delegando en la clase base (lat/lon
+        # frente a zonas) el resto de casos.
+        if self._train is None:
+            return NOT_RUNNING
+        return super().state
 
     @property
     def _current_trip_id(self) -> str | None:
