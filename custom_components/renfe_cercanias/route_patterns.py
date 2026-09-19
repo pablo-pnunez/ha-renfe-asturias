@@ -74,3 +74,13 @@ def get_route_color(route_id: str) -> str | None:
     """Devuelve el color oficial (hex) de la línea, si se conoce."""
     pattern = get_pattern(route_id)
     return pattern["color"] if pattern else None
+
+
+def preload() -> None:
+    """Fuerza la carga (y cacheado) del fichero de patrones.
+
+    Pensado para llamarse una vez desde un executor al arrancar la
+    integración, para que las lecturas posteriores desde el bucle de
+    eventos usen la caché en memoria y no bloqueen con E/S de disco.
+    """
+    _all_patterns()

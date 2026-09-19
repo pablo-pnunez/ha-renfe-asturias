@@ -70,3 +70,15 @@ def get_nucleo_name(codigo: str) -> str:
         if nucleo["codigo"] == codigo:
             return nucleo["nombre"]
     return codigo
+
+
+def preload() -> None:
+    """Fuerza la carga (y cacheado) de estaciones y núcleos.
+
+    Pensado para llamarse una vez desde un executor al arrancar la
+    integración, para que las lecturas posteriores desde el bucle de
+    eventos usen la caché en memoria y no bloqueen con E/S de disco.
+    """
+    get_all_stations()
+    get_stations_by_code()
+    get_nucleos()

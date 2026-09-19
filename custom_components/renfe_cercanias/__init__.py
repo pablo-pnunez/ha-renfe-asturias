@@ -25,12 +25,34 @@ from .const import (
     FLEET_COORDINATOR,
 )
 from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
+from .route_patterns import preload as preload_route_patterns
+from .stations import preload as preload_stations
 
 _LOGGER = logging.getLogger(__name__)
 
 FRONTEND_SCRIPT_URL = f"/{DOMAIN}/renfe-route-card.js"
 FRONTEND_SCRIPT_PATH = Path(__file__).parent / "www" / "renfe-route-card.js"
 FRONTEND_REGISTERED_FLAG = "_frontend_registered"
+CACHES_WARMED_FLAG = "_caches_warmed"
+
+
+async def _async_warm_caches(hass: HomeAssistant) -> None:
+    """Precarga (en un executor) los catálogos embebidos en JSON.
+
+    stations.py y route_patterns.py cachean su contenido en memoria con
+    lru_cache, pero la primera lectura hace E/S de disco síncrona; si esa
+    primera llamada ocurriera desde el bucle de eventos (p.ej. durante el
+    config flow), Home Assistant la detecta como bloqueante. Al forzarla
+    aquí, en un hilo del executor, las llamadas posteriores solo leen la
+    caché ya calentada.
+    """
+    domain_data = hass.data.setdefault(DOMAIN, {})
+    if domain_data.get(CACHES_WARMED_FLAG):
+        return
+    domain_data[CACHES_WARMED_FLAG] = True
+
+    await hass.async_add_executor_job(preload_stations)
+    await hass.async_add_executor_job(preload_route_patterns)
 
 
 async def _async_register_frontend(hass: HomeAssistant) -> None:
@@ -83,6 +105,7 @@ async def _async_register_frontend(hass: HomeAssistant) -> None:
 
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Configuración a nivel de componente: registra la tarjeta del frontend."""
+    await _async_warm_caches(hass)
     await _async_register_frontend(hass)
     return True
 
@@ -114,6 +137,7 @@ async def _async_get_fleet_coordinator(
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Configura una entrada (parada o ruta favorita) a partir del config flow."""
+    await _async_warm_caches(hass)
     await _async_register_frontend(hass)
 
     entry_type = entry.data[CONF_ENTRY_TYPE]
