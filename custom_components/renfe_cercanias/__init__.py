@@ -1,12 +1,15 @@
-"""Integración Renfe Cercanías Asturias: paradas y rutas favoritas."""
+"""Integración Renfe Cercanías: paradas y rutas favoritas."""
 from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from pathlib import Path
 
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.const import Platform
+from homeassistant.helpers.typing import ConfigType
 
 from .const import (
     CONF_ENTRY_TYPE,
@@ -24,6 +27,64 @@ from .const import (
 from .coordinator import RenfeFleetCoordinator, RenfeStopCoordinator
 
 _LOGGER = logging.getLogger(__name__)
+
+FRONTEND_SCRIPT_URL = f"/{DOMAIN}/renfe-route-card.js"
+FRONTEND_SCRIPT_PATH = Path(__file__).parent / "www" / "renfe-route-card.js"
+FRONTEND_REGISTERED_FLAG = "_frontend_registered"
+
+
+async def _async_register_frontend(hass: HomeAssistant) -> None:
+    """Sirve la tarjeta Lovelace y la registra como recurso, si es posible.
+
+    Es un patrón best-effort: si la API interna de recursos de Lovelace
+    cambia entre versiones de Home Assistant, el fallo se registra mediante
+    log y no bloquea la carga de la integración; el usuario siempre puede
+    añadir el recurso manualmente (ver README).
+    """
+    domain_data = hass.data.setdefault(DOMAIN, {})
+    if domain_data.get(FRONTEND_REGISTERED_FLAG):
+        return
+    domain_data[FRONTEND_REGISTERED_FLAG] = True
+
+    try:
+        await hass.http.async_register_static_paths(
+            [StaticPathConfig(FRONTEND_SCRIPT_URL, str(FRONTEND_SCRIPT_PATH), True)]
+        )
+    except Exception:  # noqa: BLE001 - registro best-effort, no debe romper el setup
+        _LOGGER.debug(
+            "No se pudo registrar la ruta estática de la tarjeta (¿ya registrada?)",
+            exc_info=True,
+        )
+
+    lovelace = hass.data.get("lovelace")
+    resources = getattr(lovelace, "resources", None) if lovelace else None
+    if resources is None:
+        _LOGGER.debug(
+            "Lovelace en modo YAML o no disponible aún: añade el recurso "
+            "%s manualmente si quieres usar la tarjeta renfe-route-card",
+            FRONTEND_SCRIPT_URL,
+        )
+        return
+
+    try:
+        already_added = any(
+            item.get("url") == FRONTEND_SCRIPT_URL for item in resources.async_items()
+        )
+        if not already_added:
+            await resources.async_create_item(
+                {"res_type": "module", "url": FRONTEND_SCRIPT_URL}
+            )
+    except Exception:  # noqa: BLE001 - registro best-effort, no debe romper el setup
+        _LOGGER.debug(
+            "No se pudo registrar automáticamente el recurso de Lovelace",
+            exc_info=True,
+        )
+
+
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
+    """Configuración a nivel de componente: registra la tarjeta del frontend."""
+    await _async_register_frontend(hass)
+    return True
 
 
 @dataclass
@@ -53,6 +114,8 @@ async def _async_get_fleet_coordinator(
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Configura una entrada (parada o ruta favorita) a partir del config flow."""
+    await _async_register_frontend(hass)
+
     entry_type = entry.data[CONF_ENTRY_TYPE]
 
     stops_interval = entry.options.get(

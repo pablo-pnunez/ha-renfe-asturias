@@ -1,11 +1,9 @@
-"""Constantes para la integración Renfe Cercanías Asturias."""
+"""Constantes para la integración Renfe Cercanías."""
 from __future__ import annotations
 
 from typing import Final
 
-DOMAIN: Final = "renfe_cercanias_asturias"
-
-NUCLEO_ASTURIAS: Final = "20"
+DOMAIN: Final = "renfe_cercanias"
 
 URL_SALIDAS: Final = (
     "https://tiempo-real.renfe.com/renfe-json-cutter/write/salidas/estacion/{codigo}.json"
@@ -28,9 +26,11 @@ ENTRY_TYPE_STOP: Final = "stop"
 ENTRY_TYPE_ROUTE: Final = "route"
 
 CONF_ENTRY_TYPE: Final = "entry_type"
+CONF_NUCLEO: Final = "nucleo"
 CONF_STATION: Final = "station"
 CONF_ORIGIN: Final = "origin"
 CONF_DESTINATION: Final = "destination"
+CONF_ROUTE_ID: Final = "route_id"
 
 CONF_NUM_DEPARTURES: Final = "num_departures"
 CONF_STOPS_SCAN_INTERVAL: Final = "stops_scan_interval"

@@ -57,6 +57,7 @@ class Departure:
 
     tren_id: str
     trip_id: str
+    route_id: str
     linea: str
     destino_codigo: str
     destino_nombre: str
@@ -122,6 +123,7 @@ async def async_get_departures(
             Departure(
                 tren_id=str(item.get("trenId", "")),
                 trip_id=str(item.get("tripId", "")),
+                route_id=str(item.get("routeId", "")).strip(),
                 linea=str(item.get("linea", "")),
                 destino_codigo=str(item.get("destino", "")),
                 destino_nombre=str(item.get("destinoNombre", "")),

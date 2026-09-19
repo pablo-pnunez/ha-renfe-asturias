@@ -1,4 +1,4 @@
-"""Flujo de configuración de Renfe Cercanías Asturias."""
+"""Flujo de configuración de Renfe Cercanías."""
 from __future__ import annotations
 
 from typing import Any
@@ -23,8 +23,10 @@ from .const import (
     CONF_DESTINATION,
     CONF_ENTRY_TYPE,
     CONF_FLEET_SCAN_INTERVAL,
+    CONF_NUCLEO,
     CONF_NUM_DEPARTURES,
     CONF_ORIGIN,
+    CONF_ROUTE_ID,
     CONF_STATION,
     CONF_STOPS_SCAN_INTERVAL,
     DEFAULT_FLEET_SCAN_INTERVAL,
@@ -36,23 +38,31 @@ from .const import (
     MIN_FLEET_SCAN_INTERVAL,
     MIN_STOPS_SCAN_INTERVAL,
 )
-from .stations import get_stations, get_stations_by_code
+from .stations import get_nucleos, get_stations, get_stations_by_code
 
 
-def _station_options() -> list[SelectOptionDict]:
+def _nucleo_options() -> list[SelectOptionDict]:
     return [
-        SelectOptionDict(value=station["codigo"], label=station["nombre"])
-        for station in get_stations()
+        SelectOptionDict(value=nucleo["codigo"], label=nucleo["nombre"])
+        for nucleo in get_nucleos()
     ]
 
 
-class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
-    """Flujo de configuración para paradas y rutas favoritas de Cercanías Asturias."""
+def _station_options(nucleo: str) -> list[SelectOptionDict]:
+    return [
+        SelectOptionDict(value=station["codigo"], label=station["nombre"])
+        for station in get_stations(nucleo)
+    ]
+
+
+class RenfeCercaniasConfigFlow(ConfigFlow, domain=DOMAIN):
+    """Flujo de configuración para paradas y rutas favoritas de Cercanías."""
 
     VERSION = 1
 
     def __init__(self) -> None:
         super().__init__()
+        self._nucleo: str | None = None
         self._route_origin: str | None = None
 
     async def async_step_user(
@@ -64,11 +74,32 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
             menu_options=[ENTRY_TYPE_STOP, ENTRY_TYPE_ROUTE],
         )
 
+    # -- Parada favorita ---------------------------------------------------
+
     async def async_step_stop(
         self, user_input: dict[str, Any] | None = None
     ) -> Any:
-        """Configura una parada favorita (horarios de salida)."""
-        errors: dict[str, str] = {}
+        """Primer paso de una parada favorita: elegir la región/núcleo."""
+        if user_input is not None:
+            self._nucleo = user_input[CONF_NUCLEO]
+            return await self.async_step_stop_station()
+
+        schema = vol.Schema(
+            {
+                vol.Required(CONF_NUCLEO): SelectSelector(
+                    SelectSelectorConfig(
+                        options=_nucleo_options(), mode=SelectSelectorMode.DROPDOWN
+                    )
+                ),
+            }
+        )
+        return self.async_show_form(step_id="stop", data_schema=schema)
+
+    async def async_step_stop_station(
+        self, user_input: dict[str, Any] | None = None
+    ) -> Any:
+        """Segundo paso: elegir la estación dentro de la región elegida."""
+        assert self._nucleo is not None
 
         if user_input is not None:
             station_code = user_input[CONF_STATION]
@@ -89,20 +120,41 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
             {
                 vol.Required(CONF_STATION): SelectSelector(
                     SelectSelectorConfig(
-                        options=_station_options(),
+                        options=_station_options(self._nucleo),
                         mode=SelectSelectorMode.DROPDOWN,
                     )
                 ),
             }
         )
-        return self.async_show_form(
-            step_id="stop", data_schema=schema, errors=errors
-        )
+        return self.async_show_form(step_id="stop_station", data_schema=schema)
+
+    # -- Ruta favorita -------------------------------------------------------
 
     async def async_step_route(
         self, user_input: dict[str, Any] | None = None
     ) -> Any:
-        """Primer paso de una ruta favorita: elegir la estación de origen."""
+        """Primer paso de una ruta favorita: elegir la región/núcleo."""
+        if user_input is not None:
+            self._nucleo = user_input[CONF_NUCLEO]
+            return await self.async_step_route_origin()
+
+        schema = vol.Schema(
+            {
+                vol.Required(CONF_NUCLEO): SelectSelector(
+                    SelectSelectorConfig(
+                        options=_nucleo_options(), mode=SelectSelectorMode.DROPDOWN
+                    )
+                ),
+            }
+        )
+        return self.async_show_form(step_id="route", data_schema=schema)
+
+    async def async_step_route_origin(
+        self, user_input: dict[str, Any] | None = None
+    ) -> Any:
+        """Segundo paso: elegir la estación de origen dentro de la región."""
+        assert self._nucleo is not None
+
         if user_input is not None:
             self._route_origin = user_input[CONF_ORIGIN]
             return await self.async_step_route_destination()
@@ -111,21 +163,24 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
             {
                 vol.Required(CONF_ORIGIN): SelectSelector(
                     SelectSelectorConfig(
-                        options=_station_options(), mode=SelectSelectorMode.DROPDOWN
+                        options=_station_options(self._nucleo),
+                        mode=SelectSelectorMode.DROPDOWN,
                     )
                 ),
             }
         )
-        return self.async_show_form(step_id="route", data_schema=schema)
+        return self.async_show_form(step_id="route_origin", data_schema=schema)
 
     async def async_step_route_destination(
         self, user_input: dict[str, Any] | None = None
     ) -> Any:
-        """Segundo paso: elegir destino entre los trenes que salen de ese origen.
+        """Último paso: elegir destino entre los trenes que salen de ese origen.
 
         El destino se limita a los que realmente aparecen como fin de trayecto
         en las salidas en tiempo real del origen elegido, para garantizar que
         la ruta pueda mostrar tanto horario como ubicación del tren en el mapa.
+        También se guarda el `route_id` (línea + sentido) de esa salida, que
+        es lo que permite luego reconstruir el itinerario completo de paradas.
         """
         errors: dict[str, str] = {}
         origin = self._route_origin
@@ -139,17 +194,22 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
             errors["base"] = "cannot_connect"
             departures = []
 
-        destinations = {
-            dep.destino_codigo: dep.destino_nombre
-            for dep in departures
-            if dep.destino_codigo and dep.destino_codigo != origin
-        }
+        # Un mismo destino puede aparecer en salidas con route_id distinto
+        # (p.ej. variantes de la misma línea); nos quedamos con el primero.
+        destinations: dict[str, tuple[str, str]] = {}
+        for dep in departures:
+            if not dep.destino_codigo or dep.destino_codigo == origin:
+                continue
+            destinations.setdefault(
+                dep.destino_codigo, (dep.destino_nombre, dep.route_id)
+            )
 
         if not destinations and not errors:
             errors["base"] = "no_destinations"
 
         if user_input is not None and not errors:
             destination = user_input[CONF_DESTINATION]
+            dest_name, route_id = destinations[destination]
 
             await self.async_set_unique_id(
                 f"{ENTRY_TYPE_ROUTE}_{origin}_{destination}"
@@ -157,13 +217,13 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
             self._abort_if_unique_id_configured()
 
             origin_name = get_stations_by_code().get(origin, {}).get("nombre", origin)
-            dest_name = destinations.get(destination, destination)
             return self.async_create_entry(
                 title=f"{origin_name} → {dest_name}",
                 data={
                     CONF_ENTRY_TYPE: ENTRY_TYPE_ROUTE,
                     CONF_ORIGIN: origin,
                     CONF_DESTINATION: destination,
+                    CONF_ROUTE_ID: route_id,
                 },
             )
 
@@ -173,8 +233,8 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
                     SelectSelectorConfig(
                         options=[
                             SelectOptionDict(value=codigo, label=nombre)
-                            for codigo, nombre in sorted(
-                                destinations.items(), key=lambda kv: kv[1]
+                            for codigo, (nombre, _route_id) in sorted(
+                                destinations.items(), key=lambda kv: kv[1][0]
                             )
                         ],
                         mode=SelectSelectorMode.DROPDOWN,
@@ -195,12 +255,12 @@ class RenfeCercaniasAsturiasConfigFlow(ConfigFlow, domain=DOMAIN):
     @callback
     def async_get_options_flow(
         config_entry: ConfigEntry,
-    ) -> RenfeCercaniasAsturiasOptionsFlow:
+    ) -> RenfeCercaniasOptionsFlow:
         """Devuelve el flujo de opciones."""
-        return RenfeCercaniasAsturiasOptionsFlow(config_entry)
+        return RenfeCercaniasOptionsFlow(config_entry)
 
 
-class RenfeCercaniasAsturiasOptionsFlow(OptionsFlow):
+class RenfeCercaniasOptionsFlow(OptionsFlow):
     """Opciones: nº de salidas a mostrar e intervalos de actualización."""
 
     def __init__(self, config_entry: ConfigEntry) -> None:

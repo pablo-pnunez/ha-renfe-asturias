@@ -1,0 +1,62 @@
+[
+  {
+    "codigo": "20",
+    "nombre": "Asturias"
+  },
+  {
+    "codigo": "60",
+    "nombre": "Bilbao"
+  },
+  {
+    "codigo": "31",
+    "nombre": "Cádiz"
+  },
+  {
+    "codigo": "62",
+    "nombre": "Cantabria"
+  },
+  {
+    "codigo": "45",
+    "nombre": "Cartagena"
+  },
+  {
+    "codigo": "46",
+    "nombre": "Ferrol"
+  },
+  {
+    "codigo": "47",
+    "nombre": "León"
+  },
+  {
+    "codigo": "10",
+    "nombre": "Madrid"
+  },
+  {
+    "codigo": "32",
+    "nombre": "Málaga"
+  },
+  {
+    "codigo": "41",
+    "nombre": "Murcia/Alicante"
+  },
+  {
+    "codigo": "50",
+    "nombre": "Rodalies de Catalunya"
+  },
+  {
+    "codigo": "61",
+    "nombre": "San Sebastián"
+  },
+  {
+    "codigo": "30",
+    "nombre": "Sevilla"
+  },
+  {
+    "codigo": "40",
+    "nombre": "Valencia"
+  },
+  {
+    "codigo": "70",
+    "nombre": "Zaragoza"
+  }
+]

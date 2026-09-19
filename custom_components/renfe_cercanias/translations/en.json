@@ -9,12 +9,26 @@
       },
       "stop": {
         "title": "Add favorite stop",
-        "description": "Choose the Cercanías Asturias station you want to see upcoming trains for.",
+        "description": "Choose the Cercanías region/network.",
+        "data": {
+          "nucleo": "Region"
+        }
+      },
+      "stop_station": {
+        "title": "Add favorite stop",
+        "description": "Choose the station you want to see upcoming trains for.",
         "data": {
           "station": "Station"
         }
       },
       "route": {
+        "title": "Add favorite route",
+        "description": "Choose the Cercanías region/network.",
+        "data": {
+          "nucleo": "Region"
+        }
+      },
+      "route_origin": {
         "title": "Add favorite route",
         "description": "Choose the origin station.",
         "data": {
@@ -40,7 +54,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Renfe Cercanías Asturias options",
+        "title": "Renfe Cercanías options",
         "data": {
           "num_departures": "Number of upcoming departures to show",
           "stops_scan_interval": "Timetable update interval (seconds)",

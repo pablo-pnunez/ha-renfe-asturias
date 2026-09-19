@@ -1,4 +1,4 @@
-"""Coordinadores de actualización de datos para Renfe Cercanías Asturias."""
+"""Coordinadores de actualización de datos para Renfe Cercanías."""
 from __future__ import annotations
 
 import logging
@@ -15,13 +15,18 @@ from .api import (
     async_get_departures,
     async_get_fleet,
 )
-from .const import DOMAIN, NUCLEO_ASTURIAS
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
 
 class RenfeFleetCoordinator(DataUpdateCoordinator[list[TrainPosition]]):
-    """Coordinador compartido con la posición de todos los trenes de Asturias."""
+    """Coordinador compartido con la posición de todos los trenes de Cercanías de España.
+
+    Se comparte entre todas las rutas favoritas, sin importar su región: el
+    `tripId` de un tren es único a nivel nacional, así que no hace falta
+    filtrar por núcleo para poder localizarlo.
+    """
 
     def __init__(self, hass: HomeAssistant, scan_interval: int) -> None:
         super().__init__(
@@ -34,7 +39,7 @@ class RenfeFleetCoordinator(DataUpdateCoordinator[list[TrainPosition]]):
 
     async def _async_update_data(self) -> list[TrainPosition]:
         try:
-            return await async_get_fleet(self._session, nucleo=NUCLEO_ASTURIAS)
+            return await async_get_fleet(self._session)
         except RenfeApiError as err:
             raise UpdateFailed(str(err)) from err
 

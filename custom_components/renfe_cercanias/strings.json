@@ -9,12 +9,26 @@
       },
       "stop": {
         "title": "Añadir parada favorita",
-        "description": "Elige la estación de Cercanías Asturias de la que quieres ver los próximos trenes.",
+        "description": "Elige la región/núcleo de Cercanías.",
+        "data": {
+          "nucleo": "Región"
+        }
+      },
+      "stop_station": {
+        "title": "Añadir parada favorita",
+        "description": "Elige la estación de la que quieres ver los próximos trenes.",
         "data": {
           "station": "Estación"
         }
       },
       "route": {
+        "title": "Añadir ruta favorita",
+        "description": "Elige la región/núcleo de Cercanías.",
+        "data": {
+          "nucleo": "Región"
+        }
+      },
+      "route_origin": {
         "title": "Añadir ruta favorita",
         "description": "Elige la estación de origen.",
         "data": {
@@ -40,7 +54,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Opciones de Renfe Cercanías Asturias",
+        "title": "Opciones de Renfe Cercanías",
         "data": {
           "num_departures": "Número de próximas salidas a mostrar",
           "stops_scan_interval": "Intervalo de actualización de horarios (segundos)",

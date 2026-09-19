@@ -1,10 +1,11 @@
 {
-  "domain": "renfe_cercanias_asturias",
-  "name": "Renfe Cercanías Asturias",
+  "domain": "renfe_cercanias",
+  "name": "Renfe Cercanías",
   "codeowners": [],
   "config_flow": true,
+  "after_dependencies": ["lovelace"],
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": [],
-  "version": "0.1.0"
+  "version": "0.2.0"
 }

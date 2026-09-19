@@ -1,0 +1,10110 @@
+[
+  {
+    "codigo": "05129",
+    "nombre": "A Cuqueira",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.607829272300975,
+    "lon": -7.921938908050198,
+    "accesible": false
+  },
+  {
+    "codigo": "13200",
+    "nombre": "Abando",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "lat": 43.26013045007107,
+    "lon": -2.9285592611364035,
+    "accesible": false
+  },
+  {
+    "codigo": "13118",
+    "nombre": "Abaroa San Miguel",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.22564800203319,
+    "lon": -2.88711399967436,
+    "accesible": false
+  },
+  {
+    "codigo": "15205",
+    "nombre": "Ablaña",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C8"
+    ],
+    "lat": 43.26760325880985,
+    "lon": -5.805792656261357,
+    "accesible": false
+  },
+  {
+    "codigo": "05207",
+    "nombre": "Aboño Apeadero",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.55504905736391,
+    "lon": -5.72360395412736,
+    "accesible": false
+  },
+  {
+    "codigo": "05957",
+    "nombre": "Abrevadero",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.60970234187445,
+    "lon": -0.9318284131787492,
+    "accesible": false
+  },
+  {
+    "codigo": "05320",
+    "nombre": "Aces",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.43991421903823,
+    "lon": -6.06579835168096,
+    "accesible": false
+  },
+  {
+    "codigo": "05604",
+    "nombre": "Adarzo",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.45347163385419,
+    "lon": -3.8559044216120455,
+    "accesible": false
+  },
+  {
+    "codigo": "72400",
+    "nombre": "Aeroport",
+    "nucleo": "50",
+    "lineas": [
+      "R2N"
+    ],
+    "lat": 41.304181397273,
+    "lon": 2.073401333901186,
+    "accesible": true
+  },
+  {
+    "codigo": "54505",
+    "nombre": "Aeropuerto",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.67771696400479,
+    "lon": -4.490160759273373,
+    "accesible": true
+  },
+  {
+    "codigo": "51205",
+    "nombre": "Aeropuerto de Jerez",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.751588617875186,
+    "lon": -6.065938486773235,
+    "accesible": true
+  },
+  {
+    "codigo": "98305",
+    "nombre": "Aeropuerto T4",
+    "nucleo": "10",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 40.49240236817061,
+    "lon": -3.593229711702935,
+    "accesible": true
+  },
+  {
+    "codigo": "05409",
+    "nombre": "Aguda",
+    "nucleo": "20",
+    "lineas": [
+      "C5",
+      "C5a"
+    ],
+    "lat": 43.4655199483889,
+    "lon": -5.726020983247536,
+    "accesible": true
+  },
+  {
+    "codigo": "78505",
+    "nombre": "Aguilar de Segarra",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.7387072642281,
+    "lon": 1.62372531225513,
+    "accesible": true
+  },
+  {
+    "codigo": "07004",
+    "nombre": "Águilas",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.40986508612519,
+    "lon": -1.5725342951052037,
+    "accesible": false
+  },
+  {
+    "codigo": "07007",
+    "nombre": "Águilas - El Labradorcico",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.41196645613457,
+    "lon": -1.58587196479856,
+    "accesible": false
+  },
+  {
+    "codigo": "60911",
+    "nombre": "Alacant Terminal",
+    "nucleo": "41",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 38.34471277133022,
+    "lon": -0.4955241197265243,
+    "accesible": true
+  },
+  {
+    "codigo": "51454",
+    "nombre": "Alameda Solano",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.425377525222565,
+    "lon": -6.14452363019272,
+    "accesible": true
+  },
+  {
+    "codigo": "64210",
+    "nombre": "Albal",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 39.39184297895015,
+    "lon": -0.4026343550646784,
+    "accesible": true
+  },
+  {
+    "codigo": "65005",
+    "nombre": "Albuixech",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.543523360759266,
+    "lon": -0.3205526903840303,
+    "accesible": true
+  },
+  {
+    "codigo": "70103",
+    "nombre": "Alcalá de Henares",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.48908140088269,
+    "lon": -3.366245741636396,
+    "accesible": false
+  },
+  {
+    "codigo": "70107",
+    "nombre": "Alcalá de Henares Universidad",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.5054303213403,
+    "lon": -3.335325832537842,
+    "accesible": false
+  },
+  {
+    "codigo": "65308",
+    "nombre": "Alcalá de Xivert",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.30471,
+    "lon": 0.22871,
+    "accesible": false
+  },
+  {
+    "codigo": "06008",
+    "nombre": "Alcantarilla - Los Romanos",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.96429936244414,
+    "lon": -1.2169837206142644,
+    "accesible": false
+  },
+  {
+    "codigo": "19003",
+    "nombre": "Alcobendas-San Sebastián de los Reyes",
+    "nucleo": "10",
+    "lineas": [
+      "C4a"
+    ],
+    "lat": 40.54657653400261,
+    "lon": -3.6351731345142193,
+    "accesible": true
+  },
+  {
+    "codigo": "40121",
+    "nombre": "Alcolea del Río",
+    "nucleo": "30",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 37.63545573164828,
+    "lon": -5.730830952364614,
+    "accesible": false
+  },
+  {
+    "codigo": "35605",
+    "nombre": "Alcorcón",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.350226911174346,
+    "lon": -3.831701834012814,
+    "accesible": false
+  },
+  {
+    "codigo": "73101",
+    "nombre": "Alcover",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "RT1"
+    ],
+    "lat": 41.26160665566562,
+    "lon": 1.1741600263457088,
+    "accesible": true
+  },
+  {
+    "codigo": "66211",
+    "nombre": "Aldaia",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.46111799461255,
+    "lon": -0.4632476105700981,
+    "accesible": false
+  },
+  {
+    "codigo": "11409",
+    "nombre": "Alegia",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.10175999203381,
+    "lon": -2.0971400276162915,
+    "accesible": false
+  },
+  {
+    "codigo": "64203",
+    "nombre": "Alfafar-Benetússer",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 39.422423233522714,
+    "lon": -0.3926050835406931,
+    "accesible": true
+  },
+  {
+    "codigo": "64105",
+    "nombre": "Algemesí",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.1931484618165,
+    "lon": -0.44091960807561753,
+    "accesible": true
+  },
+  {
+    "codigo": "67216",
+    "nombre": "Algimia Ciudad",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.752993443666185,
+    "lon": -0.3657542433824232,
+    "accesible": false
+  },
+  {
+    "codigo": "06002",
+    "nombre": "Alhama de Murcia",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.84940244890162,
+    "lon": -1.4145141151260254,
+    "accesible": false
+  },
+  {
+    "codigo": "54407",
+    "nombre": "Aljaima",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.733083341891316,
+    "lon": -4.66450015835028,
+    "accesible": true
+  },
+  {
+    "codigo": "65209",
+    "nombre": "Almassora",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.95490792511555,
+    "lon": -0.07677136307912723,
+    "accesible": true
+  },
+  {
+    "codigo": "65202",
+    "nombre": "Almenara",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.74877373437792,
+    "lon": -0.2183811567835716,
+    "accesible": true
+  },
+  {
+    "codigo": "06100",
+    "nombre": "Almendricos",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.474880210207914,
+    "lon": -1.779629968273107,
+    "accesible": false
+  },
+  {
+    "codigo": "54405",
+    "nombre": "Álora",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.819874723454554,
+    "lon": -4.699610570259875,
+    "accesible": true
+  },
+  {
+    "codigo": "12002",
+    "nombre": "Alpedrete",
+    "nucleo": "10",
+    "lineas": [
+      "C8b"
+    ],
+    "lat": 40.65810441837327,
+    "lon": -4.034971997151194,
+    "accesible": false
+  },
+  {
+    "codigo": "71502",
+    "nombre": "Altafulla-Tamarit",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "RT2"
+    ],
+    "lat": 41.136647909570335,
+    "lon": 1.373414884357026,
+    "accesible": true
+  },
+  {
+    "codigo": "05620",
+    "nombre": "Altamira",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.35191966868339,
+    "lon": -4.056969983112082,
+    "accesible": false
+  },
+  {
+    "codigo": "35600",
+    "nombre": "Aluche",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.385667740971456,
+    "lon": -3.7607343645665687,
+    "accesible": false
+  },
+  {
+    "codigo": "05959",
+    "nombre": "Alumbres",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.60993247637934,
+    "lon": -0.9148413460206996,
+    "accesible": false
+  },
+  {
+    "codigo": "64104",
+    "nombre": "Alzira",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.15314953903261,
+    "lon": -0.4506011003179101,
+    "accesible": true
+  },
+  {
+    "codigo": "13206",
+    "nombre": "Ametzola",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2",
+      "C4"
+    ],
+    "lat": 43.25470652503033,
+    "lon": -2.9436598676102337,
+    "accesible": true
+  },
+  {
+    "codigo": "13101",
+    "nombre": "Amurrio",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.049051004721534,
+    "lon": -3.0020176938526397,
+    "accesible": false
+  },
+  {
+    "codigo": "13121",
+    "nombre": "Amurrio Iparralde",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.05784539747663,
+    "lon": -2.996065984070646,
+    "accesible": false
+  },
+  {
+    "codigo": "11505",
+    "nombre": "Andoain",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.22204580907925,
+    "lon": -2.015675720240806,
+    "accesible": false
+  },
+  {
+    "codigo": "11504",
+    "nombre": "Andoain Centro",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.215573806882844,
+    "lon": -2.0204595689103235,
+    "accesible": false
+  },
+  {
+    "codigo": "78407",
+    "nombre": "Anglesola",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6463151428855,
+    "lon": 1.07900531462099,
+    "accesible": true
+  },
+  {
+    "codigo": "11502",
+    "nombre": "Anoeta",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.162606400422305,
+    "lon": -2.0703897768453,
+    "accesible": false
+  },
+  {
+    "codigo": "05119",
+    "nombre": "Apalla",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.55045700535546,
+    "lon": -8.018618882957995,
+    "accesible": false
+  },
+  {
+    "codigo": "13117",
+    "nombre": "Arakaldo",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.15355923399129,
+    "lon": -2.938202717417325,
+    "accesible": false
+  },
+  {
+    "codigo": "05473",
+    "nombre": "Aranguren",
+    "nucleo": "60",
+    "lineas": [
+      "C4",
+      "C5"
+    ],
+    "lat": 43.210456141156534,
+    "lon": -3.1083990588093546,
+    "accesible": false
+  },
+  {
+    "codigo": "05474",
+    "nombre": "Aranguren Apdo",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.2103517083096,
+    "lon": -3.114050523832889,
+    "accesible": true
+  },
+  {
+    "codigo": "60200",
+    "nombre": "Aranjuez",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.03502573561016,
+    "lon": -3.618253441368704,
+    "accesible": true
+  },
+  {
+    "codigo": "10001",
+    "nombre": "Aravaca",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.44845517608986,
+    "lon": -3.7855547746983214,
+    "accesible": true
+  },
+  {
+    "codigo": "13108",
+    "nombre": "Arbide",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.163258733552055,
+    "lon": -2.9278362500070045,
+    "accesible": false
+  },
+  {
+    "codigo": "51464",
+    "nombre": "Ardila",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.45624971506268,
+    "lon": -6.216027200885319,
+    "accesible": true
+  },
+  {
+    "codigo": "14235",
+    "nombre": "Arenas de Iguña",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.18508288616943,
+    "lon": -4.050075451873233,
+    "accesible": false
+  },
+  {
+    "codigo": "79600",
+    "nombre": "Arenys de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.57769905113163,
+    "lon": 2.5493374447631867,
+    "accesible": true
+  },
+  {
+    "codigo": "13107",
+    "nombre": "Areta",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.14512735612633,
+    "lon": -2.943391342200953,
+    "accesible": false
+  },
+  {
+    "codigo": "13109",
+    "nombre": "Arrankudiaga",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.16949944204824,
+    "lon": -2.9184485845104793,
+    "accesible": false
+  },
+  {
+    "codigo": "13111",
+    "nombre": "Arrigorriaga",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.21008687069849,
+    "lon": -2.888572331951705,
+    "accesible": false
+  },
+  {
+    "codigo": "05469",
+    "nombre": "Artxube",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.20099306121144,
+    "lon": -3.0715031130717114,
+    "accesible": true
+  },
+  {
+    "codigo": "05489",
+    "nombre": "Artzentales",
+    "nucleo": "60",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.2355083,
+    "lon": -3.2133583,
+    "accesible": true
+  },
+  {
+    "codigo": "70002",
+    "nombre": "Asamblea de Madrid-Entrevías",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.38186189669173,
+    "lon": -3.668045475822054,
+    "accesible": true
+  },
+  {
+    "codigo": "71211",
+    "nombre": "Ascó",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.18237271971065,
+    "lon": 0.5690252429078532,
+    "accesible": false
+  },
+  {
+    "codigo": "05657",
+    "nombre": "Astillero",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.40365080455238,
+    "lon": -3.820679842061479,
+    "accesible": false
+  },
+  {
+    "codigo": "05803",
+    "nombre": "Asunción Universidad",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.61609833669572,
+    "lon": -5.566098871799103,
+    "accesible": true
+  },
+  {
+    "codigo": "11513",
+    "nombre": "Ategorrieta",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.32032252494847,
+    "lon": -1.959812715482647,
+    "accesible": false
+  },
+  {
+    "codigo": "18000",
+    "nombre": "Atocha Cercanías",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C2",
+      "C3",
+      "C4",
+      "C4a",
+      "C4b",
+      "C5",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.406619186351975,
+    "lon": -3.6894391470612278,
+    "accesible": true
+  },
+  {
+    "codigo": "13207",
+    "nombre": "Autonomía",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.25813396776528,
+    "lon": -2.946032105130017,
+    "accesible": false
+  },
+  {
+    "codigo": "05768",
+    "nombre": "Aviados",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.85477672518808,
+    "lon": -5.442839688257427,
+    "accesible": true
+  },
+  {
+    "codigo": "16403",
+    "nombre": "Avilés",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.56133904079394,
+    "lon": -5.9228329097090855,
+    "accesible": true
+  },
+  {
+    "codigo": "05221",
+    "nombre": "Avilés Apeadero",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.554634361540636,
+    "lon": -5.917441678024982,
+    "accesible": true
+  },
+  {
+    "codigo": "05222",
+    "nombre": "Avilés-CIM",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.56133890158938,
+    "lon": -5.922844839885522,
+    "accesible": true
+  },
+  {
+    "codigo": "70105",
+    "nombre": "Azuqueca",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.5610770001319,
+    "lon": -3.2653970160655765,
+    "accesible": true
+  },
+  {
+    "codigo": "79404",
+    "nombre": "Badalona",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.44588383760411,
+    "lon": 2.2489209658388996,
+    "accesible": true
+  },
+  {
+    "codigo": "05361",
+    "nombre": "Baiña",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.27447175294887,
+    "lon": -5.828290218896944,
+    "accesible": false
+  },
+  {
+    "codigo": "13115",
+    "nombre": "Bakiola",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.17698584922029,
+    "lon": -2.909070014760725,
+    "accesible": false
+  },
+  {
+    "codigo": "77106",
+    "nombre": "Balenyà-Els Hostalets",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.81495110298367,
+    "lon": 2.2333152357548243,
+    "accesible": false
+  },
+  {
+    "codigo": "77107",
+    "nombre": "Balenyà-Tona-Seva",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.84190767073451,
+    "lon": 2.2474424042856245,
+    "accesible": false
+  },
+  {
+    "codigo": "05483",
+    "nombre": "Balmaseda",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.19635514362031,
+    "lon": -3.1899562343780943,
+    "accesible": true
+  },
+  {
+    "codigo": "78705",
+    "nombre": "Barberà del Vallès",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.513659898104294,
+    "lon": 2.118452699107726,
+    "accesible": true
+  },
+  {
+    "codigo": "78804",
+    "nombre": "Barcelona-Arc de Triomf",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R3",
+      "R4",
+      "RG1"
+    ],
+    "lat": 41.39190482885982,
+    "lon": 2.1806391625082373,
+    "accesible": true
+  },
+  {
+    "codigo": "79009",
+    "nombre": "Barcelona-El Clot",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R11",
+      "R2",
+      "R2N",
+      "RG1"
+    ],
+    "lat": 41.40929791917752,
+    "lon": 2.1871975947077753,
+    "accesible": true
+  },
+  {
+    "codigo": "79400",
+    "nombre": "Barcelona-Estació de França",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R2S"
+    ],
+    "lat": 41.384486626664156,
+    "lon": 2.185347851508972,
+    "accesible": true
+  },
+  {
+    "codigo": "78802",
+    "nombre": "Barcelona-Fabra i Puig",
+    "nucleo": "50",
+    "lineas": [
+      "R3",
+      "R4",
+      "R7"
+    ],
+    "lat": 41.43034817433897,
+    "lon": 2.1830807298711643,
+    "accesible": false
+  },
+  {
+    "codigo": "78806",
+    "nombre": "Barcelona-La Sagrera-Meridiana",
+    "nucleo": "50",
+    "lineas": [
+      "R3",
+      "R4"
+    ],
+    "lat": 41.421848022215336,
+    "lon": 2.1871103121949758,
+    "accesible": true
+  },
+  {
+    "codigo": "71802",
+    "nombre": "Barcelona-Passeig de Gràcia",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R2",
+      "R2N",
+      "R2S"
+    ],
+    "lat": 41.392086211624004,
+    "lon": 2.1653386254785847,
+    "accesible": true
+  },
+  {
+    "codigo": "78805",
+    "nombre": "Barcelona-Plaça de Catalunya",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R3",
+      "R4",
+      "RG1"
+    ],
+    "lat": 41.38792317102456,
+    "lon": 2.1697038316349246,
+    "accesible": true
+  },
+  {
+    "codigo": "79004",
+    "nombre": "Barcelona-Sant Andreu",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2",
+      "R2N"
+    ],
+    "lat": 41.43612517176073,
+    "lon": 2.1931986616822146,
+    "accesible": true
+  },
+  {
+    "codigo": "71801",
+    "nombre": "Barcelona-Sants",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R11",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R2",
+      "R2N",
+      "R2S",
+      "R3",
+      "R4",
+      "RG1"
+    ],
+    "lat": 41.37986322852104,
+    "lon": 2.1410168876414657,
+    "accesible": true
+  },
+  {
+    "codigo": "78801",
+    "nombre": "Barcelona-Torre Baró | Vallbona",
+    "nucleo": "50",
+    "lineas": [
+      "R3",
+      "R4",
+      "R7"
+    ],
+    "lat": 41.46096848862681,
+    "lon": 2.1810203644302693,
+    "accesible": true
+  },
+  {
+    "codigo": "14206",
+    "nombre": "Bárcena",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.12870543051854,
+    "lon": -4.053473055131115,
+    "accesible": false
+  },
+  {
+    "codigo": "05619",
+    "nombre": "Barreda",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.37428335135095,
+    "lon": -4.041897200960339,
+    "accesible": false
+  },
+  {
+    "codigo": "05441",
+    "nombre": "Barredos",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.25988892806705,
+    "lon": -5.574993490366982,
+    "accesible": true
+  },
+  {
+    "codigo": "05764",
+    "nombre": "Barrillos",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.81236822301289,
+    "lon": -5.283114533897883,
+    "accesible": true
+  },
+  {
+    "codigo": "05805",
+    "nombre": "Barrio de las Ollas",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.86464479944562,
+    "lon": -5.334481166254791,
+    "accesible": true
+  },
+  {
+    "codigo": "16006",
+    "nombre": "Barros",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.317830266529946,
+    "lon": -5.710914108429101,
+    "accesible": false
+  },
+  {
+    "codigo": "13112",
+    "nombre": "Basauri",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.22338724244485,
+    "lon": -2.882220721748345,
+    "accesible": false
+  },
+  {
+    "codigo": "05455",
+    "nombre": "Basurto Hospital",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.25976994255629,
+    "lon": -2.953826717783228,
+    "accesible": true
+  },
+  {
+    "codigo": "11404",
+    "nombre": "Beasain",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.04626872629887,
+    "lon": -2.2022994258020003,
+    "accesible": true
+  },
+  {
+    "codigo": "05323",
+    "nombre": "Beifar",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.470137929293244,
+    "lon": -6.0988707427356,
+    "accesible": false
+  },
+  {
+    "codigo": "78402",
+    "nombre": "Bell-lloc d'Urgell",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.631619,
+    "lon": 0.781547,
+    "accesible": false
+  },
+  {
+    "codigo": "51111",
+    "nombre": "Bellavista",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C5"
+    ],
+    "lat": 37.3215188400013,
+    "lon": -5.964192430527401,
+    "accesible": true
+  },
+  {
+    "codigo": "78406",
+    "nombre": "Bellpuig",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6327171709591,
+    "lon": 1.0129757733692,
+    "accesible": false
+  },
+  {
+    "codigo": "71708",
+    "nombre": "Bellvitge | Gornal",
+    "nucleo": "50",
+    "lineas": [
+      "R15",
+      "R2",
+      "R2N",
+      "R2S"
+    ],
+    "lat": 41.35492161067756,
+    "lon": 2.1152733032830104,
+    "accesible": true
+  },
+  {
+    "codigo": "43005",
+    "nombre": "Benacazón",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.35685120663344,
+    "lon": -6.208201188756447,
+    "accesible": true
+  },
+  {
+    "codigo": "54511",
+    "nombre": "Benalmádena-Arroyo de la Miel",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.599111685697245,
+    "lon": -4.536345939371387,
+    "accesible": true
+  },
+  {
+    "codigo": "05415",
+    "nombre": "Bendición",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.3634748100629,
+    "lon": -5.680585015324126,
+    "accesible": false
+  },
+  {
+    "codigo": "65311",
+    "nombre": "Benicarló",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.42767,
+    "lon": 0.41519,
+    "accesible": true
+  },
+  {
+    "codigo": "65318",
+    "nombre": "Benicassim",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.05808,
+    "lon": 0.0578,
+    "accesible": true
+  },
+  {
+    "codigo": "62001",
+    "nombre": "Beniel",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.04486082635462,
+    "lon": -0.999475923827282,
+    "accesible": true
+  },
+  {
+    "codigo": "64107",
+    "nombre": "Benifaió",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.28430270073275,
+    "lon": -0.42995371935273535,
+    "accesible": true
+  },
+  {
+    "codigo": "05605",
+    "nombre": "Bezana",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.440854949005036,
+    "lon": -3.899592159340921,
+    "accesible": false
+  },
+  {
+    "codigo": "13113",
+    "nombre": "Bidebieta",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.23697042348822,
+    "lon": -2.8895652371618823,
+    "accesible": false
+  },
+  {
+    "codigo": "05451",
+    "nombre": "Bilbao La Concordia",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.26019015961891,
+    "lon": -2.9263839385862034,
+    "accesible": false
+  },
+  {
+    "codigo": "11503",
+    "nombre": "Billabona Zizurkil",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.189190619851374,
+    "lon": -2.0553722899052405,
+    "accesible": false
+  },
+  {
+    "codigo": "79606",
+    "nombre": "Blanes",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.67361571599983,
+    "lon": 2.7692697017236263,
+    "accesible": true
+  },
+  {
+    "codigo": "05439",
+    "nombre": "Blimea",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.270881269124494,
+    "lon": -5.590331173237552,
+    "accesible": true
+  },
+  {
+    "codigo": "05766",
+    "nombre": "Boñar",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.86278756489049,
+    "lon": -5.328526195910851,
+    "accesible": true
+  },
+  {
+    "codigo": "14219",
+    "nombre": "Boo",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.41047968955352,
+    "lon": -3.841588380753082,
+    "accesible": false
+  },
+  {
+    "codigo": "05609",
+    "nombre": "Boo de Pielagos",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.43165582686709,
+    "lon": -3.9463107276081297,
+    "accesible": false
+  },
+  {
+    "codigo": "79302",
+    "nombre": "Bordils-Juià",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.03705684514688,
+    "lon": 2.9152956181737175,
+    "accesible": false
+  },
+  {
+    "codigo": "77112",
+    "nombre": "Borgonyà",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.064658660798806,
+    "lon": 2.2420056728706834,
+    "accesible": true
+  },
+  {
+    "codigo": "65207",
+    "nombre": "Borriana/Burriana-les Alqueries/Alquerías N.P.",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.89650888247677,
+    "lon": -0.10386017682778047,
+    "accesible": true
+  },
+  {
+    "codigo": "50702",
+    "nombre": "Brenes",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 37.54632761131801,
+    "lon": -5.866782106125777,
+    "accesible": false
+  },
+  {
+    "codigo": "11305",
+    "nombre": "Brinkola",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.01898657875382,
+    "lon": -2.3346811027031733,
+    "accesible": false
+  },
+  {
+    "codigo": "66206",
+    "nombre": "Buñol",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.42713905535486,
+    "lon": -0.7873638280949137,
+    "accesible": false
+  },
+  {
+    "codigo": "05385",
+    "nombre": "Cabañaquinta",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.160770077581695,
+    "lon": -5.624898756766051,
+    "accesible": false
+  },
+  {
+    "codigo": "05637",
+    "nombre": "Cabezón de la Sal",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30790381634814,
+    "lon": -4.231943759512331,
+    "accesible": false
+  },
+  {
+    "codigo": "05377",
+    "nombre": "Caborana",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.17611691322147,
+    "lon": -5.754862603257348,
+    "accesible": false
+  },
+  {
+    "codigo": "79412",
+    "nombre": "Cabrera de Mar-Vilassar de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.50677183408166,
+    "lon": 2.401624315618346,
+    "accesible": true
+  },
+  {
+    "codigo": "51405",
+    "nombre": "Cádiz",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.52893505379212,
+    "lon": -6.287971689643713,
+    "accesible": true
+  },
+  {
+    "codigo": "78503",
+    "nombre": "Calaf",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.7301618803181,
+    "lon": 1.51524778942922,
+    "accesible": true
+  },
+  {
+    "codigo": "71601",
+    "nombre": "Calafell",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2S"
+    ],
+    "lat": 41.189670385593864,
+    "lon": 1.5750093701419863,
+    "accesible": true
+  },
+  {
+    "codigo": "14211",
+    "nombre": "Caldas",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.29859454253876,
+    "lon": -4.0732520262361325,
+    "accesible": false
+  },
+  {
+    "codigo": "79502",
+    "nombre": "Caldes d'Estrac",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.56860825675539,
+    "lon": 2.5259814353331542,
+    "accesible": true
+  },
+  {
+    "codigo": "79203",
+    "nombre": "Caldes de Malavella",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 41.84111005287464,
+    "lon": 2.800766926341549,
+    "accesible": true
+  },
+  {
+    "codigo": "79603",
+    "nombre": "Calella",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.614691148563644,
+    "lon": 2.665995170235139,
+    "accesible": true
+  },
+  {
+    "codigo": "62003",
+    "nombre": "Callosa de Segura",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.122704124805395,
+    "lon": -0.8744504488008928,
+    "accesible": false
+  },
+  {
+    "codigo": "15401",
+    "nombre": "Calzada de Asturias",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.53538483688575,
+    "lon": -5.6971507543229745,
+    "accesible": true
+  },
+  {
+    "codigo": "79305",
+    "nombre": "Camallera",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.122329742659005,
+    "lon": 2.9653652272353326,
+    "accesible": false
+  },
+  {
+    "codigo": "65403",
+    "nombre": "Camarles-Deltebre",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.774763341588965,
+    "lon": 0.6717609506061013,
+    "accesible": true
+  },
+  {
+    "codigo": "43002",
+    "nombre": "Camas",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.41773855906271,
+    "lon": -6.040846977908454,
+    "accesible": true
+  },
+  {
+    "codigo": "65422",
+    "nombre": "Cambrils-Salou",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 41.08156420201213,
+    "lon": 1.0460375261327448,
+    "accesible": true
+  },
+  {
+    "codigo": "65401",
+    "nombre": "Camp-redó",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.75915567656902,
+    "lon": 0.5558443359946262,
+    "accesible": false
+  },
+  {
+    "codigo": "54410",
+    "nombre": "Campanillas",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.705043640575695,
+    "lon": -4.545482550499084,
+    "accesible": true
+  },
+  {
+    "codigo": "77301",
+    "nombre": "Campdevànol",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.221713104653254,
+    "lon": 2.1657583966054395,
+    "accesible": true
+  },
+  {
+    "codigo": "05789",
+    "nombre": "Campohermoso",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.85593552421189,
+    "lon": -5.428744977261603,
+    "accesible": true
+  },
+  {
+    "codigo": "15120",
+    "nombre": "Campomanes",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.11006815419424,
+    "lon": -5.816446628647536,
+    "accesible": true
+  },
+  {
+    "codigo": "16302",
+    "nombre": "Cancienes",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.5073330544739,
+    "lon": -5.869252119819382,
+    "accesible": false
+  },
+  {
+    "codigo": "05211",
+    "nombre": "Candás",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.58471078818039,
+    "lon": -5.772690298379768,
+    "accesible": false
+  },
+  {
+    "codigo": "05210",
+    "nombre": "Candás Apeadero",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.58653804937253,
+    "lon": -5.767971517265442,
+    "accesible": true
+  },
+  {
+    "codigo": "79601",
+    "nombre": "Canet de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.5866691485234,
+    "lon": 2.581288871385103,
+    "accesible": true
+  },
+  {
+    "codigo": "51112",
+    "nombre": "Cantaelgallo",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.278219778901224,
+    "lon": -5.9104397182693775,
+    "accesible": true
+  },
+  {
+    "codigo": "50701",
+    "nombre": "Cantillana",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 37.57496897104376,
+    "lon": -5.803207333229093,
+    "accesible": false
+  },
+  {
+    "codigo": "71302",
+    "nombre": "Capçanes",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.10209024213057,
+    "lon": 0.7803609960806158,
+    "accesible": true
+  },
+  {
+    "codigo": "05529",
+    "nombre": "Carancos",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.35556928352876,
+    "lon": -5.434442256833819,
+    "accesible": true
+  },
+  {
+    "codigo": "05417",
+    "nombre": "Carbayín",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.350721566416354,
+    "lon": -5.634334898438819,
+    "accesible": false
+  },
+  {
+    "codigo": "64103",
+    "nombre": "Carcaixent",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.120525159706716,
+    "lon": -0.4544102960578981,
+    "accesible": true
+  },
+  {
+    "codigo": "79101",
+    "nombre": "Cardedeu",
+    "nucleo": "50",
+    "lineas": [
+      "R2N"
+    ],
+    "lat": 41.63670126513822,
+    "lon": 2.356262651653966,
+    "accesible": true
+  },
+  {
+    "codigo": "05435",
+    "nombre": "Carrocera",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.28773359030497,
+    "lon": -5.626376524877778,
+    "accesible": true
+  },
+  {
+    "codigo": "05951",
+    "nombre": "Cartagena",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.603615450595434,
+    "lon": -0.9773265604818604,
+    "accesible": false
+  },
+  {
+    "codigo": "54408",
+    "nombre": "Cártama",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.73373921780526,
+    "lon": -4.608396665692542,
+    "accesible": true
+  },
+  {
+    "codigo": "51050",
+    "nombre": "Cartuja",
+    "nucleo": "30",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.40745740745942,
+    "lon": -6.010185604770778,
+    "accesible": true
+  },
+  {
+    "codigo": "54513",
+    "nombre": "Carvajal",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.57025907728791,
+    "lon": -4.594049195946647,
+    "accesible": true
+  },
+  {
+    "codigo": "05631",
+    "nombre": "Casar de Periedo",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.33878378762548,
+    "lon": -4.174731030154746,
+    "accesible": false
+  },
+  {
+    "codigo": "70800",
+    "nombre": "Casetas",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.72264795702547,
+    "lon": -1.0201916752090399,
+    "accesible": true
+  },
+  {
+    "codigo": "78605",
+    "nombre": "Castellbell i el Vilar-Monistrol de Mont",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.628682611802525,
+    "lon": 1.8688209336186905,
+    "accesible": false
+  },
+  {
+    "codigo": "72210",
+    "nombre": "Castellbisbal",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "R8"
+    ],
+    "lat": 41.47341521967482,
+    "lon": 1.9675697100354657,
+    "accesible": false
+  },
+  {
+    "codigo": "71705",
+    "nombre": "Castelldefels",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2",
+      "R2S"
+    ],
+    "lat": 41.279047450310536,
+    "lon": 1.9791512658677004,
+    "accesible": true
+  },
+  {
+    "codigo": "78405",
+    "nombre": "Castellnou de Seana",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6372887856884,
+    "lon": 0.967751297079654,
+    "accesible": true
+  },
+  {
+    "codigo": "65300",
+    "nombre": "Castelló de la Plana",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.98847369580524,
+    "lon": -0.052345629812943384,
+    "accesible": true
+  },
+  {
+    "codigo": "64201",
+    "nombre": "Catarroja",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 39.40004474781989,
+    "lon": -0.3992195673711273,
+    "accesible": true
+  },
+  {
+    "codigo": "05371",
+    "nombre": "Caudalia",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.22821545218312,
+    "lon": -5.782774036389495,
+    "accesible": false
+  },
+  {
+    "codigo": "67211",
+    "nombre": "Caudiel",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.94736965303458,
+    "lon": -0.5720537039590541,
+    "accesible": false
+  },
+  {
+    "codigo": "40113",
+    "nombre": "Cazalla-Constantina",
+    "nucleo": "30",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 37.93286372981194,
+    "lon": -5.7044330454191465,
+    "accesible": false
+  },
+  {
+    "codigo": "05603",
+    "nombre": "Cazoña",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.45515428461564,
+    "lon": -3.841163776263618,
+    "accesible": false
+  },
+  {
+    "codigo": "05527",
+    "nombre": "Ceceda",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.35622262746883,
+    "lon": -5.451109455551343,
+    "accesible": false
+  },
+  {
+    "codigo": "05667",
+    "nombre": "Ceceñas",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.376492416782426,
+    "lon": -3.7181918750031637,
+    "accesible": false
+  },
+  {
+    "codigo": "79301",
+    "nombre": "Celrà",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.027198408972076,
+    "lon": 2.874905870140615,
+    "accesible": false
+  },
+  {
+    "codigo": "77105",
+    "nombre": "Centelles",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.79939474546059,
+    "lon": 2.222635525284472,
+    "accesible": false
+  },
+  {
+    "codigo": "05204",
+    "nombre": "Centro de Transportes",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.53112959404428,
+    "lon": -5.7067165029480424,
+    "accesible": false
+  },
+  {
+    "codigo": "79316",
+    "nombre": "Cerbère",
+    "nucleo": "50",
+    "lineas": [
+      "R11"
+    ],
+    "lat": 42.44166409324299,
+    "lon": 3.163149352049177,
+    "accesible": false
+  },
+  {
+    "codigo": "12006",
+    "nombre": "Cercedilla",
+    "nucleo": "10",
+    "lineas": [
+      "C8b",
+      "C9"
+    ],
+    "lat": 40.73761293770005,
+    "lon": -4.066298503734664,
+    "accesible": true
+  },
+  {
+    "codigo": "78706",
+    "nombre": "Cerdanyola del Vallès",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "R7"
+    ],
+    "lat": 41.49256083462069,
+    "lon": 2.14752164650625,
+    "accesible": true
+  },
+  {
+    "codigo": "72503",
+    "nombre": "Cerdanyola-Universitat",
+    "nucleo": "50",
+    "lineas": [
+      "R7",
+      "R8"
+    ],
+    "lat": 41.49699042563258,
+    "lon": 2.115377701771859,
+    "accesible": true
+  },
+  {
+    "codigo": "05127",
+    "nombre": "Cerdido",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.58734262980281,
+    "lon": -7.934309988222465,
+    "accesible": true
+  },
+  {
+    "codigo": "05799",
+    "nombre": "Cerezal de la Guzpeña",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.7797744617564,
+    "lon": -5.005571959201269,
+    "accesible": false
+  },
+  {
+    "codigo": "78500",
+    "nombre": "Cervera",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6737745176342,
+    "lon": 1.27472699032389,
+    "accesible": true
+  },
+  {
+    "codigo": "17000",
+    "nombre": "Chamartín-Clara Campoamor",
+    "nucleo": "10",
+    "lineas": [
+      "C1",
+      "C10",
+      "C2",
+      "C3",
+      "C4",
+      "C4a",
+      "C4b",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.47117893731008,
+    "lon": -3.6829524174544477,
+    "accesible": true
+  },
+  {
+    "codigo": "66208",
+    "nombre": "Cheste",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.49090307248171,
+    "lon": -0.686263958903659,
+    "accesible": false
+  },
+  {
+    "codigo": "65204",
+    "nombre": "Chilches/Xilxes",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.78267268630838,
+    "lon": -0.19032950088617237,
+    "accesible": true
+  },
+  {
+    "codigo": "66207",
+    "nombre": "Chiva",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.47112687576416,
+    "lon": -0.7229414767020759,
+    "accesible": false
+  },
+  {
+    "codigo": "16010",
+    "nombre": "Ciaño",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.28938847937231,
+    "lon": -5.66867040002689,
+    "accesible": false
+  },
+  {
+    "codigo": "05431",
+    "nombre": "Ciañu",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.29072420930599,
+    "lon": -5.667899894939001,
+    "accesible": false
+  },
+  {
+    "codigo": "60105",
+    "nombre": "Ciempozuelos",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.159201164749085,
+    "lon": -3.6101851046661686,
+    "accesible": false
+  },
+  {
+    "codigo": "66210",
+    "nombre": "Circuit Ricardo Tormo",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.495437942486426,
+    "lon": -0.6247545389164795,
+    "accesible": false
+  },
+  {
+    "codigo": "05761",
+    "nombre": "Cistierna",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.80316006869903,
+    "lon": -5.130792576032834,
+    "accesible": true
+  },
+  {
+    "codigo": "05477",
+    "nombre": "Colegio",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.21126742973635,
+    "lon": -3.1381409685925914,
+    "accesible": true
+  },
+  {
+    "codigo": "79314",
+    "nombre": "Colera",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.40688373577415,
+    "lon": 3.154343169243404,
+    "accesible": false
+  },
+  {
+    "codigo": "12004",
+    "nombre": "Collado Mediano",
+    "nucleo": "10",
+    "lineas": [
+      "C8b"
+    ],
+    "lat": 40.69289826256137,
+    "lon": -4.035927132437231,
+    "accesible": true
+  },
+  {
+    "codigo": "05389",
+    "nombre": "Collanzo",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.12410040551046,
+    "lon": -5.566154453833647,
+    "accesible": false
+  },
+  {
+    "codigo": "05505",
+    "nombre": "Colloto",
+    "nucleo": "20",
+    "lineas": [
+      "C5a",
+      "C6"
+    ],
+    "lat": 43.3795086714646,
+    "lon": -5.792366008735405,
+    "accesible": false
+  },
+  {
+    "codigo": "17005",
+    "nombre": "Colmenar Viejo",
+    "nucleo": "10",
+    "lineas": [
+      "C4b"
+    ],
+    "lat": 40.64520942112303,
+    "lon": -3.77661428779071,
+    "accesible": true
+  },
+  {
+    "codigo": "51461",
+    "nombre": "Compañía de María",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.460437114473706,
+    "lon": -6.201011551163936,
+    "accesible": true
+  },
+  {
+    "codigo": "05382",
+    "nombre": "Corigos",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.164286731297494,
+    "lon": -5.6766513873139415,
+    "accesible": false
+  },
+  {
+    "codigo": "72303",
+    "nombre": "Cornellà",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R4"
+    ],
+    "lat": 41.357521418678665,
+    "lon": 2.0705490790834125,
+    "accesible": false
+  },
+  {
+    "codigo": "14210",
+    "nombre": "Corrales",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.2551009493713,
+    "lon": -4.0639472123277605,
+    "accesible": false
+  },
+  {
+    "codigo": "51407",
+    "nombre": "Cortadura",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.49436722314638,
+    "lon": -6.268238486700561,
+    "accesible": true
+  },
+  {
+    "codigo": "70108",
+    "nombre": "Coslada",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.42323709008336,
+    "lon": -3.561110904230503,
+    "accesible": true
+  },
+  {
+    "codigo": "12023",
+    "nombre": "Cotos",
+    "nucleo": "10",
+    "lineas": [
+      "C9"
+    ],
+    "lat": 40.822341995373925,
+    "lon": -3.964496155256948,
+    "accesible": false
+  },
+  {
+    "codigo": "62101",
+    "nombre": "Crevillent",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.22456220133813,
+    "lon": -0.7815283964092701,
+    "accesible": false
+  },
+  {
+    "codigo": "05220",
+    "nombre": "Cristalería",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.5755676782876,
+    "lon": -5.929241494587807,
+    "accesible": false
+  },
+  {
+    "codigo": "35603",
+    "nombre": "Cuatro Vientos",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.37776513399771,
+    "lon": -3.7915100689199033,
+    "accesible": false
+  },
+  {
+    "codigo": "71604",
+    "nombre": "Cubelles",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2S"
+    ],
+    "lat": 41.20432463992812,
+    "lon": 1.6759772002355882,
+    "accesible": true
+  },
+  {
+    "codigo": "05245",
+    "nombre": "Cudillero",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.55092597639623,
+    "lon": -6.1519305488755975,
+    "accesible": false
+  },
+  {
+    "codigo": "69104",
+    "nombre": "Cullera",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.17788858170236,
+    "lon": -0.2632437920709031,
+    "accesible": true
+  },
+  {
+    "codigo": "71603",
+    "nombre": "Cunit",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2S"
+    ],
+    "lat": 41.195041546779684,
+    "lon": 1.6319424290918747,
+    "accesible": true
+  },
+  {
+    "codigo": "05420",
+    "nombre": "Curuxona",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.3398152438197,
+    "lon": -5.630476248744803,
+    "accesible": false
+  },
+  {
+    "codigo": "04040",
+    "nombre": "Delicias",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.65865760371089,
+    "lon": -0.9112693523273168,
+    "accesible": true
+  },
+  {
+    "codigo": "18004",
+    "nombre": "Delicias",
+    "nucleo": "10",
+    "lineas": [
+      "C10"
+    ],
+    "lat": 40.40043756166128,
+    "lon": -3.6927766658583776,
+    "accesible": true
+  },
+  {
+    "codigo": "13400",
+    "nombre": "Desertu-Barakaldo",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.30002644615895,
+    "lon": -2.9844090282151114,
+    "accesible": false
+  },
+  {
+    "codigo": "35702",
+    "nombre": "Doce de Octubre",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.378921071109104,
+    "lon": -3.6986988698957446,
+    "accesible": false
+  },
+  {
+    "codigo": "11511",
+    "nombre": "Donostia-San Sebastián",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.31769619077552,
+    "lon": -1.9767172564058515,
+    "accesible": true
+  },
+  {
+    "codigo": "51103",
+    "nombre": "Dos Hermanas",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C5"
+    ],
+    "lat": 37.28722596184275,
+    "lon": -5.923532234186921,
+    "accesible": true
+  },
+  {
+    "codigo": "71305",
+    "nombre": "Duesaigües-L'Argentera",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.14369287911583,
+    "lon": 0.9208709655471812,
+    "accesible": false
+  },
+  {
+    "codigo": "10010",
+    "nombre": "El Barrial - Centro Comercial",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.465391837359206,
+    "lon": -3.807685483132258,
+    "accesible": false
+  },
+  {
+    "codigo": "05509",
+    "nombre": "El Berrón",
+    "nucleo": "20",
+    "lineas": [
+      "C5",
+      "C5a",
+      "C6"
+    ],
+    "lat": 43.38273830454634,
+    "lon": -5.70267743219033,
+    "accesible": false
+  },
+  {
+    "codigo": "15210",
+    "nombre": "El Caleyo",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.329046629967934,
+    "lon": -5.8733323660131935,
+    "accesible": true
+  },
+  {
+    "codigo": "50704",
+    "nombre": "El Cáñamo",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 37.48639525579352,
+    "lon": -5.932975093881591,
+    "accesible": true
+  },
+  {
+    "codigo": "60109",
+    "nombre": "El Casar",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.318522383773406,
+    "lon": -3.7098062031364125,
+    "accesible": true
+  },
+  {
+    "codigo": "16011",
+    "nombre": "El Entrego",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.28722244459497,
+    "lon": -5.644631410014696,
+    "accesible": true
+  },
+  {
+    "codigo": "05433",
+    "nombre": "El Entrego La Oscura",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.28951014454425,
+    "lon": -5.640809902519845,
+    "accesible": false
+  },
+  {
+    "codigo": "10203",
+    "nombre": "El Escorial",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.58536750963213,
+    "lon": -4.1324053344598495,
+    "accesible": true
+  },
+  {
+    "codigo": "05971",
+    "nombre": "El Estrecho",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.62760793546065,
+    "lon": -0.8295920716867251,
+    "accesible": false
+  },
+  {
+    "codigo": "17003",
+    "nombre": "El Goloso",
+    "nucleo": "10",
+    "lineas": [
+      "C4b"
+    ],
+    "lat": 40.558896691449235,
+    "lon": -3.7139714604735516,
+    "accesible": false
+  },
+  {
+    "codigo": "79407",
+    "nombre": "El Masnou",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.47703630630164,
+    "lon": 2.310377205964852,
+    "accesible": true
+  },
+  {
+    "codigo": "72211",
+    "nombre": "El Papiol",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.4353713508858,
+    "lon": 2.002577921122534,
+    "accesible": false
+  },
+  {
+    "codigo": "05232",
+    "nombre": "El Parador",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.53514127951191,
+    "lon": -6.070590741016973,
+    "accesible": false
+  },
+  {
+    "codigo": "54510",
+    "nombre": "El Pinillo",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.60986888824569,
+    "lon": -4.515373542671142,
+    "accesible": true
+  },
+  {
+    "codigo": "05244",
+    "nombre": "El Pito-Piñera",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.546909184151524,
+    "lon": -6.14334176617311,
+    "accesible": false
+  },
+  {
+    "codigo": "70003",
+    "nombre": "El Pozo",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.37603772549268,
+    "lon": -3.6561407807660875,
+    "accesible": false
+  },
+  {
+    "codigo": "71707",
+    "nombre": "El Prat de Llobregat",
+    "nucleo": "50",
+    "lineas": [
+      "R15",
+      "R2",
+      "R2N",
+      "R2S"
+    ],
+    "lat": 41.33094019897584,
+    "lon": 2.0893447361115345,
+    "accesible": true
+  },
+  {
+    "codigo": "51400",
+    "nombre": "El Puerto de Santamaría",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.604072319419835,
+    "lon": -6.217926139605417,
+    "accesible": true
+  },
+  {
+    "codigo": "65007",
+    "nombre": "el Puig de Santa Maria",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.58830205034104,
+    "lon": -0.31166451643868365,
+    "accesible": true
+  },
+  {
+    "codigo": "66203",
+    "nombre": "El Rebollar",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.47736044762985,
+    "lon": -1.0116025672627338,
+    "accesible": false
+  },
+  {
+    "codigo": "05521",
+    "nombre": "El Remedio",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.37507936739791,
+    "lon": -5.546239444305749,
+    "accesible": true
+  },
+  {
+    "codigo": "69101",
+    "nombre": "el Romaní",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.30297898036038,
+    "lon": -0.39423549156890647,
+    "accesible": true
+  },
+  {
+    "codigo": "72201",
+    "nombre": "El Vendrell",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "RT2"
+    ],
+    "lat": 41.22100573311041,
+    "lon": 1.5379055233647767,
+    "accesible": false
+  },
+  {
+    "codigo": "71301",
+    "nombre": "Els Guiamets",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.09597172388426,
+    "lon": 0.7477249241601751,
+    "accesible": false
+  },
+  {
+    "codigo": "72203",
+    "nombre": "Els Monjos",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.314713540053106,
+    "lon": 1.6598840223846978,
+    "accesible": false
+  },
+  {
+    "codigo": "62102",
+    "nombre": "Elx Carrús",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.26897834999902,
+    "lon": -0.7063992139393491,
+    "accesible": true
+  },
+  {
+    "codigo": "62103",
+    "nombre": "Elx Parc",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.271780937948755,
+    "lon": -0.695219374139964,
+    "accesible": true
+  },
+  {
+    "codigo": "35609",
+    "nombre": "Embajadores",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.40464848507213,
+    "lon": -3.7025790710678352,
+    "accesible": false
+  },
+  {
+    "codigo": "05125",
+    "nombre": "Entrambarrías",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.57706334225173,
+    "lon": -7.9542644764741635,
+    "accesible": false
+  },
+  {
+    "codigo": "51409",
+    "nombre": "Estadio",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.502946126928954,
+    "lon": -6.272064419375978,
+    "accesible": true
+  },
+  {
+    "codigo": "51051",
+    "nombre": "Estadio Olímpico",
+    "nucleo": "30",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.417430729017234,
+    "lon": -6.007496004770418,
+    "accesible": true
+  },
+  {
+    "codigo": "67221",
+    "nombre": "Estivella-Albalat dels Tarongers",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.706408016251125,
+    "lon": -0.3483240880195735,
+    "accesible": false
+  },
+  {
+    "codigo": "05109",
+    "nombre": "Ferreiras",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.52801782481394,
+    "lon": -8.150435971153659,
+    "accesible": false
+  },
+  {
+    "codigo": "21010",
+    "nombre": "Ferrol",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.488046745820284,
+    "lon": -8.23106640800722,
+    "accesible": true
+  },
+  {
+    "codigo": "16301",
+    "nombre": "Ferroñes",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.476033821169,
+    "lon": -5.861621701298669,
+    "accesible": false
+  },
+  {
+    "codigo": "05373",
+    "nombre": "Figaredo",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.213839854319225,
+    "lon": -5.784036202913433,
+    "accesible": false
+  },
+  {
+    "codigo": "77103",
+    "nombre": "Figaró",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.721345425955384,
+    "lon": 2.2716012905372,
+    "accesible": false
+  },
+  {
+    "codigo": "79309",
+    "nombre": "Figueres",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.26511345524038,
+    "lon": 2.9688007402064973,
+    "accesible": true
+  },
+  {
+    "codigo": "79303",
+    "nombre": "Flaçà",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.047477037748635,
+    "lon": 2.9574031503532807,
+    "accesible": true
+  },
+  {
+    "codigo": "71210",
+    "nombre": "Flix",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.22936510758467,
+    "lon": 0.5401001221285793,
+    "accesible": false
+  },
+  {
+    "codigo": "05508",
+    "nombre": "Fonciello",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.38177793856614,
+    "lon": -5.729719461840851,
+    "accesible": true
+  },
+  {
+    "codigo": "79205",
+    "nombre": "Fornells de la Selva",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 41.93504300188093,
+    "lon": 2.8097832405480965,
+    "accesible": false
+  },
+  {
+    "codigo": "14209",
+    "nombre": "Fraguas",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.19321901882241,
+    "lon": -4.054112754399625,
+    "accesible": false
+  },
+  {
+    "codigo": "17001",
+    "nombre": "Fuencarral",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.50156038461739,
+    "lon": -3.6825042379979562,
+    "accesible": true
+  },
+  {
+    "codigo": "54516",
+    "nombre": "Fuengirola",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.54189470402939,
+    "lon": -4.623858070094002,
+    "accesible": true
+  },
+  {
+    "codigo": "35002",
+    "nombre": "Fuenlabrada",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.283378463977265,
+    "lon": -3.7994429495287934,
+    "accesible": true
+  },
+  {
+    "codigo": "98003",
+    "nombre": "Fuente de la Mora",
+    "nucleo": "10",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 40.48472007397687,
+    "lon": -3.663060893862182,
+    "accesible": true
+  },
+  {
+    "codigo": "05525",
+    "nombre": "Fuente Santa de Nava",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.355569982905244,
+    "lon": -5.478379095664106,
+    "accesible": true
+  },
+  {
+    "codigo": "10104",
+    "nombre": "Galapagar La Navata",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.60031383957734,
+    "lon": -3.9822590584465964,
+    "accesible": false
+  },
+  {
+    "codigo": "13501",
+    "nombre": "Galindo",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30413494329925,
+    "lon": -3.0101966893304954,
+    "accesible": false
+  },
+  {
+    "codigo": "13508",
+    "nombre": "Gallarta",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.31933195059561,
+    "lon": -3.067452146426424,
+    "accesible": false
+  },
+  {
+    "codigo": "69110",
+    "nombre": "Gandia",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.970514029755044,
+    "lon": -0.17978293169986548,
+    "accesible": false
+  },
+  {
+    "codigo": "05622",
+    "nombre": "Ganzo",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.35652818066567,
+    "lon": -4.070227375698403,
+    "accesible": false
+  },
+  {
+    "codigo": "71703",
+    "nombre": "Garraf",
+    "nucleo": "50",
+    "lineas": [
+      "R2S"
+    ],
+    "lat": 41.254587596456766,
+    "lon": 1.9025038388822524,
+    "accesible": true
+  },
+  {
+    "codigo": "05774",
+    "nombre": "Garrafe",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.734507550734484,
+    "lon": -5.524156006558743,
+    "accesible": true
+  },
+  {
+    "codigo": "71706",
+    "nombre": "Gavà",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2",
+      "R2S"
+    ],
+    "lat": 41.303472267829136,
+    "lon": 2.0105311119006184,
+    "accesible": true
+  },
+  {
+    "codigo": "72208",
+    "nombre": "Gelida",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.44854050013627,
+    "lon": 1.8655298800792266,
+    "accesible": false
+  },
+  {
+    "codigo": "37011",
+    "nombre": "Getafe Sector 3",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.28838936667727,
+    "lon": -3.7374991739780694,
+    "accesible": true
+  },
+  {
+    "codigo": "37002",
+    "nombre": "Getafe-Centro",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.31000451019525,
+    "lon": -3.733987816306481,
+    "accesible": true
+  },
+  {
+    "codigo": "60102",
+    "nombre": "Getafe-Industrial",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.30571762742754,
+    "lon": -3.707835960483537,
+    "accesible": false
+  },
+  {
+    "codigo": "15410",
+    "nombre": "Gijón Sanz Crespo",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C4",
+      "C5",
+      "C5a"
+    ],
+    "lat": 43.53773291300064,
+    "lon": -5.6758089689382905,
+    "accesible": true
+  },
+  {
+    "codigo": "67223",
+    "nombre": "Gilet",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.67939853304599,
+    "lon": -0.32065485030419105,
+    "accesible": false
+  },
+  {
+    "codigo": "79300",
+    "nombre": "Girona",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 41.97936295254473,
+    "lon": 2.8169368915515745,
+    "accesible": true
+  },
+  {
+    "codigo": "05629",
+    "nombre": "Golbardo",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.340816497881356,
+    "lon": -4.155628272683551,
+    "accesible": false
+  },
+  {
+    "codigo": "78404",
+    "nombre": "Golmés",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.636000001328,
+    "lon": 0.930826037274185,
+    "accesible": false
+  },
+  {
+    "codigo": "05613",
+    "nombre": "Gornazo",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.40970253809938,
+    "lon": -3.9886035027261766,
+    "accesible": false
+  },
+  {
+    "codigo": "05317",
+    "nombre": "Grado",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.39454244760012,
+    "lon": -6.063725495671498,
+    "accesible": false
+  },
+  {
+    "codigo": "79100",
+    "nombre": "Granollers Centre",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2",
+      "R2N",
+      "R8"
+    ],
+    "lat": 41.59974477163522,
+    "lon": 2.291269627784105,
+    "accesible": true
+  },
+  {
+    "codigo": "77006",
+    "nombre": "Granollers-Canovelles",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.6114637946199,
+    "lon": 2.276860731555509,
+    "accesible": false
+  },
+  {
+    "codigo": "11512",
+    "nombre": "Gros",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.321845784430074,
+    "lon": -1.9738835872097809,
+    "accesible": true
+  },
+  {
+    "codigo": "50602",
+    "nombre": "Guadajoz",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.58145943671611,
+    "lon": -5.6699795370615655,
+    "accesible": false
+  },
+  {
+    "codigo": "70200",
+    "nombre": "Guadalajara",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.644192839088,
+    "lon": -3.1822602522547214,
+    "accesible": false
+  },
+  {
+    "codigo": "54503",
+    "nombre": "Guadalhorce",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.69207578872053,
+    "lon": -4.483684456380563,
+    "accesible": true
+  },
+  {
+    "codigo": "79105",
+    "nombre": "Gualba",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2N"
+    ],
+    "lat": 41.718190181540656,
+    "lon": 2.538783739916012,
+    "accesible": true
+  },
+  {
+    "codigo": "05754",
+    "nombre": "Guardo",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.79099501343576,
+    "lon": -4.8519325788858145,
+    "accesible": true
+  },
+  {
+    "codigo": "05753",
+    "nombre": "Guardo Apeadero",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.78773788100593,
+    "lon": -4.845133045341881,
+    "accesible": false
+  },
+  {
+    "codigo": "14218",
+    "nombre": "Guarnizo",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.391510128504855,
+    "lon": -3.8595450829372773,
+    "accesible": false
+  },
+  {
+    "codigo": "05216",
+    "nombre": "Gudín Laminación",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.552293113824874,
+    "lon": -5.8653924301046905,
+    "accesible": true
+  },
+  {
+    "codigo": "05471",
+    "nombre": "Güeñes",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.20902763612216,
+    "lon": -3.095211337240431,
+    "accesible": true
+  },
+  {
+    "codigo": "05661",
+    "nombre": "Heras",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.400899641002596,
+    "lon": -3.7666376966467983,
+    "accesible": false
+  },
+  {
+    "codigo": "11508",
+    "nombre": "Hernani",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.27251138307484,
+    "lon": -1.9637735315243188,
+    "accesible": false
+  },
+  {
+    "codigo": "11507",
+    "nombre": "Hernani Centro",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.266477972175004,
+    "lon": -1.9726232552676075,
+    "accesible": false
+  },
+  {
+    "codigo": "11514",
+    "nombre": "Herrera",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.31935373702214,
+    "lon": -1.9370173531304944,
+    "accesible": false
+  },
+  {
+    "codigo": "05952",
+    "nombre": "Hospital",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.60521935086282,
+    "lon": -0.9607323097698047,
+    "accesible": false
+  },
+  {
+    "codigo": "05784",
+    "nombre": "Hospitales",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.61262016561494,
+    "lon": -5.569855626893026,
+    "accesible": true
+  },
+  {
+    "codigo": "79107",
+    "nombre": "Hostalric",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2N"
+    ],
+    "lat": 41.74778804644702,
+    "lon": 2.631650114618802,
+    "accesible": true
+  },
+  {
+    "codigo": "35012",
+    "nombre": "Humanes",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.2558101899707,
+    "lon": -3.828705562333115,
+    "accesible": true
+  },
+  {
+    "codigo": "05479",
+    "nombre": "Ibarra",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.20395901938499,
+    "lon": -3.1448388188102827,
+    "accesible": true
+  },
+  {
+    "codigo": "11408",
+    "nombre": "Ikaztegieta",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.0940398404011,
+    "lon": -2.125577388143258,
+    "accesible": false
+  },
+  {
+    "codigo": "05533",
+    "nombre": "Infiesto",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.35178688197604,
+    "lon": -5.369201992406254,
+    "accesible": true
+  },
+  {
+    "codigo": "05534",
+    "nombre": "Infiesto Apeadero",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.34404079066958,
+    "lon": -5.360641484730677,
+    "accesible": true
+  },
+  {
+    "codigo": "11522",
+    "nombre": "Intxaurrondo",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.32004871426519,
+    "lon": -1.9517673113070715,
+    "accesible": true
+  },
+  {
+    "codigo": "13116",
+    "nombre": "Iñarratxu",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.035824306020324,
+    "lon": -3.0038794091906134,
+    "accesible": false
+  },
+  {
+    "codigo": "05461",
+    "nombre": "Irauregui",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.24841805443543,
+    "lon": -2.9900734242535205,
+    "accesible": false
+  },
+  {
+    "codigo": "11600",
+    "nombre": "Irún",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.33953653983852,
+    "lon": -1.8012519200248824,
+    "accesible": true
+  },
+  {
+    "codigo": "11406",
+    "nombre": "Itsasondo",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.06832980110086,
+    "lon": -2.1624850283934034,
+    "accesible": false
+  },
+  {
+    "codigo": "07003",
+    "nombre": "Jaravía",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.39246323113364,
+    "lon": -1.6930400709646078,
+    "accesible": false
+  },
+  {
+    "codigo": "51113",
+    "nombre": "Jardines de Hércules",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C5"
+    ],
+    "lat": 37.332852769120734,
+    "lon": -5.964094073471232,
+    "accesible": true
+  },
+  {
+    "codigo": "51300",
+    "nombre": "Jerez de la Frontera",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.68002204303188,
+    "lon": -6.12660328633122,
+    "accesible": true
+  },
+  {
+    "codigo": "67212",
+    "nombre": "Jérica-Viver",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.9149777056359,
+    "lon": -0.5693896682969237,
+    "accesible": false
+  },
+  {
+    "codigo": "73002",
+    "nombre": "Juneda",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.543932884921496,
+    "lon": 0.8255418557146281,
+    "accesible": false
+  },
+  {
+    "codigo": "05497",
+    "nombre": "Karrantza",
+    "nucleo": "60",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.238854,
+    "lon": -3.357827,
+    "accesible": false
+  },
+  {
+    "codigo": "05460",
+    "nombre": "Kastrexana",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.25547588730079,
+    "lon": -2.972144532322281,
+    "accesible": false
+  },
+  {
+    "codigo": "64006",
+    "nombre": "l'Alcúdia de Crespins",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 38.969057955860656,
+    "lon": -0.5866758305128946,
+    "accesible": false
+  },
+  {
+    "codigo": "65402",
+    "nombre": "L'Aldea-Amposta",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.75356400924827,
+    "lon": 0.6143092338433964,
+    "accesible": true
+  },
+  {
+    "codigo": "65405",
+    "nombre": "L'Ametlla de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.88620006251068,
+    "lon": 0.8004532111585455,
+    "accesible": false
+  },
+  {
+    "codigo": "65404",
+    "nombre": "L'Ampolla-Perelló-Deltebre",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.811989802810864,
+    "lon": 0.708263369537848,
+    "accesible": true
+  },
+  {
+    "codigo": "72202",
+    "nombre": "L'Arboç",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "RT2"
+    ],
+    "lat": 41.27340416905236,
+    "lon": 1.6005185708744785,
+    "accesible": false
+  },
+  {
+    "codigo": "64007",
+    "nombre": "l'Énova-Manuel",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.05007279348106,
+    "lon": -0.47760367645511886,
+    "accesible": true
+  },
+  {
+    "codigo": "73007",
+    "nombre": "L'Espluga de Francolí",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.400661657556995,
+    "lon": 1.1033609429464821,
+    "accesible": true
+  },
+  {
+    "codigo": "65420",
+    "nombre": "L'Hospitalet de l'Infant - Vandellòs",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.999390060135205,
+    "lon": 0.9125388774216688,
+    "accesible": true
+  },
+  {
+    "codigo": "72305",
+    "nombre": "L'Hospitalet de Llobregat",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R3",
+      "R4",
+      "RG1"
+    ],
+    "lat": 41.36420387547946,
+    "lon": 2.1009174979352183,
+    "accesible": true
+  },
+  {
+    "codigo": "05301",
+    "nombre": "La Argañosa-Lavapiés",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.365831191263474,
+    "lon": -5.870018066128984,
+    "accesible": true
+  },
+  {
+    "codigo": "05485",
+    "nombre": "La Calzada",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.190115492969085,
+    "lon": -3.1974062641551986,
+    "accesible": true
+  },
+  {
+    "codigo": "05658",
+    "nombre": "La Cantabrica",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.397366182045246,
+    "lon": -3.814967974413788,
+    "accesible": false
+  },
+  {
+    "codigo": "05511",
+    "nombre": "La Carrera de Siero",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.386921424442185,
+    "lon": -5.675346241168832,
+    "accesible": false
+  },
+  {
+    "codigo": "05669",
+    "nombre": "La Cavada",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.35061417391666,
+    "lon": -3.7070777702148576,
+    "accesible": false
+  },
+  {
+    "codigo": "15121",
+    "nombre": "La Cobertoria",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.13016086032176,
+    "lon": -5.816030405320463,
+    "accesible": true
+  },
+  {
+    "codigo": "54508",
+    "nombre": "La Colina",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.64192360718497,
+    "lon": -4.492638331821377,
+    "accesible": true
+  },
+  {
+    "codigo": "15217",
+    "nombre": "La Corredoria",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C3",
+      "C5a",
+      "C6"
+    ],
+    "lat": 43.38810801425179,
+    "lon": -5.827252775614678,
+    "accesible": true
+  },
+  {
+    "codigo": "05798",
+    "nombre": "La Devesa",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.8201272594182,
+    "lon": -5.302191881360676,
+    "accesible": true
+  },
+  {
+    "codigo": "05763",
+    "nombre": "La Ercina",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.80884801051233,
+    "lon": -5.213892483620751,
+    "accesible": true
+  },
+  {
+    "codigo": "05961",
+    "nombre": "La Esperanza",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.613763598868346,
+    "lon": -0.8914408355507065,
+    "accesible": false
+  },
+  {
+    "codigo": "05756",
+    "nombre": "La Espina",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.78685607666284,
+    "lon": -4.905202538134488,
+    "accesible": true
+  },
+  {
+    "codigo": "77114",
+    "nombre": "La Farga de Bebié",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.1300729275341,
+    "lon": 2.203935661907871,
+    "accesible": true
+  },
+  {
+    "codigo": "16008",
+    "nombre": "La Felguera",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.304831088531834,
+    "lon": -5.692851660675565,
+    "accesible": false
+  },
+  {
+    "codigo": "05426",
+    "nombre": "La Felguera Nuevo Langreo /Nuevu Llangréu",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.3104908223067,
+    "lon": -5.685659882157637,
+    "accesible": false
+  },
+  {
+    "codigo": "73004",
+    "nombre": "La Floresta",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.50421641291168,
+    "lon": 0.924400307381997,
+    "accesible": true
+  },
+  {
+    "codigo": "05411",
+    "nombre": "La Florida",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.434758868156834,
+    "lon": -5.709926845672407,
+    "accesible": false
+  },
+  {
+    "codigo": "15119",
+    "nombre": "La Frecha",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.096167061736374,
+    "lon": -5.7985997899234265,
+    "accesible": false
+  },
+  {
+    "codigo": "70111",
+    "nombre": "La Garena",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.480544856618735,
+    "lon": -3.393005507131578,
+    "accesible": true
+  },
+  {
+    "codigo": "77102",
+    "nombre": "La Garriga",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.684627214285044,
+    "lon": 2.288795594266273,
+    "accesible": false
+  },
+  {
+    "codigo": "72205",
+    "nombre": "La Granada",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.370949764632556,
+    "lon": 1.7250789339154236,
+    "accesible": false
+  },
+  {
+    "codigo": "05481",
+    "nombre": "La Herrera",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.203452134759694,
+    "lon": -3.1705687224571117,
+    "accesible": false
+  },
+  {
+    "codigo": "06004",
+    "nombre": "La Hoya",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.70374243993179,
+    "lon": -1.5958091459024053,
+    "accesible": true
+  },
+  {
+    "codigo": "51451",
+    "nombre": "La Hoya",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.4112449315071,
+    "lon": -6.1390947699592955,
+    "accesible": true
+  },
+  {
+    "codigo": "13402",
+    "nombre": "La Iberia",
+    "nucleo": "60",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.31270313664106,
+    "lon": -3.0044959032191896,
+    "accesible": false
+  },
+  {
+    "codigo": "79011",
+    "nombre": "La Llagosta",
+    "nucleo": "50",
+    "lineas": [
+      "R2",
+      "R2N"
+    ],
+    "lat": 41.51045663986622,
+    "lon": 2.199732794522285,
+    "accesible": true
+  },
+  {
+    "codigo": "05755",
+    "nombre": "La Llama de Guzpeña",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.77024818083511,
+    "lon": -5.041247865180776,
+    "accesible": false
+  },
+  {
+    "codigo": "65203",
+    "nombre": "la Llosa",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.76781094605539,
+    "lon": -0.20294448234017928,
+    "accesible": true
+  },
+  {
+    "codigo": "05765",
+    "nombre": "La Losilla",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.83854434969496,
+    "lon": -5.318160850523155,
+    "accesible": true
+  },
+  {
+    "codigo": "05793",
+    "nombre": "La Mata de la Riba",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.858540722600125,
+    "lon": -5.339489830476452,
+    "accesible": true
+  },
+  {
+    "codigo": "77306",
+    "nombre": "La Molina",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.344651847338376,
+    "lon": 1.9559508101041072,
+    "accesible": true
+  },
+  {
+    "codigo": "13119",
+    "nombre": "La Peña",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.240166906584236,
+    "lon": -2.924042966617628,
+    "accesible": false
+  },
+  {
+    "codigo": "15206",
+    "nombre": "La Pereda Riosa",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C8"
+    ],
+    "lat": 43.277086769845944,
+    "lon": -5.812235030436958,
+    "accesible": false
+  },
+  {
+    "codigo": "73100",
+    "nombre": "La Plana-Picamoixons",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "RT1"
+    ],
+    "lat": 41.30619872898125,
+    "lon": 1.1948829315469365,
+    "accesible": true
+  },
+  {
+    "codigo": "64102",
+    "nombre": "la Pobla Llarga",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 39.083338558828146,
+    "lon": -0.4696592790590342,
+    "accesible": true
+  },
+  {
+    "codigo": "05465",
+    "nombre": "La Quadra",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.22272302022262,
+    "lon": -3.024984808732021,
+    "accesible": true
+  },
+  {
+    "codigo": "05794",
+    "nombre": "La Raya",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.638110982106326,
+    "lon": -5.556981280409767,
+    "accesible": true
+  },
+  {
+    "codigo": "73010",
+    "nombre": "La Riba",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.31849264471527,
+    "lon": 1.1813126052654193,
+    "accesible": true
+  },
+  {
+    "codigo": "50703",
+    "nombre": "La Rinconada",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 37.480089741940844,
+    "lon": -5.940119057457683,
+    "accesible": true
+  },
+  {
+    "codigo": "16402",
+    "nombre": "La Rocica",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.54710151859741,
+    "lon": -5.904708322237961,
+    "accesible": false
+  },
+  {
+    "codigo": "73102",
+    "nombre": "La Selva del Camp",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "RT1"
+    ],
+    "lat": 41.21115446225471,
+    "lon": 1.143960031036267,
+    "accesible": true
+  },
+  {
+    "codigo": "35010",
+    "nombre": "La Serna",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.296817324948364,
+    "lon": -3.792623591237143,
+    "accesible": true
+  },
+  {
+    "codigo": "77310",
+    "nombre": "La Tor de Querol-Enveig",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.45902882956647,
+    "lon": 1.9043831256116985,
+    "accesible": false
+  },
+  {
+    "codigo": "05965",
+    "nombre": "La Unión",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.61554851360722,
+    "lon": -0.8751320191594323,
+    "accesible": false
+  },
+  {
+    "codigo": "05963",
+    "nombre": "La Unión Vieja",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.615466866699535,
+    "lon": -0.8816322252524735,
+    "accesible": false
+  },
+  {
+    "codigo": "05769",
+    "nombre": "La Valcueva",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.84966512018316,
+    "lon": -5.486908504370613,
+    "accesible": true
+  },
+  {
+    "codigo": "05767",
+    "nombre": "La Vecilla",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.85511581905242,
+    "lon": -5.412115735962478,
+    "accesible": true
+  },
+  {
+    "codigo": "05123",
+    "nombre": "Labacengos",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.56527070162101,
+    "lon": -7.980188240657928,
+    "accesible": false
+  },
+  {
+    "codigo": "35608",
+    "nombre": "Laguna",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.39906030354385,
+    "lon": -3.744230556115414,
+    "accesible": false
+  },
+  {
+    "codigo": "05117",
+    "nombre": "Lamas",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.54730642443385,
+    "lon": -8.049016694228746,
+    "accesible": false
+  },
+  {
+    "codigo": "05470",
+    "nombre": "Lambarri",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.206073388375984,
+    "lon": -3.0825107199073383,
+    "accesible": true
+  },
+  {
+    "codigo": "14203",
+    "nombre": "Lantueno",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.05807315398748,
+    "lon": -4.084013192227795,
+    "accesible": false
+  },
+  {
+    "codigo": "35602",
+    "nombre": "Las Águilas",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.38102202485594,
+    "lon": -3.7801636210576866,
+    "accesible": false
+  },
+  {
+    "codigo": "51415",
+    "nombre": "Las Aletas",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.54463800499427,
+    "lon": -6.199008848426348,
+    "accesible": true
+  },
+  {
+    "codigo": "51202",
+    "nombre": "Las Cabezas de San Juan",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.01948978229529,
+    "lon": -5.946580005574106,
+    "accesible": true
+  },
+  {
+    "codigo": "05302",
+    "nombre": "Las Campas",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.3638889407805,
+    "lon": -5.883372813281612,
+    "accesible": true
+  },
+  {
+    "codigo": "37010",
+    "nombre": "Las Margaritas",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.32309892021601,
+    "lon": -3.7272863253776167,
+    "accesible": true
+  },
+  {
+    "codigo": "10101",
+    "nombre": "Las Matas",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.55238696234879,
+    "lon": -3.896766426530577,
+    "accesible": false
+  },
+  {
+    "codigo": "05303",
+    "nombre": "Las Mazas",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.3587192825502,
+    "lon": -5.89755683497392,
+    "accesible": true
+  },
+  {
+    "codigo": "35610",
+    "nombre": "Las Retamas",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.342115391006324,
+    "lon": -3.842463646988254,
+    "accesible": false
+  },
+  {
+    "codigo": "10005",
+    "nombre": "Las Rozas",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.49428878722732,
+    "lon": -3.868174712506445,
+    "accesible": false
+  },
+  {
+    "codigo": "15209",
+    "nombre": "Las Segadas",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.31324190071652,
+    "lon": -5.869197862021869,
+    "accesible": false
+  },
+  {
+    "codigo": "10202",
+    "nombre": "Las Zorreras - Navalquejigo",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.60931160889289,
+    "lon": -4.046362683513723,
+    "accesible": false
+  },
+  {
+    "codigo": "72206",
+    "nombre": "Lavern-Subirats",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.3957338434464,
+    "lon": 1.768173586944561,
+    "accesible": true
+  },
+  {
+    "codigo": "05443",
+    "nombre": "Laviana",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.25081614278696,
+    "lon": -5.564668872969444,
+    "accesible": false
+  },
+  {
+    "codigo": "51203",
+    "nombre": "Lebrija",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.91163782923781,
+    "lon": -6.094848726813999,
+    "accesible": true
+  },
+  {
+    "codigo": "35001",
+    "nombre": "Leganés",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.32864304829626,
+    "lon": -3.7713161379058477,
+    "accesible": true
+  },
+  {
+    "codigo": "11306",
+    "nombre": "Legazpi",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.051038577612445,
+    "lon": -2.3306103952697064,
+    "accesible": false
+  },
+  {
+    "codigo": "11407",
+    "nombre": "Legorreta",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.085694834276424,
+    "lon": -2.1408977563890255,
+    "accesible": false
+  },
+  {
+    "codigo": "05778",
+    "nombre": "León",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.602491876496345,
+    "lon": -5.5749341958936265,
+    "accesible": true
+  },
+  {
+    "codigo": "73003",
+    "nombre": "Les Borges Blanques",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.52139738102029,
+    "lon": 0.8779102206929993,
+    "accesible": false
+  },
+  {
+    "codigo": "71307",
+    "nombre": "Les Borges del Camp",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.16650643245607,
+    "lon": 1.0221323063064938,
+    "accesible": false
+  },
+  {
+    "codigo": "77100",
+    "nombre": "Les Franqueses del Vallès",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.62978852554084,
+    "lon": 2.295164612606513,
+    "accesible": false
+  },
+  {
+    "codigo": "79109",
+    "nombre": "Les Franqueses-Granollers Nord",
+    "nucleo": "50",
+    "lineas": [
+      "R2N"
+    ],
+    "lat": 41.6172549260968,
+    "lon": 2.2944318026523267,
+    "accesible": true
+  },
+  {
+    "codigo": "65201",
+    "nombre": "les Valls",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.71934579304577,
+    "lon": -0.23976020132962433,
+    "accesible": false
+  },
+  {
+    "codigo": "05387",
+    "nombre": "Levinco",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.151107774182236,
+    "lon": -5.600293749559179,
+    "accesible": false
+  },
+  {
+    "codigo": "11516",
+    "nombre": "Lezo-Rentería",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.315936478527675,
+    "lon": -1.8994386431486656,
+    "accesible": false
+  },
+  {
+    "codigo": "06001",
+    "nombre": "Librilla",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.88655754404169,
+    "lon": -1.3471313717473616,
+    "accesible": false
+  },
+  {
+    "codigo": "05517",
+    "nombre": "Lieres",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.38058305024369,
+    "lon": -5.582622996712159,
+    "accesible": false
+  },
+  {
+    "codigo": "05671",
+    "nombre": "Liérganes",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.34507482813244,
+    "lon": -3.742645019166288,
+    "accesible": false
+  },
+  {
+    "codigo": "15218",
+    "nombre": "Llamaquique",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "lat": 43.35882828733197,
+    "lon": -5.857320146682603,
+    "accesible": true
+  },
+  {
+    "codigo": "05522",
+    "nombre": "Llames",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.368779606209436,
+    "lon": -5.525240447532649,
+    "accesible": false
+  },
+  {
+    "codigo": "79312",
+    "nombre": "Llançà",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.366619435436384,
+    "lon": 3.14897460674153,
+    "accesible": false
+  },
+  {
+    "codigo": "05969",
+    "nombre": "Llano del Beal",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.62604683835344,
+    "lon": -0.8362123038877032,
+    "accesible": false
+  },
+  {
+    "codigo": "05219",
+    "nombre": "Llaranes",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.554336661833894,
+    "lon": -5.896556744356096,
+    "accesible": false
+  },
+  {
+    "codigo": "78400",
+    "nombre": "Lleida-Pirineus",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.62013008979903,
+    "lon": 0.6336532888491779,
+    "accesible": true
+  },
+  {
+    "codigo": "79102",
+    "nombre": "Llinars del Vallès",
+    "nucleo": "50",
+    "lineas": [
+      "R2N"
+    ],
+    "lat": 41.63803678950392,
+    "lon": 2.404457698410164,
+    "accesible": false
+  },
+  {
+    "codigo": "13106",
+    "nombre": "Llodio",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.14235145948084,
+    "lon": -2.9606511947827454,
+    "accesible": false
+  },
+  {
+    "codigo": "11510",
+    "nombre": "Loiola",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.30467467691614,
+    "lon": -1.963629435000804,
+    "accesible": false
+  },
+  {
+    "codigo": "14232",
+    "nombre": "Lombera",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.26582498443618,
+    "lon": -4.067590237685911,
+    "accesible": false
+  },
+  {
+    "codigo": "50600",
+    "nombre": "Lora del Río",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.66132125244821,
+    "lon": -5.529551474553232,
+    "accesible": true
+  },
+  {
+    "codigo": "06005",
+    "nombre": "Lorca San Diego",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.680716835302135,
+    "lon": -1.6856452085934432,
+    "accesible": true
+  },
+  {
+    "codigo": "06006",
+    "nombre": "Lorca Sutullena",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.672112941733495,
+    "lon": -1.6962305350503322,
+    "accesible": false
+  },
+  {
+    "codigo": "66209",
+    "nombre": "Loriguilla-Reva",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.485777105116036,
+    "lon": -0.5673983710188993,
+    "accesible": false
+  },
+  {
+    "codigo": "54518",
+    "nombre": "Los Álamos",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.64505873384112,
+    "lon": -4.485118646263756,
+    "accesible": false
+  },
+  {
+    "codigo": "54515",
+    "nombre": "Los Boliches",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.55465831386557,
+    "lon": -4.614576730868469,
+    "accesible": true
+  },
+  {
+    "codigo": "05241",
+    "nombre": "Los Cabos",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.51241477766032,
+    "lon": -6.097474619411723,
+    "accesible": false
+  },
+  {
+    "codigo": "16408",
+    "nombre": "Los Campos",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.53651199546617,
+    "lon": -5.884882364355444,
+    "accesible": false
+  },
+  {
+    "codigo": "05515",
+    "nombre": "Los Corros",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.376843288208285,
+    "lon": -5.601376929564853,
+    "accesible": false
+  },
+  {
+    "codigo": "12005",
+    "nombre": "Los Molinos - Guadarrama",
+    "nucleo": "10",
+    "lineas": [
+      "C8b"
+    ],
+    "lat": 40.706640765871065,
+    "lon": -4.067199138806972,
+    "accesible": true
+  },
+  {
+    "codigo": "12001",
+    "nombre": "Los Negrales",
+    "nucleo": "10",
+    "lineas": [
+      "C8b"
+    ],
+    "lat": 40.63856705136041,
+    "lon": -4.021874616337711,
+    "accesible": false
+  },
+  {
+    "codigo": "05977",
+    "nombre": "Los Nietos",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.6518304349845,
+    "lon": -0.7970802035148808,
+    "accesible": false
+  },
+  {
+    "codigo": "05975",
+    "nombre": "Los Nietos Pescadería",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.64935159966135,
+    "lon": -0.7878563372543621,
+    "accesible": false
+  },
+  {
+    "codigo": "05973",
+    "nombre": "Los Nietos Viejos",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.6469125316991,
+    "lon": -0.7915137723861808,
+    "accesible": false
+  },
+  {
+    "codigo": "54412",
+    "nombre": "Los Prados",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.69861081349005,
+    "lon": -4.478150069337649,
+    "accesible": true
+  },
+  {
+    "codigo": "50700",
+    "nombre": "Los Rosales",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 37.58997189450871,
+    "lon": -5.726120887574889,
+    "accesible": true
+  },
+  {
+    "codigo": "15300",
+    "nombre": "Lugo de Llanera",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 43.442332242938654,
+    "lon": -5.815893217160533,
+    "accesible": true
+  },
+  {
+    "codigo": "15212",
+    "nombre": "Lugones",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 43.40427208506947,
+    "lon": -5.8117818105653,
+    "accesible": false
+  },
+  {
+    "codigo": "13103",
+    "nombre": "Luiaondo",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.09359268249067,
+    "lon": -2.9996644435954143,
+    "accesible": false
+  },
+  {
+    "codigo": "13305",
+    "nombre": "Lutxana",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.28781378364746,
+    "lon": -2.975413227087535,
+    "accesible": false
+  },
+  {
+    "codigo": "79200",
+    "nombre": "Maçanet-Massanes",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R11",
+      "R2N",
+      "RG1"
+    ],
+    "lat": 41.772421293720896,
+    "lon": 2.67385865346404,
+    "accesible": true
+  },
+  {
+    "codigo": "35601",
+    "nombre": "Maestra Justa Freire Polideportivo Aluche",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.38363793206354,
+    "lon": -3.768686940358326,
+    "accesible": false
+  },
+  {
+    "codigo": "10007",
+    "nombre": "Majadahonda",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.474288581551434,
+    "lon": -3.8462931119591044,
+    "accesible": false
+  },
+  {
+    "codigo": "54517",
+    "nombre": "Málaga Centro",
+    "nucleo": "32",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 36.71595395373014,
+    "lon": -4.426533598385613,
+    "accesible": true
+  },
+  {
+    "codigo": "54500",
+    "nombre": "Málaga-María Zambrano",
+    "nucleo": "32",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 36.71138851489979,
+    "lon": -4.43289093295495,
+    "accesible": true
+  },
+  {
+    "codigo": "79605",
+    "nombre": "Malgrat de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.64160208547785,
+    "lon": 2.741279037087447,
+    "accesible": true
+  },
+  {
+    "codigo": "14220",
+    "nombre": "Maliaño",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.41742,
+    "lon": -3.8420448,
+    "accesible": false
+  },
+  {
+    "codigo": "05655",
+    "nombre": "Maliaño La Vidriera",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.41601637775277,
+    "lon": -3.841101602604557,
+    "accesible": false
+  },
+  {
+    "codigo": "77110",
+    "nombre": "Manlleu",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.999860134371986,
+    "lon": 2.2692958927188935,
+    "accesible": false
+  },
+  {
+    "codigo": "78600",
+    "nombre": "Manresa",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "RL4"
+    ],
+    "lat": 41.720392101753575,
+    "lon": 1.8264856401842207,
+    "accesible": true
+  },
+  {
+    "codigo": "05773",
+    "nombre": "Manzaneda",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.75429037316433,
+    "lon": -5.516555823060135,
+    "accesible": false
+  },
+  {
+    "codigo": "05615",
+    "nombre": "Mar",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.39840635647647,
+    "lon": -4.010005906107463,
+    "accesible": false
+  },
+  {
+    "codigo": "71303",
+    "nombre": "Marçà-Falset",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.130942111030826,
+    "lon": 0.810417744762532,
+    "accesible": false
+  },
+  {
+    "codigo": "51455",
+    "nombre": "Marquesado",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.42864041819492,
+    "lon": -6.143374450943344,
+    "accesible": true
+  },
+  {
+    "codigo": "72209",
+    "nombre": "Martorell Central",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "R8"
+    ],
+    "lat": 41.47928665549854,
+    "lon": 1.925334672386229,
+    "accesible": true
+  },
+  {
+    "codigo": "11509",
+    "nombre": "Martutene",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.29911283034102,
+    "lon": -1.9561747653152108,
+    "accesible": false
+  },
+  {
+    "codigo": "65006",
+    "nombre": "Massalfassar",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.55575320822828,
+    "lon": -0.31830583276224694,
+    "accesible": false
+  },
+  {
+    "codigo": "64202",
+    "nombre": "Massanassa",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 39.40919343871366,
+    "lon": -0.3953073029128606,
+    "accesible": true
+  },
+  {
+    "codigo": "05770",
+    "nombre": "Matallana",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.841149035602186,
+    "lon": -5.521871856244365,
+    "accesible": true
+  },
+  {
+    "codigo": "79500",
+    "nombre": "Mataró",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.5333852997464,
+    "lon": 2.445530254516808,
+    "accesible": true
+  },
+  {
+    "codigo": "05786",
+    "nombre": "Matueca de Torío",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.771539861571284,
+    "lon": -5.511948330934627,
+    "accesible": true
+  },
+  {
+    "codigo": "70104",
+    "nombre": "Meco",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.53467314569246,
+    "lon": -3.2986806709466836,
+    "accesible": false
+  },
+  {
+    "codigo": "05953",
+    "nombre": "Media Legua",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.60788313311176,
+    "lon": -0.9536521339125731,
+    "accesible": false
+  },
+  {
+    "codigo": "18003",
+    "nombre": "Méndez Álvaro",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C5"
+    ],
+    "lat": 40.39577685840873,
+    "lon": -3.6778440822775296,
+    "accesible": true
+  },
+  {
+    "codigo": "05507",
+    "nombre": "Meres",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.380988555006475,
+    "lon": -5.748720967292589,
+    "accesible": false
+  },
+  {
+    "codigo": "15203",
+    "nombre": "Mieres Puente",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.25002662013011,
+    "lon": -5.7822622847757525,
+    "accesible": false
+  },
+  {
+    "codigo": "05369",
+    "nombre": "Mieres Vasco",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.250296816876855,
+    "lon": -5.780110648113376,
+    "accesible": false
+  },
+  {
+    "codigo": "05484",
+    "nombre": "Mimetiz",
+    "nucleo": "60",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.2158138,
+    "lon": -3.1312555,
+    "accesible": true
+  },
+  {
+    "codigo": "71100",
+    "nombre": "Miraflores",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.633431138339944,
+    "lon": -0.868165359125075,
+    "accesible": true
+  },
+  {
+    "codigo": "97200",
+    "nombre": "Mirasierra-Paco de Lucía",
+    "nucleo": "10",
+    "lineas": [
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.49975909700001,
+    "lon": -3.709250569221349,
+    "accesible": true
+  },
+  {
+    "codigo": "13120",
+    "nombre": "Miribilla",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.25042908724365,
+    "lon": -2.930515524303246,
+    "accesible": false
+  },
+  {
+    "codigo": "05121",
+    "nombre": "Moeche",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.5621320190687,
+    "lon": -8.002757296562635,
+    "accesible": false
+  },
+  {
+    "codigo": "05611",
+    "nombre": "Mogro",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.424893285596006,
+    "lon": -3.960516310007151,
+    "accesible": false
+  },
+  {
+    "codigo": "64003",
+    "nombre": "Moixent/Mogente",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 38.8777975215344,
+    "lon": -0.7536507451972785,
+    "accesible": true
+  },
+  {
+    "codigo": "78403",
+    "nombre": "Molerussa",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6319590494676,
+    "lon": 0.896910440095123,
+    "accesible": false
+  },
+  {
+    "codigo": "72300",
+    "nombre": "Molins de Rei",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R4"
+    ],
+    "lat": 41.40989580634639,
+    "lon": 2.0207727562704667,
+    "accesible": false
+  },
+  {
+    "codigo": "14207",
+    "nombre": "Molledo",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.14562697665976,
+    "lon": -4.039033466682329,
+    "accesible": false
+  },
+  {
+    "codigo": "79006",
+    "nombre": "Mollet-Sant Fost",
+    "nucleo": "50",
+    "lineas": [
+      "R2",
+      "R2N",
+      "R8"
+    ],
+    "lat": 41.533563457532466,
+    "lon": 2.217665160743798,
+    "accesible": false
+  },
+  {
+    "codigo": "77004",
+    "nombre": "Mollet-Santa Rosa",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.53666177582119,
+    "lon": 2.2061686556944076,
+    "accesible": false
+  },
+  {
+    "codigo": "65205",
+    "nombre": "Moncofa",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.820889168813935,
+    "lon": -0.16269659937219305,
+    "accesible": false
+  },
+  {
+    "codigo": "73008",
+    "nombre": "Montblanc",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.37662543982894,
+    "lon": 1.1655486915214526,
+    "accesible": false
+  },
+  {
+    "codigo": "78800",
+    "nombre": "Montcada Bifurcació",
+    "nucleo": "50",
+    "lineas": [
+      "R3",
+      "R4",
+      "R7"
+    ],
+    "lat": 41.4698402506362,
+    "lon": 2.1800157850660558,
+    "accesible": false
+  },
+  {
+    "codigo": "79005",
+    "nombre": "Montcada i Reixac",
+    "nucleo": "50",
+    "lineas": [
+      "R2",
+      "R2N"
+    ],
+    "lat": 41.48424983658132,
+    "lon": 2.1880259129023765,
+    "accesible": false
+  },
+  {
+    "codigo": "78708",
+    "nombre": "Montcada i Reixac-Manresa",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "R7"
+    ],
+    "lat": 41.48394022980508,
+    "lon": 2.1854042035306693,
+    "accesible": false
+  },
+  {
+    "codigo": "78707",
+    "nombre": "Montcada i Reixac-Santa Maria",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "R7"
+    ],
+    "lat": 41.481140938146176,
+    "lon": 2.1669868371999326,
+    "accesible": true
+  },
+  {
+    "codigo": "77002",
+    "nombre": "Montcada Ripollet",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.49680228491222,
+    "lon": 2.181928419602433,
+    "accesible": false
+  },
+  {
+    "codigo": "15303",
+    "nombre": "Monteana",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.52084751151902,
+    "lon": -5.746358020850213,
+    "accesible": false
+  },
+  {
+    "codigo": "54519",
+    "nombre": "Montemar Alto",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.61366736916778,
+    "lon": -4.5094259658890055,
+    "accesible": true
+  },
+  {
+    "codigo": "64005",
+    "nombre": "Montesa",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 38.94293886729544,
+    "lon": -0.6410905044110664,
+    "accesible": true
+  },
+  {
+    "codigo": "79405",
+    "nombre": "Montgat",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.46302119958492,
+    "lon": 2.2721551071198576,
+    "accesible": true
+  },
+  {
+    "codigo": "79406",
+    "nombre": "Montgat Nord",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.46878603502854,
+    "lon": 2.286696616533786,
+    "accesible": true
+  },
+  {
+    "codigo": "79007",
+    "nombre": "Montmeló",
+    "nucleo": "50",
+    "lineas": [
+      "R2",
+      "R2N",
+      "R8"
+    ],
+    "lat": 41.54965238111346,
+    "lon": 2.245444076015993,
+    "accesible": true
+  },
+  {
+    "codigo": "71300",
+    "nombre": "Móra la Nova",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.106582380878685,
+    "lon": 0.6532181945741845,
+    "accesible": false
+  },
+  {
+    "codigo": "05379",
+    "nombre": "Moreda de Aller",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.17079181542909,
+    "lon": -5.741962209806499,
+    "accesible": false
+  },
+  {
+    "codigo": "05607",
+    "nombre": "Mortera",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.4352343528354,
+    "lon": -3.9182532152882144,
+    "accesible": false
+  },
+  {
+    "codigo": "35606",
+    "nombre": "Móstoles",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.32866260385369,
+    "lon": -3.8636221726352225,
+    "accesible": false
+  },
+  {
+    "codigo": "35607",
+    "nombre": "Móstoles-El Soto",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.33106408051207,
+    "lon": -3.8824560893178868,
+    "accesible": false
+  },
+  {
+    "codigo": "61200",
+    "nombre": "Murcia del Carmen",
+    "nucleo": "41",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 37.9748243128276,
+    "lon": -1.1315080677438163,
+    "accesible": true
+  },
+  {
+    "codigo": "14237",
+    "nombre": "Muriedas-Bahía",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.42168582953804,
+    "lon": -3.844117574319537,
+    "accesible": false
+  },
+  {
+    "codigo": "05243",
+    "nombre": "Muros de Nalón",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.54297284629571,
+    "lon": -6.111071836765572,
+    "accesible": false
+  },
+  {
+    "codigo": "13506",
+    "nombre": "Muskiz",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.321511155397395,
+    "lon": -3.112320773918517,
+    "accesible": false
+  },
+  {
+    "codigo": "05787",
+    "nombre": "Naredo de Fenar",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.833650792401095,
+    "lon": -5.523177952169904,
+    "accesible": true
+  },
+  {
+    "codigo": "05523",
+    "nombre": "Nava",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.361187821448,
+    "lon": -5.5090986333674605,
+    "accesible": true
+  },
+  {
+    "codigo": "67213",
+    "nombre": "Navajas",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.874416657693466,
+    "lon": -0.5059546234661202,
+    "accesible": false
+  },
+  {
+    "codigo": "05413",
+    "nombre": "Noreña",
+    "nucleo": "20",
+    "lineas": [
+      "C5",
+      "C5a"
+    ],
+    "lat": 43.39397783350776,
+    "lon": -5.703626961614511,
+    "accesible": false
+  },
+  {
+    "codigo": "16400",
+    "nombre": "Nubledo",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.52342294161246,
+    "lon": -5.870301497019358,
+    "accesible": false
+  },
+  {
+    "codigo": "51453",
+    "nombre": "Nuestra Señora de los Remedios",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.420397871349714,
+    "lon": -6.144746949258884,
+    "accesible": true
+  },
+  {
+    "codigo": "05651",
+    "nombre": "Nueva Montaña",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.4401845468096,
+    "lon": -3.849371135323794,
+    "accesible": false
+  },
+  {
+    "codigo": "14231",
+    "nombre": "Nueva Montaña Antana",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.444713,
+    "lon": -3.847199,
+    "accesible": false
+  },
+  {
+    "codigo": "18002",
+    "nombre": "Nuevos Ministerios",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C2",
+      "C3",
+      "C4",
+      "C4a",
+      "C4b",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.44662719089485,
+    "lon": -3.6923468749745836,
+    "accesible": true
+  },
+  {
+    "codigo": "65206",
+    "nombre": "Nules-la Vilavella",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.85323541086533,
+    "lon": -0.15273172569998855,
+    "accesible": true
+  },
+  {
+    "codigo": "76003",
+    "nombre": "Nulles-Bràfim",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.250319209013966,
+    "lon": 1.2975025908136832,
+    "accesible": true
+  },
+  {
+    "codigo": "05108",
+    "nombre": "O Alto do Castiñeiro",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.50317941792895,
+    "lon": -8.195548401822625,
+    "accesible": true
+  },
+  {
+    "codigo": "05106",
+    "nombre": "O Ponto",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.51477576754915,
+    "lon": -8.177780838042398,
+    "accesible": false
+  },
+  {
+    "codigo": "79408",
+    "nombre": "Ocata",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.479021147552665,
+    "lon": 2.3195326716837688,
+    "accesible": false
+  },
+  {
+    "codigo": "13303",
+    "nombre": "Olabeaga",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.26438043356466,
+    "lon": -2.9553272742895316,
+    "accesible": false
+  },
+  {
+    "codigo": "13114",
+    "nombre": "Ollargan",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.24249742398899,
+    "lon": -2.916456434517199,
+    "accesible": false
+  },
+  {
+    "codigo": "15207",
+    "nombre": "Olloniego",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.296122600955286,
+    "lon": -5.818850265395011,
+    "accesible": false
+  },
+  {
+    "codigo": "05635",
+    "nombre": "Ontoria",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.31533374334763,
+    "lon": -4.215421988183259,
+    "accesible": false
+  },
+  {
+    "codigo": "35703",
+    "nombre": "Orcasitas",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.36710216860659,
+    "lon": -3.7042307814250752,
+    "accesible": false
+  },
+  {
+    "codigo": "11405",
+    "nombre": "Ordizia",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.05275472286206,
+    "lon": -2.1791923666025994,
+    "accesible": false
+  },
+  {
+    "codigo": "13100",
+    "nombre": "Orduña",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 42.99461911415557,
+    "lon": -3.01581395811148,
+    "accesible": false
+  },
+  {
+    "codigo": "05663",
+    "nombre": "Orejo",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.399477665910204,
+    "lon": -3.738397439218078,
+    "accesible": false
+  },
+  {
+    "codigo": "62002",
+    "nombre": "Orihuela Miguel Hernández",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.077932110017585,
+    "lon": -0.944606077761941,
+    "accesible": true
+  },
+  {
+    "codigo": "11402",
+    "nombre": "Ormaiztegi",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.04027529364015,
+    "lon": -2.2564620216585536,
+    "accesible": false
+  },
+  {
+    "codigo": "65304",
+    "nombre": "Orpesa",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.09283,
+    "lon": 0.13988,
+    "accesible": false
+  },
+  {
+    "codigo": "05139",
+    "nombre": "Ortigueira",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.686221796278964,
+    "lon": -7.849573819150959,
+    "accesible": true
+  },
+  {
+    "codigo": "13504",
+    "nombre": "Ortuella",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.3115122707321,
+    "lon": -3.0603549523346842,
+    "accesible": false
+  },
+  {
+    "codigo": "05795",
+    "nombre": "Otero",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.85957051643482,
+    "lon": -5.389967358546889,
+    "accesible": true
+  },
+  {
+    "codigo": "15211",
+    "nombre": "Oviedo",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3",
+      "C5a",
+      "C6",
+      "C7"
+    ],
+    "lat": 43.36635770005217,
+    "lon": -5.854838014784357,
+    "accesible": true
+  },
+  {
+    "codigo": "05381",
+    "nombre": "Oyanco",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.16655272719085,
+    "lon": -5.7221512650806154,
+    "accesible": false
+  },
+  {
+    "codigo": "51010",
+    "nombre": "Padre Pío - Palmete",
+    "nucleo": "30",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 37.37085206060822,
+    "lon": -5.939411146351928,
+    "accesible": true
+  },
+  {
+    "codigo": "51009",
+    "nombre": "Palacio de Congresos",
+    "nucleo": "30",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 37.40364565142368,
+    "lon": -5.936263641278847,
+    "accesible": true
+  },
+  {
+    "codigo": "79103",
+    "nombre": "Palautordera",
+    "nucleo": "50",
+    "lineas": [
+      "R2N"
+    ],
+    "lat": 41.67195228718209,
+    "lon": 2.454214888877496,
+    "accesible": true
+  },
+  {
+    "codigo": "05775",
+    "nombre": "Palazuelo",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.70712575037528,
+    "lon": -5.533780916619973,
+    "accesible": true
+  },
+  {
+    "codigo": "14217",
+    "nombre": "Parbayón",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.37674465754466,
+    "lon": -3.8942201041476228,
+    "accesible": false
+  },
+  {
+    "codigo": "05771",
+    "nombre": "Pardavé",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.806349926078575,
+    "lon": -5.508189100852604,
+    "accesible": true
+  },
+  {
+    "codigo": "77005",
+    "nombre": "Parets del Vallès",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.55626907542326,
+    "lon": 2.2260040959697225,
+    "accesible": false
+  },
+  {
+    "codigo": "37012",
+    "nombre": "Parla",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.24109863729795,
+    "lon": -3.7692699586384224,
+    "accesible": true
+  },
+  {
+    "codigo": "35011",
+    "nombre": "Parque Polvoranca",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.31257384196451,
+    "lon": -3.783493768051343,
+    "accesible": true
+  },
+  {
+    "codigo": "05504",
+    "nombre": "Parque Principado",
+    "nucleo": "20",
+    "lineas": [
+      "C5a",
+      "C6"
+    ],
+    "lat": 43.38658657751249,
+    "lon": -5.808797158649069,
+    "accesible": false
+  },
+  {
+    "codigo": "11515",
+    "nombre": "Pasaia",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.31894280666375,
+    "lon": -1.9171727934163059,
+    "accesible": false
+  },
+  {
+    "codigo": "40115",
+    "nombre": "Pedroso",
+    "nucleo": "30",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 37.83739192052962,
+    "lon": -5.762452207843051,
+    "accesible": false
+  },
+  {
+    "codigo": "05113",
+    "nombre": "Pedroso de Narón",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.53670714184233,
+    "lon": -8.109193120094904,
+    "accesible": false
+  },
+  {
+    "codigo": "05772",
+    "nombre": "Pedrún",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.790898277648886,
+    "lon": -5.506948211143292,
+    "accesible": true
+  },
+  {
+    "codigo": "51450",
+    "nombre": "Pelagatos",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.40875616855204,
+    "lon": -6.134322470897661,
+    "accesible": true
+  },
+  {
+    "codigo": "16005",
+    "nombre": "Peña Rubia",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.32130201171377,
+    "lon": -5.720805902947204,
+    "accesible": false
+  },
+  {
+    "codigo": "05316",
+    "nombre": "Peñaflor de Grado",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.402926762129006,
+    "lon": -6.045392115876318,
+    "accesible": true
+  },
+  {
+    "codigo": "05237",
+    "nombre": "Peñaullán",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.49116962963498,
+    "lon": -6.093964225588079,
+    "accesible": false
+  },
+  {
+    "codigo": "13404",
+    "nombre": "Peñota",
+    "nucleo": "60",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.32635635477744,
+    "lon": -3.0234574981182964,
+    "accesible": false
+  },
+  {
+    "codigo": "05209",
+    "nombre": "Perlora",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.580863248282945,
+    "lon": -5.754104705330755,
+    "accesible": false
+  },
+  {
+    "codigo": "14204",
+    "nombre": "Pesquera",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.08233303595017,
+    "lon": -4.073814395026741,
+    "accesible": false
+  },
+  {
+    "codigo": "05227",
+    "nombre": "Piedras Blancas",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.55655674870297,
+    "lon": -5.975552352148962,
+    "accesible": false
+  },
+  {
+    "codigo": "10100",
+    "nombre": "Pinar de las Rozas",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.522267217240156,
+    "lon": -3.882247724524272,
+    "accesible": false
+  },
+  {
+    "codigo": "51456",
+    "nombre": "Pinar de los Franceses",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.44052019389589,
+    "lon": -6.144565889019717,
+    "accesible": true
+  },
+  {
+    "codigo": "79604",
+    "nombre": "Pineda de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.62244496805307,
+    "lon": 2.6935504297120705,
+    "accesible": true
+  },
+  {
+    "codigo": "60103",
+    "nombre": "Pinto",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.24285557794745,
+    "lon": -3.703530375360101,
+    "accesible": true
+  },
+  {
+    "codigo": "05531",
+    "nombre": "Pintueles",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.35992344019078,
+    "lon": -5.384131670359757,
+    "accesible": true
+  },
+  {
+    "codigo": "05407",
+    "nombre": "Pinzales",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.48654085562279,
+    "lon": -5.719703894477768,
+    "accesible": false
+  },
+  {
+    "codigo": "05105",
+    "nombre": "Piñeiros",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.5094830298131,
+    "lon": -8.18399234027598,
+    "accesible": true
+  },
+  {
+    "codigo": "05383",
+    "nombre": "Piñeres",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.165973091982224,
+    "lon": -5.684253910234747,
+    "accesible": false
+  },
+  {
+    "codigo": "18005",
+    "nombre": "Pirámides",
+    "nucleo": "10",
+    "lineas": [
+      "C10"
+    ],
+    "lat": 40.40253414814169,
+    "lon": -3.7113623084871006,
+    "accesible": true
+  },
+  {
+    "codigo": "97100",
+    "nombre": "Pitis",
+    "nucleo": "10",
+    "lineas": [
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.49541735983925,
+    "lon": -3.726160363030856,
+    "accesible": true
+  },
+  {
+    "codigo": "54406",
+    "nombre": "Pizarra",
+    "nucleo": "32",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 36.76415159932976,
+    "lon": -4.711831342753352,
+    "accesible": true
+  },
+  {
+    "codigo": "77304",
+    "nombre": "Planoles",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.314468908236016,
+    "lon": 2.0997315235945333,
+    "accesible": false
+  },
+  {
+    "codigo": "71704",
+    "nombre": "Platja de Castelldefels",
+    "nucleo": "50",
+    "lineas": [
+      "R2S"
+    ],
+    "lat": 41.266982307086124,
+    "lon": 1.9571357997617573,
+    "accesible": true
+  },
+  {
+    "codigo": "69111",
+    "nombre": "Platja i Grau de Gandia",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.99024364755947,
+    "lon": -0.16243392249812982,
+    "accesible": true
+  },
+  {
+    "codigo": "51459",
+    "nombre": "Plaza de la Iglesia",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.46621877001868,
+    "lon": -6.195549586573249,
+    "accesible": true
+  },
+  {
+    "codigo": "51462",
+    "nombre": "Plaza del Carmen",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.45815930363015,
+    "lon": -6.20348871212504,
+    "accesible": true
+  },
+  {
+    "codigo": "51460",
+    "nombre": "Plaza del Rey",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.463944357391796,
+    "lon": -6.1983443829600064,
+    "accesible": true
+  },
+  {
+    "codigo": "54520",
+    "nombre": "Plaza Mayor",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.65620293601608,
+    "lon": -4.480304410804952,
+    "accesible": false
+  },
+  {
+    "codigo": "15122",
+    "nombre": "Pola de Lena",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.158720010310304,
+    "lon": -5.831026327922049,
+    "accesible": false
+  },
+  {
+    "codigo": "05513",
+    "nombre": "Pola de Siero",
+    "nucleo": "20",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 43.38815272790998,
+    "lon": -5.664771867817455,
+    "accesible": true
+  },
+  {
+    "codigo": "05133",
+    "nombre": "Ponte Mera",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.66603802939068,
+    "lon": -7.9026205399095515,
+    "accesible": false
+  },
+  {
+    "codigo": "79315",
+    "nombre": "Portbou",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.424590813447054,
+    "lon": 3.158018414109067,
+    "accesible": false
+  },
+  {
+    "codigo": "70806",
+    "nombre": "Portillo",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.65273614742277,
+    "lon": -0.895875977065374,
+    "accesible": true
+  },
+  {
+    "codigo": "13403",
+    "nombre": "Portugalete",
+    "nucleo": "60",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.318676002366445,
+    "lon": -3.0152296629265205,
+    "accesible": false
+  },
+  {
+    "codigo": "10002",
+    "nombre": "Pozuelo",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.44745697673262,
+    "lon": -3.8002779316425808,
+    "accesible": true
+  },
+  {
+    "codigo": "71304",
+    "nombre": "Pradell",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.133359551153546,
+    "lon": 0.858650329156722,
+    "accesible": false
+  },
+  {
+    "codigo": "05759",
+    "nombre": "Prado de la Guzpeña",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.783234727817394,
+    "lon": -5.027097341514529,
+    "accesible": false
+  },
+  {
+    "codigo": "05325",
+    "nombre": "Pravia",
+    "nucleo": "20",
+    "lineas": [
+      "C4",
+      "C7"
+    ],
+    "lat": 43.490898368625736,
+    "lon": -6.110537301313675,
+    "accesible": true
+  },
+  {
+    "codigo": "79409",
+    "nombre": "Premià de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.48775229849954,
+    "lon": 2.3548560880730123,
+    "accesible": true
+  },
+  {
+    "codigo": "10000",
+    "nombre": "Príncipe Pío",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C7"
+    ],
+    "lat": 40.421489503628486,
+    "lon": -3.7189689706980955,
+    "accesible": true
+  },
+  {
+    "codigo": "65008",
+    "nombre": "Puçol",
+    "nucleo": "40",
+    "lineas": [
+      "C5",
+      "C6"
+    ],
+    "lat": 39.620536756959076,
+    "lon": -0.3031085180500869,
+    "accesible": true
+  },
+  {
+    "codigo": "35704",
+    "nombre": "Puente Alcocer",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.35044825977941,
+    "lon": -3.7051154306162326,
+    "accesible": false
+  },
+  {
+    "codigo": "05758",
+    "nombre": "Puente Almuhey",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.787632073808446,
+    "lon": -4.971899259755152,
+    "accesible": false
+  },
+  {
+    "codigo": "05412",
+    "nombre": "Puente Buracos",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.448047847811104,
+    "lon": -5.717266469942457,
+    "accesible": false
+  },
+  {
+    "codigo": "15118",
+    "nombre": "Puente de los Fierros",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.07159865003274,
+    "lon": -5.769465046621571,
+    "accesible": true
+  },
+  {
+    "codigo": "05623",
+    "nombre": "Puente San Miguel",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.35867247321421,
+    "lon": -4.087766781498059,
+    "accesible": false
+  },
+  {
+    "codigo": "12020",
+    "nombre": "Puerto de Navacerrada",
+    "nucleo": "10",
+    "lineas": [
+      "C9"
+    ],
+    "lat": 40.78446783605855,
+    "lon": -4.0047744623709605,
+    "accesible": false
+  },
+  {
+    "codigo": "06007",
+    "nombre": "Puerto Lumbreras",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.58100622605931,
+    "lon": -1.731875212332518,
+    "accesible": false
+  },
+  {
+    "codigo": "51401",
+    "nombre": "Puerto Real",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.53091553919256,
+    "lon": -6.185314323098294,
+    "accesible": true
+  },
+  {
+    "codigo": "77309",
+    "nombre": "Puigcerdà",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.42962569565677,
+    "lon": 1.924583556645848,
+    "accesible": false
+  },
+  {
+    "codigo": "73001",
+    "nombre": "Puigverd de Lleida-Artesa de Lleida",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.553701591055265,
+    "lon": 0.7334270638835366,
+    "accesible": false
+  },
+  {
+    "codigo": "14234",
+    "nombre": "Pujayo",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.122874507250565,
+    "lon": -4.082375315125062,
+    "accesible": false
+  },
+  {
+    "codigo": "07001",
+    "nombre": "Pulpí",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.39920338670046,
+    "lon": -1.7494862927866177,
+    "accesible": false
+  },
+  {
+    "codigo": "13505",
+    "nombre": "Putxeta",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.315680166532054,
+    "lon": -3.0911356643037147,
+    "accesible": false
+  },
+  {
+    "codigo": "05224",
+    "nombre": "Raíces",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.57634926113679,
+    "lon": -5.939912756984286,
+    "accesible": false
+  },
+  {
+    "codigo": "78506",
+    "nombre": "Rajadell",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.7323200859036,
+    "lon": 1.69855167283946,
+    "accesible": true
+  },
+  {
+    "codigo": "97201",
+    "nombre": "Ramón y Cajal",
+    "nucleo": "10",
+    "lineas": [
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.48814736384859,
+    "lon": -3.694803798286266,
+    "accesible": false
+  },
+  {
+    "codigo": "18001",
+    "nombre": "Recoletos",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.42337310971531,
+    "lon": -3.6909310471766053,
+    "accesible": false
+  },
+  {
+    "codigo": "05213",
+    "nombre": "Regueral",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.580501787009254,
+    "lon": -5.797616062682885,
+    "accesible": false
+  },
+  {
+    "codigo": "14202",
+    "nombre": "Reinosa",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.99449910956189,
+    "lon": -4.140945427050536,
+    "accesible": false
+  },
+  {
+    "codigo": "14216",
+    "nombre": "Renedo",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.35310693075047,
+    "lon": -3.949647157480637,
+    "accesible": false
+  },
+  {
+    "codigo": "05617",
+    "nombre": "Requejada",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.391417969478816,
+    "lon": -4.0280246127964725,
+    "accesible": false
+  },
+  {
+    "codigo": "66202",
+    "nombre": "Requena",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.49127089855389,
+    "lon": -1.1046578104546094,
+    "accesible": false
+  },
+  {
+    "codigo": "71400",
+    "nombre": "Reus",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "R15",
+      "RT1"
+    ],
+    "lat": 41.16052295597058,
+    "lon": 1.1000897832180188,
+    "accesible": true
+  },
+  {
+    "codigo": "51452",
+    "nombre": "Reyes Católicos",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.41441195676582,
+    "lon": -6.143189781014831,
+    "accesible": true
+  },
+  {
+    "codigo": "71209",
+    "nombre": "Riba-roja d'Ebre",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.24855948066253,
+    "lon": 0.4810317869664606,
+    "accesible": false
+  },
+  {
+    "codigo": "05235",
+    "nombre": "Riberas",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.50273968547422,
+    "lon": -6.07430545109159,
+    "accesible": false
+  },
+  {
+    "codigo": "77303",
+    "nombre": "Ribes de Freser",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.300212659310674,
+    "lon": 2.1661994771434023,
+    "accesible": false
+  },
+  {
+    "codigo": "79106",
+    "nombre": "Riells i Viabrea-Breda",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2N"
+    ],
+    "lat": 41.726358204386436,
+    "lon": 2.568895846423264,
+    "accesible": true
+  },
+  {
+    "codigo": "51419",
+    "nombre": "Río Arillo",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.45749435311916,
+    "lon": -6.223626121264969,
+    "accesible": true
+  },
+  {
+    "codigo": "14233",
+    "nombre": "Río Ebro",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.00075549856511,
+    "lon": -4.134400660084434,
+    "accesible": false
+  },
+  {
+    "codigo": "77200",
+    "nombre": "Ripoll",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.196128452774886,
+    "lon": 2.1958412812601584,
+    "accesible": true
+  },
+  {
+    "codigo": "71306",
+    "nombre": "Riudecanyes-Botarell",
+    "nucleo": "50",
+    "lineas": [
+      "R15"
+    ],
+    "lat": 41.14005773931918,
+    "lon": 0.9757477503025235,
+    "accesible": false
+  },
+  {
+    "codigo": "79204",
+    "nombre": "Riudellots",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 41.8962970118333,
+    "lon": 2.8115703716574747,
+    "accesible": false
+  },
+  {
+    "codigo": "10205",
+    "nombre": "Robledo de Chavela",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.52082443864076,
+    "lon": -4.2467592739689275,
+    "accesible": false
+  },
+  {
+    "codigo": "05788",
+    "nombre": "Robles",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.84073667972051,
+    "lon": -5.507315542565991,
+    "accesible": false
+  },
+  {
+    "codigo": "65001",
+    "nombre": "Roca-Cúper",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.52620944845766,
+    "lon": -0.3238405618986281,
+    "accesible": true
+  },
+  {
+    "codigo": "72100",
+    "nombre": "Roda de Barà",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.183914429173505,
+    "lon": 1.440170869984243,
+    "accesible": false
+  },
+  {
+    "codigo": "72101",
+    "nombre": "Roda de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.186420483852366,
+    "lon": 1.4552076740918183,
+    "accesible": true
+  },
+  {
+    "codigo": "72501",
+    "nombre": "Rubí Can Vallhonrat",
+    "nucleo": "50",
+    "lineas": [
+      "R8"
+    ],
+    "lat": 41.47517635888259,
+    "lon": 2.0370792621986515,
+    "accesible": false
+  },
+  {
+    "codigo": "78704",
+    "nombre": "Sabadell Centre",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.54641975834248,
+    "lon": 2.1156076754719972,
+    "accesible": true
+  },
+  {
+    "codigo": "78709",
+    "nombre": "Sabadell Nord",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.56197735097802,
+    "lon": 2.0962284499357846,
+    "accesible": true
+  },
+  {
+    "codigo": "78703",
+    "nombre": "Sabadell Sud",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.52870762268647,
+    "lon": 2.1053931183101335,
+    "accesible": true
+  },
+  {
+    "codigo": "13509",
+    "nombre": "Sagrada Familia",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30823656777761,
+    "lon": -3.0528979828142413,
+    "accesible": false
+  },
+  {
+    "codigo": "65200",
+    "nombre": "Sagunt/Sagunto",
+    "nucleo": "40",
+    "lineas": [
+      "C5",
+      "C6"
+    ],
+    "lat": 39.67580256796691,
+    "lon": -0.27154209338084845,
+    "accesible": true
+  },
+  {
+    "codigo": "13102",
+    "nombre": "Salbio",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.07417200716335,
+    "lon": -2.999395360453851,
+    "accesible": false
+  },
+  {
+    "codigo": "05225",
+    "nombre": "Salinas",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.57039135320855,
+    "lon": -5.956625684162698,
+    "accesible": false
+  },
+  {
+    "codigo": "76001",
+    "nombre": "Salomó",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.223441692753056,
+    "lon": 1.376625043813045,
+    "accesible": false
+  },
+  {
+    "codigo": "65411",
+    "nombre": "Salou - Port Aventura",
+    "nucleo": "50",
+    "lineas": [
+      "R17",
+      "RT2"
+    ],
+    "lat": 41.088479866290385,
+    "lon": 1.146051951556394,
+    "accesible": true
+  },
+  {
+    "codigo": "43027",
+    "nombre": "Salteras",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.41023484469181,
+    "lon": -6.099239169804342,
+    "accesible": true
+  },
+  {
+    "codigo": "16009",
+    "nombre": "Sama",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.291842853059556,
+    "lon": -5.67945562729622,
+    "accesible": true
+  },
+  {
+    "codigo": "05427",
+    "nombre": "Sama-Los Llerones",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.29682870895694,
+    "lon": -5.680050291022826,
+    "accesible": true
+  },
+  {
+    "codigo": "05380",
+    "nombre": "San Antonio",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.168851017134635,
+    "lon": -5.696707585989943,
+    "accesible": false
+  },
+  {
+    "codigo": "66201",
+    "nombre": "San Antonio de Requena",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.52229976863507,
+    "lon": -1.1503670134743365,
+    "accesible": false
+  },
+  {
+    "codigo": "51100",
+    "nombre": "San Bernardo",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C4",
+      "C5"
+    ],
+    "lat": 37.37777781906026,
+    "lon": -5.979614297460952,
+    "accesible": true
+  },
+  {
+    "codigo": "05304",
+    "nombre": "San Claudio",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.35535350551453,
+    "lon": -5.917809159023219,
+    "accesible": false
+  },
+  {
+    "codigo": "05135",
+    "nombre": "San Clodio",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.66094436691154,
+    "lon": -7.873478022579531,
+    "accesible": false
+  },
+  {
+    "codigo": "60107",
+    "nombre": "San Cristóbal de los Ángeles",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.342414466400314,
+    "lon": -3.6839795309105283,
+    "accesible": false
+  },
+  {
+    "codigo": "60101",
+    "nombre": "San Cristóbal Industrial",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.3318587980798,
+    "lon": -3.6989600342740947,
+    "accesible": false
+  },
+  {
+    "codigo": "05329",
+    "nombre": "San Esteban",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.552094019141265,
+    "lon": -6.087239317877578,
+    "accesible": false
+  },
+  {
+    "codigo": "05776",
+    "nombre": "San Feliz",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.682311270309384,
+    "lon": -5.537908673382532,
+    "accesible": true
+  },
+  {
+    "codigo": "51402",
+    "nombre": "San Fernando Centro",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.47596128937259,
+    "lon": -6.194032239357359,
+    "accesible": true
+  },
+  {
+    "codigo": "70101",
+    "nombre": "San Fernando de Henares",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.44278055647028,
+    "lon": -3.533986677097917,
+    "accesible": false
+  },
+  {
+    "codigo": "51406",
+    "nombre": "San Fernando-Bahía Sur",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.46808341762492,
+    "lon": -6.206767607809168,
+    "accesible": true
+  },
+  {
+    "codigo": "62100",
+    "nombre": "San Isidro - Albatera Catral",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.16702097703664,
+    "lon": -0.8380854391723279,
+    "accesible": true
+  },
+  {
+    "codigo": "43000",
+    "nombre": "San Jerónimo",
+    "nucleo": "30",
+    "lineas": [
+      "C2",
+      "C5"
+    ],
+    "lat": 37.43317304131695,
+    "lon": -5.9803600747211085,
+    "accesible": true
+  },
+  {
+    "codigo": "35604",
+    "nombre": "San José de Valderas",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.356613032342345,
+    "lon": -3.815573087985839,
+    "accesible": false
+  },
+  {
+    "codigo": "16405",
+    "nombre": "San Juan de Nieva",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.58953594408876,
+    "lon": -5.932551332961307,
+    "accesible": true
+  },
+  {
+    "codigo": "13208",
+    "nombre": "San Mamés",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.26153060347272,
+    "lon": -2.948834187758633,
+    "accesible": false
+  },
+  {
+    "codigo": "05436",
+    "nombre": "San Martín",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.278376443497656,
+    "lon": -5.615291995612026,
+    "accesible": false
+  },
+  {
+    "codigo": "05306",
+    "nombre": "San Pedro de Nora",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.368748121663835,
+    "lon": -5.958595179413362,
+    "accesible": false
+  },
+  {
+    "codigo": "05627",
+    "nombre": "San Pedro de Rudagüera",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.3611587971345,
+    "lon": -4.149528144896114,
+    "accesible": false
+  },
+  {
+    "codigo": "05327",
+    "nombre": "San Ranón",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.51645474680677,
+    "lon": -6.0820305732319335,
+    "accesible": false
+  },
+  {
+    "codigo": "05321",
+    "nombre": "San Román",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.44888394615454,
+    "lon": -6.0771641895898,
+    "accesible": false
+  },
+  {
+    "codigo": "05115",
+    "nombre": "San Sadurniño",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.54608389891843,
+    "lon": -8.07810991478684,
+    "accesible": false
+  },
+  {
+    "codigo": "05659",
+    "nombre": "San Salvador",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.39376601774842,
+    "lon": -3.803854044973858,
+    "accesible": false
+  },
+  {
+    "codigo": "51414",
+    "nombre": "San Severiano",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.521604868873744,
+    "lon": -6.2806706130007095,
+    "accesible": true
+  },
+  {
+    "codigo": "05432",
+    "nombre": "San Vicente",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.289141770900244,
+    "lon": -5.652933385556901,
+    "accesible": false
+  },
+  {
+    "codigo": "05102",
+    "nombre": "San Xoan",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.49456541993759,
+    "lon": -8.214273364140347,
+    "accesible": false
+  },
+  {
+    "codigo": "10201",
+    "nombre": "San Yago",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.617895346548956,
+    "lon": -4.031074919646758,
+    "accesible": false
+  },
+  {
+    "codigo": "05319",
+    "nombre": "Sandiche",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.42562268922769,
+    "lon": -6.059934148020717,
+    "accesible": false
+  },
+  {
+    "codigo": "43004",
+    "nombre": "Sanlúcar la Mayor",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.3814397501305,
+    "lon": -6.193962531445517,
+    "accesible": true
+  },
+  {
+    "codigo": "79403",
+    "nombre": "Sant Adrià de Besòs",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.42443166026754,
+    "lon": 2.230481782528126,
+    "accesible": true
+  },
+  {
+    "codigo": "79501",
+    "nombre": "Sant Andreu de Llavaneres",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.555546700461605,
+    "lon": 2.4982646371556556,
+    "accesible": true
+  },
+  {
+    "codigo": "79104",
+    "nombre": "Sant Celoni",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "R2N"
+    ],
+    "lat": 41.68579283178666,
+    "lon": 2.4907279990893025,
+    "accesible": true
+  },
+  {
+    "codigo": "72502",
+    "nombre": "Sant Cugat Coll Favà",
+    "nucleo": "50",
+    "lineas": [
+      "R8"
+    ],
+    "lat": 41.481090703194404,
+    "lon": 2.0796792270610553,
+    "accesible": false
+  },
+  {
+    "codigo": "72301",
+    "nombre": "Sant Feliu de Llobregat",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R4"
+    ],
+    "lat": 41.38300187962826,
+    "lon": 2.047919706450083,
+    "accesible": false
+  },
+  {
+    "codigo": "62109",
+    "nombre": "Sant Gabriel",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.32906474484308,
+    "lon": -0.5086866580460193,
+    "accesible": false
+  },
+  {
+    "codigo": "78501",
+    "nombre": "Sant Guim de Freixenet",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.6558219378101,
+    "lon": 1.42071649550986,
+    "accesible": false
+  },
+  {
+    "codigo": "72302",
+    "nombre": "Sant Joan Despí",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "R4"
+    ],
+    "lat": 41.36858050140746,
+    "lon": 2.0602083559633293,
+    "accesible": true
+  },
+  {
+    "codigo": "79304",
+    "nombre": "Sant Jordi Desvalls",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.06830231396752,
+    "lon": 2.964476649377325,
+    "accesible": false
+  },
+  {
+    "codigo": "77104",
+    "nombre": "Sant Martí de Centelles",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.76057362256045,
+    "lon": 2.2489046234919856,
+    "accesible": false
+  },
+  {
+    "codigo": "78502",
+    "nombre": "Sant Martí de Sesgueioles",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.7013703545359,
+    "lon": 1.48622662698464,
+    "accesible": false
+  },
+  {
+    "codigo": "79306",
+    "nombre": "Sant Miquel de Fluvià",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.172101973744105,
+    "lon": 2.989598282742662,
+    "accesible": false
+  },
+  {
+    "codigo": "78610",
+    "nombre": "Sant Miquel de Gonteres-Viladecavalls",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.56886617958069,
+    "lon": 1.9742848486997522,
+    "accesible": false
+  },
+  {
+    "codigo": "79602",
+    "nombre": "Sant Pol de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.601754915434626,
+    "lon": 2.624597568145215,
+    "accesible": false
+  },
+  {
+    "codigo": "77113",
+    "nombre": "Sant Quirze de Besora",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.104848853038135,
+    "lon": 2.2177334965765696,
+    "accesible": false
+  },
+  {
+    "codigo": "72207",
+    "nombre": "Sant Sadurní d'Anoia",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.42051817234943,
+    "lon": 1.7946876998276335,
+    "accesible": false
+  },
+  {
+    "codigo": "71600",
+    "nombre": "Sant Vicenç de Calders",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R2S",
+      "R4",
+      "RT2"
+    ],
+    "lat": 41.186210284247,
+    "lon": 1.524803581171792,
+    "accesible": true
+  },
+  {
+    "codigo": "78604",
+    "nombre": "Sant Vicenç de Castellet",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "RL4"
+    ],
+    "lat": 41.6688309930919,
+    "lon": 1.862643044567052,
+    "accesible": false
+  },
+  {
+    "codigo": "60913",
+    "nombre": "Sant Vicent Centre",
+    "nucleo": "41",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 38.394653326832355,
+    "lon": -0.5287247763908954,
+    "accesible": true
+  },
+  {
+    "codigo": "05459",
+    "nombre": "Santa Águeda",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.26185700278235,
+    "lon": -2.973021824920391,
+    "accesible": false
+  },
+  {
+    "codigo": "05384",
+    "nombre": "Santa Ana-Soto",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.16478053176007,
+    "lon": -5.646099835645936,
+    "accesible": false
+  },
+  {
+    "codigo": "14208",
+    "nombre": "Santa Cruz",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.170121641962865,
+    "lon": -4.045062737878267,
+    "accesible": false
+  },
+  {
+    "codigo": "05376",
+    "nombre": "Santa Cruz",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.19597036918429,
+    "lon": -5.777544718841547,
+    "accesible": false
+  },
+  {
+    "codigo": "13104",
+    "nombre": "Santa Cruz de Llodio",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.132863068523186,
+    "lon": -2.969837558980224,
+    "accesible": false
+  },
+  {
+    "codigo": "70109",
+    "nombre": "Santa Eugenia",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.38695459535439,
+    "lon": -3.6089855181127444,
+    "accesible": false
+  },
+  {
+    "codigo": "16001",
+    "nombre": "Santa Eulalia de Manzaneda",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.317337527622854,
+    "lon": -5.812620425357019,
+    "accesible": true
+  },
+  {
+    "codigo": "05103",
+    "nombre": "Santa Icía",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.499770765420536,
+    "lon": -8.199922606238049,
+    "accesible": true
+  },
+  {
+    "codigo": "05625",
+    "nombre": "Santa Isabel de Quijas",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.359010184285694,
+    "lon": -4.111853361196041,
+    "accesible": false
+  },
+  {
+    "codigo": "51003",
+    "nombre": "Santa Justa",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "lat": 37.392495584133634,
+    "lon": -5.974926974088349,
+    "accesible": true
+  },
+  {
+    "codigo": "05313",
+    "nombre": "Santa María de Grado",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.38422749471057,
+    "lon": -5.9827075066287545,
+    "accesible": false
+  },
+  {
+    "codigo": "10206",
+    "nombre": "Santa María de la Alameda",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.5690010109614,
+    "lon": -4.269125545720563,
+    "accesible": false
+  },
+  {
+    "codigo": "05131",
+    "nombre": "Santa María de Mera",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.64092885638762,
+    "lon": -7.916190446615289,
+    "accesible": false
+  },
+  {
+    "codigo": "77003",
+    "nombre": "Santa Perpètua de Mogoda",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.52154799707768,
+    "lon": 2.1938869887901413,
+    "accesible": false
+  },
+  {
+    "codigo": "72508",
+    "nombre": "Santa Perpètua de Mogoda Riera de Caldes",
+    "nucleo": "50",
+    "lineas": [
+      "R8"
+    ],
+    "lat": 41.526229712101674,
+    "lon": 2.186338674086828,
+    "accesible": false
+  },
+  {
+    "codigo": "79608",
+    "nombre": "Santa Susanna",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.63009715772761,
+    "lon": 2.71596980962853,
+    "accesible": true
+  },
+  {
+    "codigo": "14223",
+    "nombre": "Santander",
+    "nucleo": "62",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "lat": 43.458398158149386,
+    "lon": -3.810952908332502,
+    "accesible": false
+  },
+  {
+    "codigo": "05231",
+    "nombre": "Santiago del Monte",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.54092413967549,
+    "lon": -6.027971056866352,
+    "accesible": false
+  },
+  {
+    "codigo": "05239",
+    "nombre": "Santianes",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.50379907524826,
+    "lon": -6.091839185310401,
+    "accesible": false
+  },
+  {
+    "codigo": "51463",
+    "nombre": "Santo Entierro",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.45590704136876,
+    "lon": -6.209616139237298,
+    "accesible": true
+  },
+  {
+    "codigo": "15202",
+    "nombre": "Santullano",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.22089909430464,
+    "lon": -5.7855868666905295,
+    "accesible": true
+  },
+  {
+    "codigo": "13405",
+    "nombre": "Santurtzi",
+    "nucleo": "60",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.32866051938117,
+    "lon": -3.0295685203874423,
+    "accesible": false
+  },
+  {
+    "codigo": "05111",
+    "nombre": "Sedes",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.542611348165785,
+    "lon": -8.14019031906714,
+    "accesible": false
+  },
+  {
+    "codigo": "67214",
+    "nombre": "Segorbe Arrabal",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.85455703401129,
+    "lon": -0.49386308524951417,
+    "accesible": false
+  },
+  {
+    "codigo": "67215",
+    "nombre": "Segorbe Ciudad",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.84717555492401,
+    "lon": -0.4823544653301532,
+    "accesible": false
+  },
+  {
+    "codigo": "78504",
+    "nombre": "Seguers- Sant Pere Sallavinera",
+    "nucleo": "50",
+    "lineas": [
+      "RL4"
+    ],
+    "lat": 41.7479531753561,
+    "lon": 1.57414493152705,
+    "accesible": false
+  },
+  {
+    "codigo": "51404",
+    "nombre": "Segunda Aguada",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a",
+      "T1"
+    ],
+    "lat": 36.5135317624952,
+    "lon": -6.277012824932436,
+    "accesible": true
+  },
+  {
+    "codigo": "71602",
+    "nombre": "Segur de Calafell",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2S"
+    ],
+    "lat": 41.19257876050225,
+    "lon": 1.6064359948855658,
+    "accesible": true
+  },
+  {
+    "codigo": "15302",
+    "nombre": "Serín",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.50490502431335,
+    "lon": -5.7818821766170645,
+    "accesible": false
+  },
+  {
+    "codigo": "05137",
+    "nombre": "Serna",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.66879307727465,
+    "lon": -7.854553472948444,
+    "accesible": false
+  },
+  {
+    "codigo": "13401",
+    "nombre": "Sestao Urbínaga",
+    "nucleo": "60",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.308520162987755,
+    "lon": -2.9940107188045655,
+    "accesible": false
+  },
+  {
+    "codigo": "05967",
+    "nombre": "Sierra Minera",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.61987836717158,
+    "lon": -0.8648822262915326,
+    "accesible": false
+  },
+  {
+    "codigo": "14214",
+    "nombre": "Sierrapando",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.34178458851257,
+    "lon": -4.026634263562704,
+    "accesible": false
+  },
+  {
+    "codigo": "66204",
+    "nombre": "Siete Aguas",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.45722645444789,
+    "lon": -0.9025067288209612,
+    "accesible": false
+  },
+  {
+    "codigo": "64200",
+    "nombre": "Silla",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 39.3619548531536,
+    "lon": -0.4149813028494723,
+    "accesible": true
+  },
+  {
+    "codigo": "79202",
+    "nombre": "Sils",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 41.807599655791186,
+    "lon": 2.7450072941260824,
+    "accesible": true
+  },
+  {
+    "codigo": "71701",
+    "nombre": "Sitges",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R2S"
+    ],
+    "lat": 41.23913155315337,
+    "lon": 1.8096918422601063,
+    "accesible": true
+  },
+  {
+    "codigo": "05467",
+    "nombre": "Sodupe",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.20203012781985,
+    "lon": -3.050517056829764,
+    "accesible": false
+  },
+  {
+    "codigo": "18101",
+    "nombre": "Sol",
+    "nucleo": "10",
+    "lineas": [
+      "C3",
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.41686650140562,
+    "lon": -3.702876589511783,
+    "accesible": true
+  },
+  {
+    "codigo": "05665",
+    "nombre": "Solares",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.3872470771101,
+    "lon": -3.731383476518789,
+    "accesible": false
+  },
+  {
+    "codigo": "69102",
+    "nombre": "Sollana",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.27934715762125,
+    "lon": -0.3793139229749777,
+    "accesible": false
+  },
+  {
+    "codigo": "67217",
+    "nombre": "Soneja",
+    "nucleo": "40",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 39.8126015669401,
+    "lon": -0.43182069608509727,
+    "accesible": false
+  },
+  {
+    "codigo": "05790",
+    "nombre": "Sorriba",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.786277029015004,
+    "lon": -5.127475845923449,
+    "accesible": false
+  },
+  {
+    "codigo": "05405",
+    "nombre": "Sotiello",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.507238665359374,
+    "lon": -5.726541638223681,
+    "accesible": false
+  },
+  {
+    "codigo": "15208",
+    "nombre": "Soto de Rey",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.30640948125714,
+    "lon": -5.855807230195565,
+    "accesible": false
+  },
+  {
+    "codigo": "05233",
+    "nombre": "Soto del Barco",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.52905560747266,
+    "lon": -6.07129348179266,
+    "accesible": false
+  },
+  {
+    "codigo": "70112",
+    "nombre": "Soto del Henares",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.46396402466159,
+    "lon": -3.4414076316419395,
+    "accesible": true
+  },
+  {
+    "codigo": "05308",
+    "nombre": "Soto Udrión",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.35643640773528,
+    "lon": -5.965015762220996,
+    "accesible": false
+  },
+  {
+    "codigo": "05437",
+    "nombre": "Sotrondio",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.27592558024391,
+    "lon": -5.604890089927611,
+    "accesible": false
+  },
+  {
+    "codigo": "69103",
+    "nombre": "Sueca",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.205847199653185,
+    "lon": -0.30823889868505394,
+    "accesible": true
+  },
+  {
+    "codigo": "71500",
+    "nombre": "Tarragona",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "RT1",
+      "RT2"
+    ],
+    "lat": 41.11156366030262,
+    "lon": 1.2532277670890275,
+    "accesible": true
+  },
+  {
+    "codigo": "78408",
+    "nombre": "Tàrrega",
+    "nucleo": "50",
+    "lineas": [
+      "RL3",
+      "RL4"
+    ],
+    "lat": 41.6501715288971,
+    "lon": 1.13853542824154,
+    "accesible": true
+  },
+  {
+    "codigo": "69105",
+    "nombre": "Tavernes de la Valldigna",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.079043880529944,
+    "lon": -0.2262966068569953,
+    "accesible": false
+  },
+  {
+    "codigo": "78710",
+    "nombre": "Terrassa Est",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.56752968972441,
+    "lon": 2.039636399884527,
+    "accesible": true
+  },
+  {
+    "codigo": "78700",
+    "nombre": "Terrassa Estació del Nord",
+    "nucleo": "50",
+    "lineas": [
+      "R4",
+      "RL4"
+    ],
+    "lat": 41.569782526266756,
+    "lon": 2.01435428558083,
+    "accesible": true
+  },
+  {
+    "codigo": "40122",
+    "nombre": "Tocina",
+    "nucleo": "30",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 37.609304416172755,
+    "lon": -5.731693953117883,
+    "accesible": false
+  },
+  {
+    "codigo": "11500",
+    "nombre": "Tolosa",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.13544729151997,
+    "lon": -2.079088670879632,
+    "accesible": true
+  },
+  {
+    "codigo": "11501",
+    "nombre": "Tolosa Centro",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.13939638213748,
+    "lon": -2.074112250407385,
+    "accesible": false
+  },
+  {
+    "codigo": "79607",
+    "nombre": "Tordera",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.70716873671781,
+    "lon": 2.719570634839429,
+    "accesible": true
+  },
+  {
+    "codigo": "77111",
+    "nombre": "Torelló",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.05201135936165,
+    "lon": 2.259972264370682,
+    "accesible": true
+  },
+  {
+    "codigo": "54514",
+    "nombre": "Torreblanca",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.56490717695515,
+    "lon": -4.606710654186586,
+    "accesible": true
+  },
+  {
+    "codigo": "65306",
+    "nombre": "Torreblanca",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.21228,
+    "lon": 0.19876,
+    "accesible": false
+  },
+  {
+    "codigo": "71503",
+    "nombre": "Torredembarra",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "RT2"
+    ],
+    "lat": 41.14279238234169,
+    "lon": 1.4057837791225816,
+    "accesible": true
+  },
+  {
+    "codigo": "70102",
+    "nombre": "Torrejón de Ardoz",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.454789574533216,
+    "lon": -3.479730002806918,
+    "accesible": false
+  },
+  {
+    "codigo": "14213",
+    "nombre": "Torrelavega Tanos",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.32767763099286,
+    "lon": -4.042687118803521,
+    "accesible": false
+  },
+  {
+    "codigo": "05621",
+    "nombre": "Torrelavega-Centro",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.351001408385024,
+    "lon": -4.05117896333791,
+    "accesible": false
+  },
+  {
+    "codigo": "62104",
+    "nombre": "Torrellano",
+    "nucleo": "41",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 38.28963655874549,
+    "lon": -0.5824572399630866,
+    "accesible": false
+  },
+  {
+    "codigo": "10103",
+    "nombre": "Torrelodones",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.574554082213666,
+    "lon": -3.9566013277854353,
+    "accesible": false
+  },
+  {
+    "codigo": "54509",
+    "nombre": "Torremolinos",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.622559661696464,
+    "lon": -4.499570036223631,
+    "accesible": true
+  },
+  {
+    "codigo": "54512",
+    "nombre": "Torremuelle",
+    "nucleo": "32",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 36.58229669775404,
+    "lon": -4.567018355296971,
+    "accesible": true
+  },
+  {
+    "codigo": "65400",
+    "nombre": "Tortosa",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.807333005632636,
+    "lon": 0.5230136040985406,
+    "accesible": true
+  },
+  {
+    "codigo": "77305",
+    "nombre": "Toses",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.32096398709899,
+    "lon": 2.0152583688606196,
+    "accesible": true
+  },
+  {
+    "codigo": "06003",
+    "nombre": "Totana",
+    "nucleo": "41",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 37.76354241217742,
+    "lon": -1.4956153253153552,
+    "accesible": false
+  },
+  {
+    "codigo": "13502",
+    "nombre": "Trápaga",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30302656023411,
+    "lon": -3.016990770756389,
+    "accesible": false
+  },
+  {
+    "codigo": "13503",
+    "nombre": "Trapagaran",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30148428832746,
+    "lon": -3.0287951973721765,
+    "accesible": false
+  },
+  {
+    "codigo": "05487",
+    "nombre": "Traslaviña",
+    "nucleo": "60",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.23329,
+    "lon": -3.198304,
+    "accesible": false
+  },
+  {
+    "codigo": "05217",
+    "nombre": "Trasona",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.5517694975496,
+    "lon": -5.874174708138444,
+    "accesible": true
+  },
+  {
+    "codigo": "05203",
+    "nombre": "Tremañes-Carreño",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.52855243018993,
+    "lon": -5.6948835751202695,
+    "accesible": true
+  },
+  {
+    "codigo": "05403",
+    "nombre": "Tremañes-Langreo",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.5271011119,
+    "lon": -5.6906644219741,
+    "accesible": true
+  },
+  {
+    "codigo": "51457",
+    "nombre": "Tres Caminos",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.46652272083937,
+    "lon": -6.175705957510825,
+    "accesible": false
+  },
+  {
+    "codigo": "17004",
+    "nombre": "Tres Cantos",
+    "nucleo": "10",
+    "lineas": [
+      "C4b"
+    ],
+    "lat": 40.598741774260645,
+    "lon": -3.7155585451304756,
+    "accesible": true
+  },
+  {
+    "codigo": "05311",
+    "nombre": "Trubia",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.348570080642226,
+    "lon": -5.967775611014067,
+    "accesible": true
+  },
+  {
+    "codigo": "16002",
+    "nombre": "Tudela-Veguín",
+    "nucleo": "20",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.331010337822285,
+    "lon": -5.776892593424556,
+    "accesible": false
+  },
+  {
+    "codigo": "05421",
+    "nombre": "Tuilla",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.32815061681358,
+    "lon": -5.643077578346517,
+    "accesible": true
+  },
+  {
+    "codigo": "13110",
+    "nombre": "Ugao Miraballes",
+    "nucleo": "60",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.1790833576434,
+    "lon": -2.9026960034066227,
+    "accesible": false
+  },
+  {
+    "codigo": "15200",
+    "nombre": "Ujo",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.20469624765122,
+    "lon": -5.792642254479055,
+    "accesible": true
+  },
+  {
+    "codigo": "05375",
+    "nombre": "Ujo Taruelo",
+    "nucleo": "20",
+    "lineas": [
+      "C8"
+    ],
+    "lat": 43.20062294664821,
+    "lon": -5.787861224271066,
+    "accesible": false
+  },
+  {
+    "codigo": "65314",
+    "nombre": "Ulldecona-Alcanar-La Sénia",
+    "nucleo": "50",
+    "lineas": [
+      "R16"
+    ],
+    "lat": 40.595926722905894,
+    "lon": 0.44927448155328187,
+    "accesible": false
+  },
+  {
+    "codigo": "51416",
+    "nombre": "Universidad",
+    "nucleo": "31",
+    "lineas": [
+      "C1a"
+    ],
+    "lat": 36.529250932457906,
+    "lon": -6.206168691953522,
+    "accesible": true
+  },
+  {
+    "codigo": "17009",
+    "nombre": "Universidad Cantoblanco",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.543841620963576,
+    "lon": -3.7001551022712853,
+    "accesible": true
+  },
+  {
+    "codigo": "60914",
+    "nombre": "Universidad de Alicante",
+    "nucleo": "41",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 38.38416500956839,
+    "lon": -0.5284110955198217,
+    "accesible": true
+  },
+  {
+    "codigo": "19001",
+    "nombre": "Universidad Pontificia de Comillas",
+    "nucleo": "10",
+    "lineas": [
+      "C4a"
+    ],
+    "lat": 40.55396972912518,
+    "lon": -3.683699715682875,
+    "accesible": true
+  },
+  {
+    "codigo": "13507",
+    "nombre": "Urioste",
+    "nucleo": "60",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.30753159201256,
+    "lon": -3.0410720012912322,
+    "accesible": false
+  },
+  {
+    "codigo": "11506",
+    "nombre": "Urnieta",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.247466989909185,
+    "lon": -1.9884271367863413,
+    "accesible": false
+  },
+  {
+    "codigo": "77307",
+    "nombre": "Urtx-Alp",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 42.37686242067685,
+    "lon": 1.896853070953292,
+    "accesible": true
+  },
+  {
+    "codigo": "70801",
+    "nombre": "Utebo",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.71086442746132,
+    "lon": -0.9985828033034163,
+    "accesible": true
+  },
+  {
+    "codigo": "66200",
+    "nombre": "Utiel",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.570774240190694,
+    "lon": -1.202421519284481,
+    "accesible": false
+  },
+  {
+    "codigo": "51200",
+    "nombre": "Utrera",
+    "nucleo": "30",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.18481782263326,
+    "lon": -5.790753703701543,
+    "accesible": true
+  },
+  {
+    "codigo": "78606",
+    "nombre": "Vacarisses",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.60192806070025,
+    "lon": 1.8940879004480748,
+    "accesible": false
+  },
+  {
+    "codigo": "78607",
+    "nombre": "Vacarisses-Torreblanca",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.58691839929015,
+    "lon": 1.916475775091322,
+    "accesible": false
+  },
+  {
+    "codigo": "05757",
+    "nombre": "Valcuende",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.76557809846054,
+    "lon": -4.929255875425521,
+    "accesible": false
+  },
+  {
+    "codigo": "98304",
+    "nombre": "Valdebebas",
+    "nucleo": "10",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 40.48210164367604,
+    "lon": -3.6162874917314394,
+    "accesible": true
+  },
+  {
+    "codigo": "14230",
+    "nombre": "Valdecilla",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.45408883888616,
+    "lon": -3.8277628288381216,
+    "accesible": false
+  },
+  {
+    "codigo": "05602",
+    "nombre": "Valdecilla La Marga",
+    "nucleo": "62",
+    "lineas": [
+      "C2",
+      "C3"
+    ],
+    "lat": 43.45294654840108,
+    "lon": -3.8282409310867105,
+    "accesible": false
+  },
+  {
+    "codigo": "51417",
+    "nombre": "Valdelagrana",
+    "nucleo": "31",
+    "lineas": [
+      "C1",
+      "C1a"
+    ],
+    "lat": 36.58472499210456,
+    "lon": -6.216299372912513,
+    "accesible": true
+  },
+  {
+    "codigo": "19002",
+    "nombre": "Valdelasfuentes",
+    "nucleo": "10",
+    "lineas": [
+      "C4a"
+    ],
+    "lat": 40.5474339625193,
+    "lon": -3.6543237817889764,
+    "accesible": true
+  },
+  {
+    "codigo": "60104",
+    "nombre": "Valdemoro",
+    "nucleo": "10",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 40.1960779802083,
+    "lon": -3.664937259465667,
+    "accesible": true
+  },
+  {
+    "codigo": "05797",
+    "nombre": "Valdepiélago",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.86496355877093,
+    "lon": -5.403219101520733,
+    "accesible": true
+  },
+  {
+    "codigo": "05807",
+    "nombre": "Valderilla",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.718774212491155,
+    "lon": -5.530001461129255,
+    "accesible": true
+  },
+  {
+    "codigo": "05416",
+    "nombre": "Valdesoto",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.35834960219657,
+    "lon": -5.658146778369096,
+    "accesible": true
+  },
+  {
+    "codigo": "65003",
+    "nombre": "València Cabanyal",
+    "nucleo": "40",
+    "lineas": [
+      "C5",
+      "C6"
+    ],
+    "lat": 39.47024560128024,
+    "lon": -0.3346772984735376,
+    "accesible": true
+  },
+  {
+    "codigo": "65000",
+    "nombre": "València Estació del Nord",
+    "nucleo": "40",
+    "lineas": [
+      "C1",
+      "C2",
+      "C3",
+      "C5",
+      "C6"
+    ],
+    "lat": 39.466930569764706,
+    "lon": -0.37722391486797624,
+    "accesible": false
+  },
+  {
+    "codigo": "65002",
+    "nombre": "València la Font de Sant Lluís",
+    "nucleo": "40",
+    "lineas": [
+      "C3",
+      "C5",
+      "C6"
+    ],
+    "lat": 39.44160522689367,
+    "lon": -0.3714220248878836,
+    "accesible": true
+  },
+  {
+    "codigo": "66212",
+    "nombre": "València Sant Isidre",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.45021948561054,
+    "lon": -0.40397889836292544,
+    "accesible": false
+  },
+  {
+    "codigo": "43026",
+    "nombre": "Valencina-Santiponce",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.42681278986915,
+    "lon": -6.056685882877239,
+    "accesible": true
+  },
+  {
+    "codigo": "64004",
+    "nombre": "Vallada",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 38.90899076153735,
+    "lon": -0.6902385959980217,
+    "accesible": true
+  },
+  {
+    "codigo": "05760",
+    "nombre": "Valle de las casas",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.767772053723036,
+    "lon": -5.0713669414653895,
+    "accesible": false
+  },
+  {
+    "codigo": "05652",
+    "nombre": "Valle Real",
+    "nucleo": "62",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.427539971783375,
+    "lon": -3.8405377337365056,
+    "accesible": false
+  },
+  {
+    "codigo": "70001",
+    "nombre": "Vallecas",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.381960730340055,
+    "lon": -3.624583533631959,
+    "accesible": true
+  },
+  {
+    "codigo": "05300",
+    "nombre": "Vallobín",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.36523067371669,
+    "lon": -5.864798473157259,
+    "accesible": true
+  },
+  {
+    "codigo": "76004",
+    "nombre": "Valls",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.28960797141572,
+    "lon": 1.2586517913299529,
+    "accesible": false
+  },
+  {
+    "codigo": "05315",
+    "nombre": "Vega de Anzo",
+    "nucleo": "20",
+    "lineas": [
+      "C7"
+    ],
+    "lat": 43.38933006528744,
+    "lon": -6.00568344577097,
+    "accesible": true
+  },
+  {
+    "codigo": "05229",
+    "nombre": "Vegarrozadas",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.551161307359315,
+    "lon": -5.995514081846953,
+    "accesible": false
+  },
+  {
+    "codigo": "51458",
+    "nombre": "Venta de Vargas",
+    "nucleo": "31",
+    "lineas": [
+      "T1"
+    ],
+    "lat": 36.467739165386924,
+    "lon": -6.191064255302579,
+    "accesible": true
+  },
+  {
+    "codigo": "66205",
+    "nombre": "Venta Mina-Siete Aguas",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.45435091958984,
+    "lon": -0.8702163006278186,
+    "accesible": false
+  },
+  {
+    "codigo": "11518",
+    "nombre": "Ventas de Irún",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.330411684930894,
+    "lon": -1.8167813008661797,
+    "accesible": false
+  },
+  {
+    "codigo": "05801",
+    "nombre": "Ventas San Mamés",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.60987604806211,
+    "lon": -5.571176158711018,
+    "accesible": true
+  },
+  {
+    "codigo": "15400",
+    "nombre": "Veriña",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C4"
+    ],
+    "lat": 43.54157551233907,
+    "lon": -5.722797033652733,
+    "accesible": false
+  },
+  {
+    "codigo": "77109",
+    "nombre": "Vic",
+    "nucleo": "50",
+    "lineas": [
+      "R3"
+    ],
+    "lat": 41.93109582492064,
+    "lon": 2.2488566542618673,
+    "accesible": true
+  },
+  {
+    "codigo": "70100",
+    "nombre": "Vicálvaro",
+    "nucleo": "10",
+    "lineas": [
+      "C2",
+      "C7",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.4012524760658,
+    "lon": -3.5958970156733585,
+    "accesible": false
+  },
+  {
+    "codigo": "54501",
+    "nombre": "Victoria Kent",
+    "nucleo": "32",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 36.70122293386249,
+    "lon": -4.454414539959495,
+    "accesible": true
+  },
+  {
+    "codigo": "14212",
+    "nombre": "Viérnoles",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.324563605636904,
+    "lon": -4.054044123430378,
+    "accesible": false
+  },
+  {
+    "codigo": "65208",
+    "nombre": "Vila-real",
+    "nucleo": "40",
+    "lineas": [
+      "C6"
+    ],
+    "lat": 39.93309355000747,
+    "lon": -0.09676819170737436,
+    "accesible": true
+  },
+  {
+    "codigo": "71401",
+    "nombre": "Vila-seca",
+    "nucleo": "50",
+    "lineas": [
+      "R14",
+      "R15",
+      "R16",
+      "RT1"
+    ],
+    "lat": 41.112819389946935,
+    "lon": 1.1503787725809298,
+    "accesible": true
+  },
+  {
+    "codigo": "76002",
+    "nombre": "Vilabella",
+    "nucleo": "50",
+    "lineas": [
+      "R13"
+    ],
+    "lat": 41.23954737854534,
+    "lon": 1.3174915590666152,
+    "accesible": true
+  },
+  {
+    "codigo": "71709",
+    "nombre": "Viladecans",
+    "nucleo": "50",
+    "lineas": [
+      "R15",
+      "R2",
+      "R2S"
+    ],
+    "lat": 41.30950860166712,
+    "lon": 2.0274185719562925,
+    "accesible": true
+  },
+  {
+    "codigo": "78609",
+    "nombre": "Viladecavalls",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.56379659462234,
+    "lon": 1.9572701534277916,
+    "accesible": false
+  },
+  {
+    "codigo": "72204",
+    "nombre": "Vilafranca del Penedès",
+    "nucleo": "50",
+    "lineas": [
+      "R4"
+    ],
+    "lat": 41.34481398197748,
+    "lon": 1.703201314436184,
+    "accesible": false
+  },
+  {
+    "codigo": "79311",
+    "nombre": "Vilajuïga",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.32566912329435,
+    "lon": 3.0875462648814715,
+    "accesible": false
+  },
+  {
+    "codigo": "79308",
+    "nombre": "Vilamalla",
+    "nucleo": "50",
+    "lineas": [
+      "R11",
+      "RG1"
+    ],
+    "lat": 42.216362041453905,
+    "lon": 2.9777642393651043,
+    "accesible": false
+  },
+  {
+    "codigo": "71700",
+    "nombre": "Vilanova i la Geltrú",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R2S"
+    ],
+    "lat": 41.22032079960109,
+    "lon": 1.730772493967953,
+    "accesible": true
+  },
+  {
+    "codigo": "79410",
+    "nombre": "Vilassar de Mar",
+    "nucleo": "50",
+    "lineas": [
+      "R1",
+      "RG1"
+    ],
+    "lat": 41.50062851909844,
+    "lon": 2.389861043418595,
+    "accesible": true
+  },
+  {
+    "codigo": "73009",
+    "nombre": "Vilaverd",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.33766339706438,
+    "lon": 1.1765323598551445,
+    "accesible": true
+  },
+  {
+    "codigo": "05796",
+    "nombre": "Villa Romana",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.62920437412623,
+    "lon": -5.5613065272142075,
+    "accesible": true
+  },
+  {
+    "codigo": "15301",
+    "nombre": "Villabona de Asturias",
+    "nucleo": "20",
+    "lineas": [
+      "C1",
+      "C3"
+    ],
+    "lat": 43.46151874059757,
+    "lon": -5.826346391908059,
+    "accesible": false
+  },
+  {
+    "codigo": "15305",
+    "nombre": "Villabona Tabladiello",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.474162458373264,
+    "lon": -5.800053882207751,
+    "accesible": false
+  },
+  {
+    "codigo": "10200",
+    "nombre": "Villalba de Guadarrama",
+    "nucleo": "10",
+    "lineas": [
+      "C10",
+      "C8",
+      "C8a",
+      "C8b"
+    ],
+    "lat": 40.626489305670134,
+    "lon": -4.008030124398341,
+    "accesible": true
+  },
+  {
+    "codigo": "16401",
+    "nombre": "Villalegre",
+    "nucleo": "20",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 43.540040460828905,
+    "lon": -5.902230837002548,
+    "accesible": false
+  },
+  {
+    "codigo": "15123",
+    "nombre": "Villallana",
+    "nucleo": "20",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.18385687092795,
+    "lon": -5.814592810913201,
+    "accesible": false
+  },
+  {
+    "codigo": "43003",
+    "nombre": "Villanueva del Ariscal",
+    "nucleo": "30",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 37.40713750506391,
+    "lon": -6.14818955807276,
+    "accesible": true
+  },
+  {
+    "codigo": "40119",
+    "nombre": "Villanueva del Río-Minas",
+    "nucleo": "30",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 37.661704837118855,
+    "lon": -5.712154321883712,
+    "accesible": false
+  },
+  {
+    "codigo": "05777",
+    "nombre": "Villaquilambre",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.64686628862782,
+    "lon": -5.554037679733142,
+    "accesible": true
+  },
+  {
+    "codigo": "05785",
+    "nombre": "Villasinta",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.657581960655065,
+    "lon": -5.5492813459817505,
+    "accesible": true
+  },
+  {
+    "codigo": "37001",
+    "nombre": "Villaverde Alto",
+    "nucleo": "10",
+    "lineas": [
+      "C4",
+      "C4a",
+      "C4b",
+      "C5"
+    ],
+    "lat": 40.341589589024686,
+    "lon": -3.712350868020094,
+    "accesible": true
+  },
+  {
+    "codigo": "60100",
+    "nombre": "Villaverde Bajo",
+    "nucleo": "10",
+    "lineas": [
+      "C3",
+      "C4",
+      "C4a",
+      "C4b"
+    ],
+    "lat": 40.35267626822908,
+    "lon": -3.683897745992931,
+    "accesible": false
+  },
+  {
+    "codigo": "05493",
+    "nombre": "Villaverde de Trucios",
+    "nucleo": "60",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.24128,
+    "lon": -3.25054,
+    "accesible": false
+  },
+  {
+    "codigo": "73006",
+    "nombre": "Vimbodí i Poblet",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.40272772375208,
+    "lon": 1.0460332722598051,
+    "accesible": true
+  },
+  {
+    "codigo": "73005",
+    "nombre": "Vinaixa",
+    "nucleo": "50",
+    "lineas": [
+      "R13",
+      "R14"
+    ],
+    "lat": 41.42514105839668,
+    "lon": 0.9703737042712101,
+    "accesible": false
+  },
+  {
+    "codigo": "65312",
+    "nombre": "Vinarós",
+    "nucleo": "40",
+    "lineas": [
+      "ER02"
+    ],
+    "lat": 40.47161,
+    "lon": 0.45574,
+    "accesible": true
+  },
+  {
+    "codigo": "14236",
+    "nombre": "Vioño",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.36064703534712,
+    "lon": -3.9648063712649178,
+    "accesible": false
+  },
+  {
+    "codigo": "05633",
+    "nombre": "Virgen de la Peña",
+    "nucleo": "62",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 43.323039466577505,
+    "lon": -4.193484016144763,
+    "accesible": false
+  },
+  {
+    "codigo": "51110",
+    "nombre": "Virgen del Rocío",
+    "nucleo": "30",
+    "lineas": [
+      "C1",
+      "C4",
+      "C5"
+    ],
+    "lat": 37.362809111446744,
+    "lon": -5.976010522204153,
+    "accesible": true
+  },
+  {
+    "codigo": "05104",
+    "nombre": "Virxe do Mar",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.49652546552674,
+    "lon": -8.204875284400453,
+    "accesible": false
+  },
+  {
+    "codigo": "05955",
+    "nombre": "Vista Alegre",
+    "nucleo": "45",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 37.60931296015809,
+    "lon": -0.9437592914214602,
+    "accesible": false
+  },
+  {
+    "codigo": "64100",
+    "nombre": "Xàtiva",
+    "nucleo": "40",
+    "lineas": [
+      "C2"
+    ],
+    "lat": 38.99214802401134,
+    "lon": -0.5245402232527491,
+    "accesible": true
+  },
+  {
+    "codigo": "69107",
+    "nombre": "Xeraco",
+    "nucleo": "40",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 39.0261489965231,
+    "lon": -0.21503462727626316,
+    "accesible": true
+  },
+  {
+    "codigo": "66214",
+    "nombre": "Xirivella Alqueries",
+    "nucleo": "40",
+    "lineas": [
+      "C3"
+    ],
+    "lat": 39.46262949008699,
+    "lon": -0.43221605207161734,
+    "accesible": false
+  },
+  {
+    "codigo": "05208",
+    "nombre": "Xivares",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.565938775751036,
+    "lon": -5.7287459022771055,
+    "accesible": true
+  },
+  {
+    "codigo": "05410",
+    "nombre": "Xixún",
+    "nucleo": "20",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 43.37145239725676,
+    "lon": -5.693868202819773,
+    "accesible": true
+  },
+  {
+    "codigo": "05107",
+    "nombre": "Xuvia",
+    "nucleo": "46",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.51719116297768,
+    "lon": -8.161282091299775,
+    "accesible": true
+  },
+  {
+    "codigo": "05762",
+    "nombre": "Yugueros",
+    "nucleo": "47",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 42.80979048179085,
+    "lon": -5.180063034244949,
+    "accesible": true
+  },
+  {
+    "codigo": "13205",
+    "nombre": "Zabálburu",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.25679116061543,
+    "lon": -2.9322841588718873,
+    "accesible": false
+  },
+  {
+    "codigo": "05475",
+    "nombre": "Zalla",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.21290967764935,
+    "lon": -3.133336855035102,
+    "accesible": false
+  },
+  {
+    "codigo": "05215",
+    "nombre": "Zanzabornín",
+    "nucleo": "20",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.56892675821675,
+    "lon": -5.8253120580775,
+    "accesible": false
+  },
+  {
+    "codigo": "70807",
+    "nombre": "Zaragoza - Goya",
+    "nucleo": "70",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 41.64387799946289,
+    "lon": -0.8912574082513267,
+    "accesible": true
+  },
+  {
+    "codigo": "05463",
+    "nombre": "Zaramillo",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.23328941537455,
+    "lon": -3.0159040540104867,
+    "accesible": true
+  },
+  {
+    "codigo": "10204",
+    "nombre": "Zarzalejo",
+    "nucleo": "10",
+    "lineas": [
+      "C8a"
+    ],
+    "lat": 40.538927237791455,
+    "lon": -4.158066229815454,
+    "accesible": false
+  },
+  {
+    "codigo": "35009",
+    "nombre": "Zarzaquemada",
+    "nucleo": "10",
+    "lineas": [
+      "C5"
+    ],
+    "lat": 40.34085264128251,
+    "lon": -3.7482632606793733,
+    "accesible": true
+  },
+  {
+    "codigo": "13304",
+    "nombre": "Zorrotza",
+    "nucleo": "60",
+    "lineas": [
+      "C1",
+      "C2"
+    ],
+    "lat": 43.27780394149743,
+    "lon": -2.9721188575444466,
+    "accesible": false
+  },
+  {
+    "codigo": "05457",
+    "nombre": "Zorrotza Zorrozgoiti",
+    "nucleo": "60",
+    "lineas": [
+      "C4"
+    ],
+    "lat": 43.27403985428286,
+    "lon": -2.9740116240597505,
+    "accesible": false
+  },
+  {
+    "codigo": "11400",
+    "nombre": "Zumárraga",
+    "nucleo": "61",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.0870824499358,
+    "lon": -2.3202298126262106,
+    "accesible": true
+  },
+  {
+    "codigo": "14215",
+    "nombre": "Zurita",
+    "nucleo": "62",
+    "lineas": [
+      "C1"
+    ],
+    "lat": 43.34767127318461,
+    "lon": -3.991050177003637,
+    "accesible": false
+  }
+]
