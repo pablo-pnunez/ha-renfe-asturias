@@ -41,6 +41,7 @@ from .const import (
     MIN_FLEET_SCAN_INTERVAL,
     MIN_STOPS_SCAN_INTERVAL,
 )
+from .route_patterns import get_pattern
 from .stations import get_nucleos, get_stations, get_stations_by_code
 
 
@@ -177,13 +178,19 @@ class RenfeCercaniasConfigFlow(ConfigFlow, domain=DOMAIN):
     async def async_step_route_destination(
         self, user_input: dict[str, Any] | None = None
     ) -> Any:
-        """Último paso: elegir destino entre los trenes que salen de ese origen.
+        """Último paso: elegir destino entre las líneas que pasan por ese origen.
 
-        El destino se limita a los que realmente aparecen como fin de trayecto
-        en las salidas en tiempo real del origen elegido, para garantizar que
-        la ruta pueda mostrar tanto horario como ubicación del tren en el mapa.
-        También se guarda el `route_id` (línea + sentido) de esa salida, que
-        es lo que permite luego reconstruir el itinerario completo de paradas.
+        El destino se limita a las paradas que un tren con servicio activo
+        ahora mismo desde el origen elegido realmente va a recorrer, para
+        garantizar que la ruta pueda mostrar tanto horario como ubicación en
+        el mapa. No se limita al final de trayecto del tren (muchas líneas de
+        Cercanías tienen estaciones importantes como paradas intermedias, no
+        como terminal: p.ej. la C2 de Asturias es San Juan de Nieva↔El
+        Entrego y Oviedo es una parada intermedia) — se ofrece cualquier
+        parada posterior al origen en el itinerario GTFS de esa línea.
+        También se guarda el `route_id` (línea + sentido) de esa línea, que
+        es lo que permite luego reconstruir el itinerario completo de
+        paradas.
         """
         errors: dict[str, str] = {}
         origin = self._route_origin
@@ -197,15 +204,29 @@ class RenfeCercaniasConfigFlow(ConfigFlow, domain=DOMAIN):
             errors["base"] = "cannot_connect"
             departures = []
 
-        # Un mismo destino puede aparecer en salidas con route_id distinto
-        # (p.ej. variantes de la misma línea); nos quedamos con el primero.
+        # Para cada línea con servicio activo ahora desde el origen,
+        # ofrecemos como destino cualquier parada posterior en su itinerario
+        # GTFS completo (no solo el final de trayecto real del tren).
+        seen_route_ids: set[str] = set()
         destinations: dict[str, tuple[str, str]] = {}
         for dep in departures:
-            if not dep.destino_codigo or dep.destino_codigo == origin:
+            if not dep.route_id or dep.route_id in seen_route_ids:
                 continue
-            destinations.setdefault(
-                dep.destino_codigo, (dep.destino_nombre, dep.route_id)
-            )
+            seen_route_ids.add(dep.route_id)
+
+            pattern = get_pattern(dep.route_id)
+            if pattern is None:
+                continue
+            codigos = [parada["codigo"] for parada in pattern["paradas"]]
+            try:
+                origin_idx = codigos.index(origin)
+            except ValueError:
+                continue
+
+            for parada in pattern["paradas"][origin_idx + 1 :]:
+                destinations.setdefault(
+                    parada["codigo"], (parada["nombre"], dep.route_id)
+                )
 
         if not destinations and not errors:
             errors["base"] = "no_destinations"

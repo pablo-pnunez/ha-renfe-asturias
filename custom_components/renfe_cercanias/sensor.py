@@ -34,12 +34,28 @@ from .route_patterns import get_pattern, get_route_ids_for_line, get_travel_time
 from .stations import get_station_name
 
 
-def _departure_attrs(departure: Departure, origin_code: str) -> dict:
+def _departure_attrs(
+    departure: Departure,
+    origin_code: str,
+    destination_code: str | None = None,
+    destination_name: str | None = None,
+) -> dict:
+    """Atributos de una salida real.
+
+    Para una parada favorita, `destination_code`/`destination_name` se dejan
+    en blanco y se usa el destino final real del tren. Para una ruta
+    favorita a una parada intermedia (p.ej. la línea C2 de Asturias es San
+    Juan de Nieva↔El Entrego y Oviedo es una parada intermedia, nunca el
+    destino final declarado), el llamador los fija a la parada elegida por
+    el usuario, para que la hora de llegada estimada sea la de esa parada y
+    no la del final de trayecto real del tren.
+    """
+    dest_code = destination_code or departure.destino_codigo
+    dest_name = destination_name or departure.destino_nombre
+
     hora_llegada_estimada = None
     if departure.hora_salida is not None:
-        travel_min = get_travel_time_min(
-            departure.route_id, origin_code, departure.destino_codigo
-        )
+        travel_min = get_travel_time_min(departure.route_id, origin_code, dest_code)
         if travel_min is not None:
             hora_llegada_estimada = (
                 departure.hora_salida + timedelta(minutes=travel_min)
@@ -47,8 +63,8 @@ def _departure_attrs(departure: Departure, origin_code: str) -> dict:
 
     return {
         "linea": departure.linea,
-        "destino": departure.destino_nombre,
-        "destino_codigo": departure.destino_codigo,
+        "destino": dest_name,
+        "destino_codigo": dest_code,
         "hora_salida": departure.hora_salida.isoformat()
         if departure.hora_salida
         else None,
@@ -151,13 +167,37 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
         self._origin = entry.data.get(CONF_ORIGIN)
         self._attr_unique_id = f"route_{self._origin}_{destination}_next_departure"
 
+        route_id = entry.data.get(CONF_ROUTE_ID, "")
+        pattern = get_pattern(route_id)
+        self._linea = pattern["linea"] if pattern else ""
+        # Offsets del patrón de referencia elegido al configurar la ruta; se
+        # usa siempre este mismo patrón (no el de cada salida real) para que
+        # las comparaciones sean consistentes entre sí.
+        self._offsets: dict[str, int] = (
+            {p["codigo"]: p["offset_min"] for p in pattern["paradas"]}
+            if pattern
+            else {}
+        )
+        self._destination_offset = self._offsets.get(destination)
+
     @property
     def _departures(self) -> list[Departure]:
-        return [
-            dep
-            for dep in (self.coordinator.data or [])
-            if dep.destino_codigo == self._destination
-        ]
+        # No se filtra por destino_codigo exacto: muchas rutas favoritas
+        # terminan en una parada intermedia del trayecto real del tren (ver
+        # nota en device_tracker.RenfeRouteTrainTracker._current_departure).
+        # Basta con que la línea coincida y el tren llegue, como mínimo,
+        # hasta nuestra parada de destino (offset GTFS mayor o igual, dentro
+        # de nuestro propio patrón de referencia).
+        if self._destination_offset is None:
+            return []
+        result = []
+        for dep in self.coordinator.data or []:
+            if dep.linea != self._linea:
+                continue
+            dest_offset = self._offsets.get(dep.destino_codigo)
+            if dest_offset is not None and dest_offset >= self._destination_offset:
+                result.append(dep)
+        return result
 
     @property
     def native_value(self) -> datetime | None:
@@ -166,14 +206,22 @@ class RenfeRouteDepartureSensor(RenfeStopEntity, SensorEntity):
 
     @property
     def extra_state_attributes(self) -> dict:
+        destination_name = get_station_name(self._destination)
         departures = self._departures[: self._num_departures]
         first = departures[0] if departures else None
         attrs: dict = {
-            "destino": get_station_name(self._destination),
-            "salidas": [_departure_attrs(dep, self._origin) for dep in departures],
+            "destino": destination_name,
+            "salidas": [
+                _departure_attrs(dep, self._origin, self._destination, destination_name)
+                for dep in departures
+            ],
         }
         if first is not None:
-            attrs.update(_departure_attrs(first, self._origin))
+            attrs.update(
+                _departure_attrs(
+                    first, self._origin, self._destination, destination_name
+                )
+            )
         return attrs
 
 

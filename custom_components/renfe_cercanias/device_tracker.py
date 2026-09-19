@@ -125,6 +125,14 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
         self._color: str | None = pattern["color"] if pattern else None
         self._linea: str = pattern["linea"] if pattern else ""
 
+        self._offsets: dict[str, int] = (
+            {p["codigo"]: p["offset_min"] for p in pattern["paradas"]}
+            if pattern
+            else {}
+        )
+        self._origin_offset: int | None = self._offsets.get(self._origin)
+        self._destination_offset: int | None = self._offsets.get(self._destination)
+
     async def async_added_to_hass(self) -> None:
         """Refresca también cuando cambian las salidas (próximo tripId)."""
         await super().async_added_to_hass()
@@ -147,16 +155,22 @@ class RenfeRouteTrainTracker(CoordinatorEntity[RenfeFleetCoordinator], TrackerEn
 
     @property
     def _current_departure(self) -> Departure | None:
-        # Dos líneas distintas pueden compartir destino final (p.ej. varias
-        # rutas que terminan en la misma estación cabecera); si se vinculara
-        # el tren solo por destino, podría acabar siendo uno de otra línea,
-        # cuya estación actual/siguiente no aparecería en `self._paradas`
-        # (el tramo se calculó a partir del `route_id` de la línea elegida).
+        # No se puede vincular el tren comparando `destino_codigo` con
+        # nuestro destino: muchas rutas favoritas terminan en una parada
+        # intermedia del trayecto real del tren (p.ej. la línea C2 de
+        # Asturias es San Juan de Nieva↔El Entrego y Oviedo es una parada
+        # intermedia, nunca el destino final declarado). En su lugar se
+        # comprueba la línea y que el tren vaya en la dirección correcta:
+        # su destino final debe llegar, como mínimo, hasta la parada que
+        # elegimos como destino (offset GTFS mayor o igual al nuestro).
+        if self._destination_offset is None:
+            return None
+
         for departure in self._stop_coordinator.data or []:
-            if (
-                departure.destino_codigo == self._destination
-                and departure.linea == self._linea
-            ):
+            if departure.linea != self._linea:
+                continue
+            dest_offset = self._offsets.get(departure.destino_codigo)
+            if dest_offset is not None and dest_offset >= self._destination_offset:
                 return departure
         return None
 
