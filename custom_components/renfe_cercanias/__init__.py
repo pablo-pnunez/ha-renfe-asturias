@@ -127,10 +127,18 @@ def _platforms_for_entry(entry: ConfigEntry) -> list[Platform]:
 async def _async_get_fleet_coordinator(
     hass: HomeAssistant, scan_interval: int
 ) -> RenfeFleetCoordinator:
+    """Devuelve el coordinador de flota compartido, creándolo si hace falta.
+
+    `async_config_entry_first_refresh` solo puede llamarse una vez por
+    coordinador (queda ligado a la config entry que lo crea); por eso el
+    primer refresco se hace aquí, justo al crearlo, y nunca se repite para
+    las siguientes rutas favoritas que reutilizan el mismo coordinador.
+    """
     domain_data = hass.data.setdefault(DOMAIN, {})
     coordinator: RenfeFleetCoordinator | None = domain_data.get(FLEET_COORDINATOR)
     if coordinator is None:
         coordinator = RenfeFleetCoordinator(hass, scan_interval)
+        await coordinator.async_config_entry_first_refresh()
         domain_data[FLEET_COORDINATOR] = coordinator
     return coordinator
 
@@ -161,7 +169,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     fleet_coordinator: RenfeFleetCoordinator | None = None
     if entry_type == ENTRY_TYPE_ROUTE:
         fleet_coordinator = await _async_get_fleet_coordinator(hass, fleet_interval)
-        await fleet_coordinator.async_config_entry_first_refresh()
 
     hass.data.setdefault(DOMAIN, {})[entry.entry_id] = RenfeEntryData(
         stop_coordinator=stop_coordinator,
