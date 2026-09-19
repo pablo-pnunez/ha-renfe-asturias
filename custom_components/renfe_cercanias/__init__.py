@@ -9,6 +9,7 @@ from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.const import Platform
+from homeassistant.helpers.storage import Store
 from homeassistant.helpers.typing import ConfigType
 
 from .const import (
@@ -34,6 +35,8 @@ FRONTEND_SCRIPT_URL = f"/{DOMAIN}/renfe-route-card.js"
 FRONTEND_SCRIPT_PATH = Path(__file__).parent / "www" / "renfe-route-card.js"
 FRONTEND_REGISTERED_FLAG = "_frontend_registered"
 CACHES_WARMED_FLAG = "_caches_warmed"
+FRONTEND_STORAGE_VERSION = 1
+FRONTEND_STORAGE_KEY = f"{DOMAIN}_frontend"
 
 
 async def _async_warm_caches(hass: HomeAssistant) -> None:
@@ -58,10 +61,15 @@ async def _async_warm_caches(hass: HomeAssistant) -> None:
 async def _async_register_frontend(hass: HomeAssistant) -> None:
     """Sirve la tarjeta Lovelace y la registra como recurso, si es posible.
 
-    Es un patrón best-effort: si la API interna de recursos de Lovelace
-    cambia entre versiones de Home Assistant, el fallo se registra mediante
-    log y no bloquea la carga de la integración; el usuario siempre puede
-    añadir el recurso manualmente (ver README).
+    El intento de añadir el recurso a Lovelace se hace como mucho una vez en
+    toda la vida de la instalación (guardado en un `Store` persistente): al
+    arrancar, la colección de recursos de Lovelace puede tardar en terminar
+    de cargar su storage, así que comprobar "¿ya está en la lista?" en cada
+    reinicio no es fiable y duplicaba el recurso. Es además un patrón
+    best-effort: si la API interna de recursos de Lovelace cambia entre
+    versiones de Home Assistant, el fallo se registra mediante log y no
+    bloquea la carga de la integración; el usuario siempre puede añadir el
+    recurso manualmente (ver README).
     """
     domain_data = hass.data.setdefault(DOMAIN, {})
     if domain_data.get(FRONTEND_REGISTERED_FLAG):
@@ -77,6 +85,11 @@ async def _async_register_frontend(hass: HomeAssistant) -> None:
             "No se pudo registrar la ruta estática de la tarjeta (¿ya registrada?)",
             exc_info=True,
         )
+
+    store: Store = Store(hass, FRONTEND_STORAGE_VERSION, FRONTEND_STORAGE_KEY)
+    if await store.async_load():
+        return
+    await store.async_save({"resource_registration_attempted": True})
 
     lovelace = hass.data.get("lovelace")
     resources = getattr(lovelace, "resources", None) if lovelace else None
